@@ -26,6 +26,10 @@ The header contains the map name, New, Example, Load map and Save map. The toolb
 
 The left library contains procedural asset collections and the Water plane and Grass area cards. Search by name or choose a category. The centre is the perspective viewport. The right inspector shows the selected object's controls, terrain/environment settings, style controls and camera settings. Scroll the inspector to reach lower controls. The bottom status bar reports rendering work and cursor coordinates.
 
+![The 1 km island example](../artifacts/showcase-preview.png)
+
+[Watch the live island showcase](https://samg-coder.github.io/Leaf/showcase.html) for daylight, sunset, night, sunrise and weather views.
+
 ## Move the camera
 
 | Input | Behaviour |
