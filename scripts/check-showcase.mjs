@@ -1,0 +1,2 @@
+import {chromium} from 'playwright';
+const b=await chromium.launch({channel:'msedge',headless:true,args:['--enable-unsafe-webgpu']});try{const p=await b.newPage({viewport:{width:1920,height:1080}});for(let i=0;i<7;i++){await p.goto('http://127.0.0.1:5197/showcase.html?shot='+i);await p.waitForFunction(()=>window.showcaseReady);await p.waitForTimeout(3500);await p.screenshot({path:`D:/LeafMedia/island-shot-${i}.png`});console.log('shot',i);}}finally{await b.close();}

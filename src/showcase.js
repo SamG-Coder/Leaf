@@ -1,0 +1,23 @@
+import {MapRenderer} from './map-renderer.js';import {islandExample} from './island-example.js';import {terrainHeight} from './map-model.js';
+const output=document.querySelector('#show'),ctx=output.getContext('2d'),canvas=document.createElement('canvas');canvas.width=1920;canvas.height=1080;const map=islandExample();const renderer=await MapRenderer.create(canvas,e=>{throw e;});
+const shots=[
+ {label:'Leaf / Island',sub:'1 km of procedural terrain, forest and water',duration:8,from:[620,500,-780],to:[480,390,-650],target:[0,10,0],hour:14,weather:'clear'},
+ {label:'Coast & shallows',sub:'painted sand and depth-based water transparency',duration:8,from:[-450,80,-250],to:[-430,90,-130],target:[-260,8,-80],hour:14,weather:'clear'},
+ {label:'River & lagoon',sub:'curved water polygons and directional river flow',duration:8,from:[0,120,320],to:[15,130,200],target:[0,10,-60],hour:14,weather:'clear'},
+ {label:'Forest & meadows',sub:'seeded vegetation, grass areas and wind',duration:8,from:[-150,165,180],to:[-220,150,100],target:[-130,35,-60],hour:14,weather:'clear'},
+ {label:'Day into night',sub:'watch the sunlight, sky and water change',duration:32,from:[-460,125,-230],to:[-430,145,-250],target:[-70,40,-60],hour:14,hourEnd:23,weather:'clear'},
+ {label:'Sunrise',sub:'night gives way to morning',duration:20,from:[-430,145,-250],to:[-460,125,-230],target:[-70,40,-60],hour:4,hourEnd:10,weather:'clear'},
+ {label:'Cloudy',sub:'painted cloud layers drift over the island',duration:10,from:[0,85,320],to:[10,85,285],target:[0,15,0],hour:14,weather:'cloudy'},
+ {label:'Rain',sub:'rain streaks, water ripples and wet ground',duration:12,from:[0,85,285],to:[10,85,245],target:[0,15,0],hour:14,weather:'rain'},
+ {label:'Storm',sub:'stronger rain, wind and cloud cover',duration:12,from:[10,85,245],to:[0,85,210],target:[0,15,0],hour:14,weather:'storm'},
+ {label:'After the rain',sub:'the sky clears while the ground stays wet',duration:10,from:[0,85,210],to:[0,105,260],target:[0,15,0],hour:15,weather:'clear'},
+ {label:'Build your own world',sub:'samg-coder.github.io/Leaf/editor.html',duration:7,from:[500,390,-650],to:[600,470,-740],target:[0,10,0],hour:15,weather:'clear'}
+];
+const total=shots.reduce((n,s)=>n+s.duration,0);window.showcaseDuration=total;
+let recording=false,started=performance.now();window.showcaseReady=true;document.querySelector('#status').remove();
+window.recordShowcase=async()=>{if(recording)return;recording=true;started=performance.now();const chunks=[],recorder=new MediaRecorder(output.captureStream(30),{mimeType:'video/webm;codecs=vp9',videoBitsPerSecond:14000000});recorder.ondataavailable=e=>{if(e.data.size)chunks.push(e.data);};recorder.onstop=()=>{const blob=new Blob(chunks,{type:'video/webm'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='leaf-island-1080p.webm';a.click();recording=false;};recorder.start(1000);setTimeout(()=>recorder.stop(),total*1000);};
+async function draw(now){const preview=new URLSearchParams(location.search).get('shot');let seconds=(now-started)/1000,elapsed=seconds%total,index=0;
+if(!recording&&preview!==null){index=Number(preview);elapsed=shots[index].duration*.5;}else{while(index<shots.length-1&&elapsed>=shots[index].duration){elapsed-=shots[index].duration;index++;}}
+const shot=shots[index],t=elapsed/shot.duration,s=t*t*(3-2*t),position=shot.from.map((v,i)=>v+(shot.to[i]-v)*s);position[1]=Math.max(position[1],terrainHeight(map,position[0],position[2])+55);const delta=shot.target.map((v,i)=>v-position[i]),distance=Math.hypot(...delta);map.environment.hour=shot.hour+((shot.hourEnd??shot.hour)-shot.hour)*t;map.environment.weather=shot.weather;map.environment.wetness=index>=7&&index<=9?.55:.05;
+const view={position,pivot:shot.target,distance,yaw:Math.atan2(delta[0],delta[2]),pitch:Math.asin(delta[1]/distance),fov:60,aspect:16/9,grid:false,anime:true,paint:.8,waterTime:seconds,environmentTime:seconds};await renderer.render(map,new Set(),view);ctx.drawImage(canvas,0,0);const gradient=ctx.createLinearGradient(0,840,0,1080);gradient.addColorStop(0,'#07141900');gradient.addColorStop(1,'#071419d9');ctx.fillStyle=gradient;ctx.fillRect(0,840,1920,240);ctx.fillStyle='#e3efb9';ctx.font='600 42px system-ui';ctx.fillText(shot.label,64,965);ctx.fillStyle='#ffffff';ctx.font='24px system-ui';ctx.fillText(shot.sub,66,1012);ctx.fillStyle='#e3efb9';ctx.font='600 20px system-ui';ctx.fillText('LEAF / CUDA WEBSHADER',64,55);ctx.font='22px system-ui';ctx.fillStyle='#ffffff';ctx.fillText(String(Math.floor(map.environment.hour)).padStart(2,'0')+':'+String(Math.floor(map.environment.hour%1*60)).padStart(2,'0'),1770,55);requestAnimationFrame(draw);}
+requestAnimationFrame(draw);
