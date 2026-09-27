@@ -1,0 +1,53 @@
+[
+  {
+    "baseline": false,
+    "n": 100000,
+    "scale": 95,
+    "samples": 25,
+    "stages": {
+      "generate": 0.003232,
+      "lighting": 0.001888,
+      "clear": 0.006208,
+      "raster": 0.05776,
+      "branches": 0.289856,
+      "resolve": 0.010432
+    },
+    "steadyGpuMs": 0.364448,
+    "hash": "9be9b537b1a03843610d32862bf1ddd9d4bc9ccc57a8bf773621fe1501daf605",
+    "errors": []
+  },
+  {
+    "baseline": false,
+    "n": 200000,
+    "scale": 95,
+    "samples": 25,
+    "stages": {
+      "generate": 0.004576,
+      "lighting": 0.00192,
+      "clear": 0.006208,
+      "raster": 0.122496,
+      "branches": 0.289824,
+      "resolve": 0.01024
+    },
+    "steadyGpuMs": 0.42918399999999995,
+    "hash": "7f871be430bcab768461d9cbc871f4a6913ce4efc7246036fd29d4f1dbba6943",
+    "errors": []
+  },
+  {
+    "baseline": false,
+    "n": 100000,
+    "scale": 200,
+    "samples": 25,
+    "stages": {
+      "generate": 0.003264,
+      "lighting": 0.00192,
+      "clear": 0.006208,
+      "raster": 0.181152,
+      "branches": 1.939264,
+      "resolve": 0.012064
+    },
+    "steadyGpuMs": 2.138016,
+    "hash": "c48204adff9fcc6cbfa647e660be92161edfaf2aa4e8a8092c8d416c4299869c",
+    "errors": []
+  }
+]

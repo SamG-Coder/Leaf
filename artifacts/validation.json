@@ -1,0 +1,93 @@
+{
+  "default": {
+    "ready": true,
+    "errors": [],
+    "frames": 11,
+    "adapter": {
+      "vendor": "nvidia",
+      "architecture": "blackwell",
+      "device": "",
+      "description": ""
+    },
+    "instanceBytes": 6400000,
+    "generations": 1,
+    "lightUpdates": 1,
+    "n": 100000,
+    "seed": 42,
+    "bins": 8,
+    "mode": 0,
+    "frameMs": 10.521960345885994,
+    "groups": 4096
+  },
+  "check": {
+    "finite": true,
+    "sameGeometryAfterLight": true,
+    "noRegeneration": true,
+    "initialSample": [
+      1.0423991680145264,
+      5.701296806335449,
+      1.4958133697509766,
+      0.04473874717950821,
+      -0.4906051754951477,
+      5.704265594482422,
+      -0.4209943115711212,
+      0.042746562510728836,
+      1.6639001369476318,
+      4.824402332305908,
+      -0.386534184217453,
+      0.045439593493938446,
+      -0.9949267506599426,
+      3.6109814643859863,
+      2.324676513671875,
+      0.046766094863414764
+    ]
+  },
+  "maximum": {
+    "ready": true,
+    "errors": [],
+    "frames": 127,
+    "adapter": {
+      "vendor": "nvidia",
+      "architecture": "blackwell",
+      "device": "",
+      "description": ""
+    },
+    "instanceBytes": 6400000,
+    "generations": 2,
+    "lightUpdates": 3,
+    "n": 200000,
+    "seed": 42,
+    "bins": 16,
+    "mode": 3,
+    "frameMs": 5.315642600642851,
+    "groups": 16384
+  },
+  "deterministic": {
+    "seedChangesGeometry": true,
+    "repeatable": true
+  },
+  "exposureErrors": [
+    {
+      "bins": 4,
+      "groups": 1024,
+      "meanAbsoluteError": 0.07821437917811909,
+      "rootMeanSquareError": 0.09929326621870695,
+      "maxAbsoluteError": 0.40012115847095364
+    },
+    {
+      "bins": 8,
+      "groups": 4096,
+      "meanAbsoluteError": 0.05089664820061522,
+      "rootMeanSquareError": 0.06539079759971311,
+      "maxAbsoluteError": 0.3118357152041151
+    },
+    {
+      "bins": 16,
+      "groups": 16384,
+      "meanAbsoluteError": 0.03157876922313354,
+      "rootMeanSquareError": 0.03931223218451615,
+      "maxAbsoluteError": 0.16295847386104123
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,13 @@
+{
+  "rightMouseLook": true,
+  "wasdFlight": true,
+  "verticalFlight": true,
+  "flyWheelSpeed": true,
+  "altOrbit": true,
+  "altRightDolly": true,
+  "middlePan": true,
+  "frameSelection": true,
+  "geometryReused": true,
+  "sceneUnchanged": true,
+  "errors": []
+}

@@ -1,0 +1,67 @@
+{
+  "frames": [
+    {
+      "ms": 15.310000002384186,
+      "dispatches": 10,
+      "submissions": 3
+    },
+    {
+      "ms": 14.194999992847443,
+      "dispatches": 10,
+      "submissions": 3
+    },
+    {
+      "ms": 14.039999961853027,
+      "dispatches": 10,
+      "submissions": 3
+    },
+    {
+      "ms": 14.939999997615814,
+      "dispatches": 10,
+      "submissions": 3
+    },
+    {
+      "ms": 13.115000009536743,
+      "dispatches": 10,
+      "submissions": 3
+    },
+    {
+      "ms": 13.275000035762787,
+      "dispatches": 10,
+      "submissions": 3
+    },
+    {
+      "ms": 12.839999973773956,
+      "dispatches": 10,
+      "submissions": 3
+    },
+    {
+      "ms": 15.39000004529953,
+      "dispatches": 10,
+      "submissions": 3
+    },
+    {
+      "ms": 13.990000009536743,
+      "dispatches": 10,
+      "submissions": 3
+    },
+    {
+      "ms": 15.944999992847443,
+      "dispatches": 10,
+      "submissions": 3
+    }
+  ],
+  "stats": {
+    "candidates": 3074,
+    "budgetDropped": 0,
+    "triangleObjects": 1079,
+    "blendingObjects": 458,
+    "promoted": 0,
+    "subpixelDetail": 2867,
+    "high": 16,
+    "samples": 712136,
+    "maxSamples": 36317
+  },
+  "digest": "1a509817b84204ef382f79d154e08fa548f6854af26d8543213261e6f65e7b18",
+  "errors": []
+}

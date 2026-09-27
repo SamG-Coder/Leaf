@@ -1,0 +1,4 @@
+let dbPromise;
+function database(){return dbPromise??=new Promise((resolve,reject)=>{const request=indexedDB.open('leaf-world-studio',1);request.onupgradeneeded=()=>request.result.createObjectStore('maps');request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error);});}
+export async function restoreMap(){const db=await database();return new Promise((resolve,reject)=>{const request=db.transaction('maps').objectStore('maps').get('autosave');request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error);});}
+export async function autosaveMap(map){const db=await database();return new Promise((resolve,reject)=>{const tx=db.transaction('maps','readwrite');tx.objectStore('maps').put(map,'autosave');tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error);});}

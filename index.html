@@ -1,0 +1,37 @@
+<!doctype html><html lang="en"><head><link rel="icon" href="data:,"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Leaf · Seeded canopy experiment</title><link rel="stylesheet" href="./style.css"></head><body>
+<a href="./editor.html" style="position:fixed;right:20px;top:12px;z-index:10;color:#c6df9b">Open map editor ↗</a>
+
+<header><a class="brand" href="./">Leaf<span> / rendering lab</span></a><span class="tag">CUDA → WEBGPU</span></header>
+
+<main><section class="scene"><canvas width="1280" height="896" aria-label="Procedural foliage rendered using CUDA WebShader"></canvas><div class="scene-title"><span class="eyebrow">PROCEDURAL PLANT COLLECTION</span><h1 id="treeName">English oak</h1><p id="scientific">Quercus robur</p><p>Seeded geometry. Shared light. GPU resident.</p></div><div class="scene-foot"><span>DRAG TO ORBIT · SCROLL TO ZOOM</span><span id="status">Compiling GPU pipelines…</span></div></section>
+
+<aside><div class="eyebrow">PROCEDURAL INSTANCING</div><h2>Small rules.<br>Large structures.</h2><p class="intro">Each leaf is a seed + an offset. Similar directions share an exposure, while the canopy stays fully dynamic.</p>
+
+<label>Species / emitter<select id="species"></select></label><p id="description" class="intro"></p><a id="research" class="source" target="_blank" rel="noopener">Botanical reference ↗</a>
+
+<label>Surface instances <output id="countOut"></output><input id="count" type="range" min="10000" max="200000" step="10000" value="100000"></label>
+
+<label>Autumn colour <output id="autumnOut"></output><input id="autumn" type="range" min="0" max="1" step="0.01" value="0"></label>
+
+<label>Light direction <output id="sunOut"></output><input id="sun" type="range" min="0" max="360" value="305"></label>
+
+<label>Light elevation <output id="elevationOut"></output><input id="elevation" type="range" min="5" max="85" value="40"></label>
+
+<label>Orientation groups<select id="bins"><option value="4">8 per cluster · coarse</option><option value="8" selected>32 per cluster · balanced</option><option value="16">128 per cluster · fine</option></select></label>
+
+<label>Inspect<select id="mode"><option value="0">Shared exposure</option><option value="1">Per-leaf reference</option><option value="2">Lighting group colours</option><option value="3">Exposure error × 5</option></select></label>
+
+<label>Wind <output id="windOut"></output><input id="wind" type="range" min="0" max="0.35" step="0.01" value="0.10"></label>
+
+<div class="seedrow"><label>Plant seed<input id="seed" type="number" min="0" max="999999" value="42"></label><button id="newseed">New seed ↗</button></div>
+
+<label class="check"><input id="animate" type="checkbox" checked> Animate wind</label>
+
+<div class="stats"><div><strong id="groups">4,096</strong><span>shared exposures</span></div><div><strong id="ratio">24.4×</strong><span>fewer lighting evaluations*</span></div><div><strong id="frame">—</strong><span>frame + GPU completion</span></div><div><strong id="memory">—</strong><span>instance buffer storage</span></div></div>
+
+<p class="note">*When lighting is refreshed, compared with one evaluation per instance. This is an operation count, not a measured speedup. Reference mode evaluates visible pixels. Canopy shelter and ground shadow are approximations.</p>
+
+<a class="source" href="./src/leaf.cu">Inspect the CUDA source ↗</a><p><a class="source" href="./gallery.html">Compare all ten trees ↗</a> · <a class="source" href="./bushes.html">Ten bushes ↗</a> · <a class="source" href="./flowers.html">Ten flowers ↗</a> · <a class="source" href="./ferns.html">Ten ferns ↗</a> · <a class="source" href="./moss.html">Ten mosses ↗</a> · <a class="source" href="./vines.html">Vines and ivy ↗</a> · <a class="source" href="./grasses.html">Ten grasses ↗</a> · <a class="source" href="./crops.html">Ten crops ↗</a> · <a class="source" href="./mushrooms.html">Mushroom colonies ↗</a> · <a class="source" href="./rocks.html">Rocks and crystals ↗</a> · <a class="source" href="./litter.html">Ground litter ↗</a> · <a class="source" href="./deadwood.html">Deadwood and stumps ↗</a> · <a class="source" href="./docs/api.md">Instance API ↗</a></p></aside></main>
+
+<script type="module" src="./src/main.js"></script></body></html>
+

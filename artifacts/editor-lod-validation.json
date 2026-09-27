@@ -1,0 +1,51 @@
+{
+  "near": {
+    "visible": 1,
+    "culled": 0,
+    "cache": 1,
+    "detail": {
+      "candidates": 1,
+      "budgetDropped": 0,
+      "triangleObjects": 1,
+      "blendingObjects": 0,
+      "promoted": 0,
+      "subpixelDetail": 0,
+      "high": 1,
+      "samples": 118466,
+      "maxSamples": 118466
+    }
+  },
+  "far": {
+    "visible": 1,
+    "culled": 0,
+    "cache": 2,
+    "detail": {
+      "candidates": 1,
+      "budgetDropped": 0,
+      "triangleObjects": 1,
+      "blendingObjects": 0,
+      "promoted": 0,
+      "subpixelDetail": 1,
+      "high": 0,
+      "samples": 0,
+      "maxSamples": 0
+    }
+  },
+  "close": {
+    "visible": 1,
+    "culled": 0,
+    "cache": 2,
+    "detail": {
+      "candidates": 1,
+      "budgetDropped": 0,
+      "triangleObjects": 1,
+      "blendingObjects": 0,
+      "promoted": 0,
+      "subpixelDetail": 0,
+      "high": 1,
+      "samples": 200000,
+      "maxSamples": 200000
+    }
+  },
+  "errors": []
+}

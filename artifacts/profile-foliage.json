@@ -1,0 +1,184 @@
+[
+  {
+    "preset": 0,
+    "n": 100000,
+    "scale": 95,
+    "resolution": [
+      1280,
+      896
+    ],
+    "samples": 25,
+    "medianGpuMs": 0.168064,
+    "p95GpuMs": 0.172,
+    "errors": []
+  },
+  {
+    "preset": 1,
+    "n": 100000,
+    "scale": 95,
+    "resolution": [
+      1280,
+      896
+    ],
+    "samples": 25,
+    "medianGpuMs": 0.202624,
+    "p95GpuMs": 0.205696,
+    "errors": []
+  },
+  {
+    "preset": 2,
+    "n": 100000,
+    "scale": 95,
+    "resolution": [
+      1280,
+      896
+    ],
+    "samples": 25,
+    "medianGpuMs": 0.096992,
+    "p95GpuMs": 0.100544,
+    "errors": []
+  },
+  {
+    "preset": 3,
+    "n": 100000,
+    "scale": 95,
+    "resolution": [
+      1280,
+      896
+    ],
+    "samples": 25,
+    "medianGpuMs": 0.263232,
+    "p95GpuMs": 0.270048,
+    "errors": []
+  },
+  {
+    "preset": 4,
+    "n": 100000,
+    "scale": 95,
+    "resolution": [
+      1280,
+      896
+    ],
+    "samples": 25,
+    "medianGpuMs": 0.15952,
+    "p95GpuMs": 0.162592,
+    "errors": []
+  },
+  {
+    "preset": 5,
+    "n": 100000,
+    "scale": 95,
+    "resolution": [
+      1280,
+      896
+    ],
+    "samples": 25,
+    "medianGpuMs": 0.204032,
+    "p95GpuMs": 0.206816,
+    "errors": []
+  },
+  {
+    "preset": 6,
+    "n": 100000,
+    "scale": 95,
+    "resolution": [
+      1280,
+      896
+    ],
+    "samples": 25,
+    "medianGpuMs": 0.17184,
+    "p95GpuMs": 0.17408,
+    "errors": []
+  },
+  {
+    "preset": 7,
+    "n": 100000,
+    "scale": 95,
+    "resolution": [
+      1280,
+      896
+    ],
+    "samples": 25,
+    "medianGpuMs": 0.120288,
+    "p95GpuMs": 0.122784,
+    "errors": []
+  },
+  {
+    "preset": 8,
+    "n": 100000,
+    "scale": 95,
+    "resolution": [
+      1280,
+      896
+    ],
+    "samples": 25,
+    "medianGpuMs": 0.273856,
+    "p95GpuMs": 0.279168,
+    "errors": []
+  },
+  {
+    "preset": 9,
+    "n": 100000,
+    "scale": 95,
+    "resolution": [
+      1280,
+      896
+    ],
+    "samples": 25,
+    "medianGpuMs": 1.999552,
+    "p95GpuMs": 5.21072,
+    "errors": []
+  },
+  {
+    "preset": 10,
+    "n": 100000,
+    "scale": 95,
+    "resolution": [
+      1280,
+      896
+    ],
+    "samples": 25,
+    "medianGpuMs": 0.12384,
+    "p95GpuMs": 0.127936,
+    "errors": []
+  },
+  {
+    "preset": 10,
+    "n": 200000,
+    "scale": 95,
+    "resolution": [
+      1280,
+      896
+    ],
+    "samples": 25,
+    "medianGpuMs": 0.223712,
+    "p95GpuMs": 0.228,
+    "errors": []
+  },
+  {
+    "preset": 9,
+    "n": 200000,
+    "scale": 95,
+    "resolution": [
+      1280,
+      896
+    ],
+    "samples": 25,
+    "medianGpuMs": 3.387616,
+    "p95GpuMs": 5.211264,
+    "errors": []
+  },
+  {
+    "preset": 9,
+    "n": 100000,
+    "scale": 200,
+    "resolution": [
+      1280,
+      896
+    ],
+    "samples": 25,
+    "medianGpuMs": 10.152864,
+    "p95GpuMs": 12.196448,
+    "errors": []
+  }
+]

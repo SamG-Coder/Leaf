@@ -1,0 +1,16 @@
+import {chromium} from 'playwright';
+import assert from 'node:assert/strict';
+import {writeFile} from 'node:fs/promises';
+const browser=await chromium.launch({channel:'msedge',headless:true,args:['--enable-unsafe-webgpu']});
+try{const page=await browser.newPage({viewport:{width:1600,height:1000}});const errors=[];page.on('pageerror',e=>errors.push(String(e)));await page.goto('http://127.0.0.1:5197/editor.html');await page.waitForFunction(()=>window.editorTest);await page.evaluate(()=>editorTest.idle());
+await page.click('#new');await page.fill('#newMapExtent','1024');await page.fill('#newMapName','Placement scale validation');await page.click('#createMap');await page.evaluate(()=>editorTest.idle());assert.equal(await page.evaluate(()=>editorTest.getMap().extent),1024);assert(await page.locator('#extent').getAttribute('readonly')!==null);
+await page.evaluate(()=>{editorTest.add(0,0,0);editorTest.add(81,3,0);editorTest.add(41,5,0);editorTest.add(31,7,0);editorTest.select([1,2,3,4]);});await page.click('#frameSelected');await page.evaluate(()=>editorTest.idle());
+assert.deepEqual(await page.evaluate(()=>editorTest.getMap().objects.map(o=>o.scale)),[2.5,.25,.3,.45]);
+const before=await page.evaluate(async()=>({digest:await editorTest.renderDigest(),generations:editorTest.generations,light:editorTest.getMap().light}));
+await page.locator('#sun').evaluate(el=>{el.value='100';el.dispatchEvent(new Event('input',{bubbles:true}));});await page.evaluate(()=>editorTest.idle());
+assert.notEqual(await page.evaluate(()=>editorTest.renderDigest()),before.digest);assert.equal(await page.evaluate(()=>editorTest.generations),before.generations);
+await page.locator('#sun').dispatchEvent('change');await page.click('#undo');await page.evaluate(()=>editorTest.idle());assert.deepEqual(await page.evaluate(()=>editorTest.getMap().light),before.light);
+await page.locator('#elevation').evaluate(el=>{el.value='10';el.dispatchEvent(new Event('input',{bubbles:true}));});await page.evaluate(()=>editorTest.idle());assert.notEqual(await page.evaluate(()=>editorTest.renderDigest()),before.digest);await page.locator('#elevation').dispatchEvent('change');
+const original=await page.evaluate(()=>editorTest.getMap());await page.locator('#terrainFile').setInputFiles({name:'wrong-size.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify({format:'leaf-terrain',version:1,extent:32,terrain:Array(4225).fill(0)}))});await page.waitForFunction(()=>document.querySelector('#toast').textContent.includes('dimensions must match'));assert.deepEqual(await page.evaluate(()=>editorTest.getMap()),original);
+await page.screenshot({path:'artifacts/editor-scale-lighting.png',fullPage:true});assert.deepEqual(errors,[]);assert.deepEqual(await page.evaluate(()=>mapDiagnostics.errors),[]);await writeFile('artifacts/editor-settings-validation.json',JSON.stringify({newMapSize:1024,readOnlyDimensions:true,terrainResizeRejected:true,scales:[2.5,.25,.3,.45],sunPreviewBeforeRelease:true,elevationPreviewBeforeRelease:true,geometryReused:true,lightUndo:true,errors},null,2));console.log('Map creation, fixed size, placement defaults, live sunlight, geometry reuse and undo passed.');
+}finally{await browser.close();}

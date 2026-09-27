@@ -1,0 +1,3 @@
+import {chromium} from 'playwright';
+const browser=await chromium.launch({channel:'msedge',headless:true,args:['--enable-unsafe-webgpu']});
+try{const page=await browser.newPage({viewport:{width:1200,height:760}});const errors=[];page.on('pageerror',e=>errors.push(String(e)));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});await page.goto('http://127.0.0.1:5197/reuse.html');await page.waitForFunction(()=>document.querySelector('#status').textContent.includes('shared device'));await page.screenshot({path:'artifacts/reuse.png'});if(errors.length)throw Error(errors.join('\n'));console.log('Shared-runtime leaf and grass batches rendered without errors.');}finally{await browser.close();}

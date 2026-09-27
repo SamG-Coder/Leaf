@@ -1,0 +1,18 @@
+{
+  "name": "leaf",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node scripts/test-foliage.mjs",
+    "profile": "node scripts/profile.mjs",
+    "check": "node scripts/check.mjs",
+    "build:pages": "npm run build && node scripts/build-pages.mjs",
+    "test:model": "node scripts/test-map-model.mjs"
+  },
+  "description": "Seeded procedural vegetation and a CUDA WebShader world editor",
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "frames": [
+    {
+      "ms": 65.01499998569489,
+      "dispatches": 6149,
+      "submissions": 98
+    },
+    {
+      "ms": 68.10999995470047,
+      "dispatches": 6149,
+      "submissions": 98
+    },
+    {
+      "ms": 65.69000005722046,
+      "dispatches": 6149,
+      "submissions": 98
+    },
+    {
+      "ms": 65.33999997377396,
+      "dispatches": 6149,
+      "submissions": 98
+    },
+    {
+      "ms": 65.68500000238419,
+      "dispatches": 6149,
+      "submissions": 98
+    },
+    {
+      "ms": 61.05500000715256,
+      "dispatches": 6149,
+      "submissions": 98
+    },
+    {
+      "ms": 59.2950000166893,
+      "dispatches": 6149,
+      "submissions": 98
+    },
+    {
+      "ms": 63.269999980926514,
+      "dispatches": 6149,
+      "submissions": 98
+    },
+    {
+      "ms": 62.67500001192093,
+      "dispatches": 6149,
+      "submissions": 98
+    },
+    {
+      "ms": 57.61500000953674,
+      "dispatches": 6149,
+      "submissions": 98
+    }
+  ],
+  "stats": {
+    "candidates": 3074,
+    "budgetDropped": 0,
+    "high": 2,
+    "samples": 1998067,
+    "maxSamples": 29908
+  },
+  "digest": "f9384a239d07c9f76f7258bf303bb3811595ec6ef1d2711b3f8bacb9da5ee8b0",
+  "errors": []
+}

@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><head><link rel="icon" href="data:,"><meta charset="utf-8"><title>Leaf · Reusable instance batches</title><style>body{background:#10191d;color:#dfebd1;font:16px Segoe UI;margin:28px}main{display:flex;gap:20px;flex-wrap:wrap}canvas{width:512px;height:512px;max-width:100%}h1{font-weight:400}p{color:#9caa9e}a{color:#c6df9b}</style></head><body><h1>Two batches. One GPU runtime.</h1><p>Independent grass and leaf systems with shared compiler/pipelines. All geometry and rendering run in CUDA.</p><main><section><h2>Red maple</h2><canvas id="leaves" width="512" height="512"></canvas></section><section><h2>Grass</h2><canvas id="grass" width="512" height="512"></canvas></section></main><p id="status">Starting…</p><a href="./">Back to lab</a><script type="module">
+import {FoliageSystem} from './src/foliage-system.js';
+try{
+ const leaves=await FoliageSystem.create({width:512,height:512,capacity:100000});
+ const grass=await FoliageSystem.create({runtime:leaves.runtime,width:512,height:512,capacity:100000});
+ leaves.configure({preset:'red-maple'}).setLight();grass.configure({preset:'grass',seed:7}).setLight();
+ const contexts=[...document.querySelectorAll('canvas')].map(c=>{const x=c.getContext('webgpu');x.configure({device:leaves.runtime.device,format:'rgba8unorm',usage:GPUTextureUsage.COPY_DST|GPUTextureUsage.RENDER_ATTACHMENT});return x;});
+ async function frame(t){leaves.render({time:t/1000,scale:52,autumn:.8});leaves.present(contexts[0]);grass.render({time:t/1000,scale:50,tilt:.65,wind:.2});grass.present(contexts[1]);await leaves.runtime.idle();document.querySelector('#status').textContent='100,000 leaves + 100,000 grass blades · shared device · separate output buffers';requestAnimationFrame(frame);}requestAnimationFrame(frame);
+}catch(e){document.querySelector('#status').textContent=String(e);console.error(e);}
+</script></body></html>

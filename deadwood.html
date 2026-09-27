@@ -1,0 +1,12 @@
+<!doctype html><html lang="en"><head><link rel="icon" href="data:,"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Leaf · Deadwood and stumps</title><style>
+
+body{margin:0;background:#10191d;color:#e6eae2;font:14px Segoe UI,sans-serif}header{padding:24px 30px;display:flex;justify-content:space-between;align-items:center}h1{margin:0;font-size:27px;font-weight:400}p{color:#9aaa9e;font-size:12px}a{color:#c6df9b;text-decoration:none}main{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:#34433d}article{background:#142025;padding-bottom:18px}img{width:100%;display:block}h2,p{margin:7px 16px}h2{font-size:15px;font-weight:500}.tag{font-size:10px;letter-spacing:2px;color:#bdd697}footer{padding:22px 30px;color:#9aaa9e;font-size:12px}@media(max-width:900px){main{grid-template-columns:repeat(2,1fr)}}
+
+</style></head><body><header><div><div class="tag">LEAF / PROCEDURAL DEADWOOD AND STUMPS</div><h1>Ten deadwood and stump presets. One instance system.</h1><p>Seed 42 · Seeded trunks, roots and branches · 100,000 surface samples each · same camera scale · CUDA-generated previews</p></div><a href="./">Open interactive lab ↗</a></header><main id="grid"></main><footer>Procedural approximations of deadwood forms; counts are rendering stress tests, not ecological measurements.</footer><script type="module">
+
+import {PRESETS} from './src/species.js';
+
+for(const p of PRESETS.filter(p=>p.category==='deadwood')){const card=document.createElement('article');card.innerHTML=`<a href="./?preset=${p.id}"><img src="./artifacts/species/${p.key}.png" alt="${p.name} procedural rendering"><h2>${p.name}</h2></a><p><i>${p.scientific}</i></p><p>${p.description}</p>`;document.querySelector('#grid').append(card);}
+
+</script></body></html>
+

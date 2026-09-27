@@ -1,0 +1,20 @@
+{
+  "extent": 65536,
+  "placements": 100000,
+  "terrainTiles": 2,
+  "farTerrainHeight": 4,
+  "initialUpdateMs": 441.72999995946884,
+  "visible": 1211,
+  "culled": 98789,
+  "cache": 130,
+  "detail": {
+    "candidates": 1211,
+    "budgetDropped": 0,
+    "high": 0,
+    "samples": 620032,
+    "maxSamples": 512
+  },
+  "errors": [],
+  "farObjectFraming": true,
+  "indexedDbRestore": true
+}

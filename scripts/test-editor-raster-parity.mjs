@@ -1,0 +1,5 @@
+import {chromium} from 'playwright';
+import assert from 'node:assert/strict';
+import {writeFile} from 'node:fs/promises';
+const b=await chromium.launch({channel:'msedge',headless:true,args:['--enable-unsafe-webgpu']});
+try{const p=await b.newPage({viewport:{width:1600,height:1000}});await p.goto('http://127.0.0.1:5197/editor.html');await p.waitForFunction(()=>window.editorTest);await p.evaluate(async()=>{const {emptyMap}=await import('./src/map-model.js');editorTest.load(emptyMap());editorTest.add(0,0,0);editorTest.select([1]);});await p.click('#frameSelected');await p.evaluate(()=>editorTest.idle());const result=await p.evaluate(()=>editorTest.rasterParity());assert.equal(result.depth.changed,0);assert.equal(result.picks.changed,0);assert(result.pixels.maxDelta<=2);assert.deepEqual(await p.evaluate(()=>mapDiagnostics.errors),[]);await writeFile('artifacts/raster-parity.json',JSON.stringify(result,null,2));await p.screenshot({path:'artifacts/editor-raster-optimized.png'});const bounds=await p.evaluate(()=>editorTest.boundsParity());assert.equal(bounds.mismatches,0);console.log({result,bounds});}finally{await b.close();}

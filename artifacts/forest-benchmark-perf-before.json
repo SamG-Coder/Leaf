@@ -1,0 +1,67 @@
+{
+  "frames": [
+    {
+      "ms": 14.475000023841858,
+      "dispatches": 10,
+      "submissions": 3
+    },
+    {
+      "ms": 15.269999980926514,
+      "dispatches": 10,
+      "submissions": 3
+    },
+    {
+      "ms": 16.39000004529953,
+      "dispatches": 10,
+      "submissions": 3
+    },
+    {
+      "ms": 14.35999995470047,
+      "dispatches": 10,
+      "submissions": 3
+    },
+    {
+      "ms": 15.214999973773956,
+      "dispatches": 10,
+      "submissions": 3
+    },
+    {
+      "ms": 13.1700000166893,
+      "dispatches": 10,
+      "submissions": 3
+    },
+    {
+      "ms": 12.894999980926514,
+      "dispatches": 10,
+      "submissions": 3
+    },
+    {
+      "ms": 12.814999997615814,
+      "dispatches": 10,
+      "submissions": 3
+    },
+    {
+      "ms": 13.694999992847443,
+      "dispatches": 10,
+      "submissions": 3
+    },
+    {
+      "ms": 13.069999992847443,
+      "dispatches": 10,
+      "submissions": 3
+    }
+  ],
+  "stats": {
+    "candidates": 3074,
+    "budgetDropped": 0,
+    "triangleObjects": 1079,
+    "blendingObjects": 458,
+    "promoted": 0,
+    "subpixelDetail": 2867,
+    "high": 16,
+    "samples": 712136,
+    "maxSamples": 36317
+  },
+  "digest": "d0b20f9d137ff92768677b51b33e3ef45a9aa6bf079aba0d2dad7d70df2a4a9f",
+  "errors": []
+}

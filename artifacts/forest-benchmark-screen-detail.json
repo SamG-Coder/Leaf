@@ -1,0 +1,64 @@
+{
+  "frames": [
+    {
+      "ms": 12.049999952316284,
+      "dispatches": 3,
+      "submissions": 2
+    },
+    {
+      "ms": 13.09500002861023,
+      "dispatches": 3,
+      "submissions": 2
+    },
+    {
+      "ms": 15.550000011920929,
+      "dispatches": 3,
+      "submissions": 2
+    },
+    {
+      "ms": 14.5799999833107,
+      "dispatches": 3,
+      "submissions": 2
+    },
+    {
+      "ms": 13.020000040531158,
+      "dispatches": 3,
+      "submissions": 2
+    },
+    {
+      "ms": 9.724999964237213,
+      "dispatches": 3,
+      "submissions": 2
+    },
+    {
+      "ms": 12.870000004768372,
+      "dispatches": 3,
+      "submissions": 2
+    },
+    {
+      "ms": 9.430000007152557,
+      "dispatches": 3,
+      "submissions": 2
+    },
+    {
+      "ms": 8.480000019073486,
+      "dispatches": 3,
+      "submissions": 2
+    },
+    {
+      "ms": 13.034999966621399,
+      "dispatches": 3,
+      "submissions": 2
+    }
+  ],
+  "stats": {
+    "candidates": 3074,
+    "budgetDropped": 0,
+    "subpixelDetail": 2867,
+    "high": 2,
+    "samples": 733412,
+    "maxSamples": 36317
+  },
+  "digest": "53696cb3723a575dd2c955b96418fdffaa476f8997c738dedbf29c0432b0279b",
+  "errors": []
+}

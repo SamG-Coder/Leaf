@@ -1,0 +1,40 @@
+{
+  "checks": [
+    {
+      "species": 0,
+      "visibleWoodPixels": 66554,
+      "relitWoodPixels": 62089,
+      "geometryAndDepthUnchanged": true,
+      "orbitReturnExact": true
+    },
+    {
+      "species": 1,
+      "visibleWoodPixels": 65666,
+      "relitWoodPixels": 62692,
+      "geometryAndDepthUnchanged": true,
+      "orbitReturnExact": true
+    },
+    {
+      "species": 2,
+      "visibleWoodPixels": 50971,
+      "relitWoodPixels": 49199,
+      "geometryAndDepthUnchanged": true,
+      "orbitReturnExact": true
+    },
+    {
+      "species": 5,
+      "visibleWoodPixels": 68200,
+      "relitWoodPixels": 63864,
+      "geometryAndDepthUnchanged": true,
+      "orbitReturnExact": true
+    },
+    {
+      "species": 8,
+      "visibleWoodPixels": 63380,
+      "relitWoodPixels": 60494,
+      "geometryAndDepthUnchanged": true,
+      "orbitReturnExact": true
+    }
+  ],
+  "errors": []
+}

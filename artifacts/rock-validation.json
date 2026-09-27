@@ -1,0 +1,95 @@
+{
+  "results": [
+    {
+      "id": 91,
+      "count": 200000,
+      "prefixStable": true,
+      "surfaceSamples": 200000,
+      "lightChangesPixels": true,
+      "lightPreservesGeometry": true,
+      "inspectionModes": true
+    },
+    {
+      "id": 92,
+      "count": 200000,
+      "prefixStable": true,
+      "surfaceSamples": 200000,
+      "lightChangesPixels": true,
+      "lightPreservesGeometry": true,
+      "inspectionModes": true
+    },
+    {
+      "id": 93,
+      "count": 200000,
+      "prefixStable": true,
+      "surfaceSamples": 200000,
+      "lightChangesPixels": true,
+      "lightPreservesGeometry": true,
+      "inspectionModes": true
+    },
+    {
+      "id": 94,
+      "count": 200000,
+      "prefixStable": true,
+      "surfaceSamples": 200000,
+      "lightChangesPixels": true,
+      "lightPreservesGeometry": true,
+      "inspectionModes": true
+    },
+    {
+      "id": 95,
+      "count": 200000,
+      "prefixStable": true,
+      "surfaceSamples": 200000,
+      "lightChangesPixels": true,
+      "lightPreservesGeometry": true,
+      "inspectionModes": true
+    },
+    {
+      "id": 96,
+      "count": 200000,
+      "prefixStable": true,
+      "surfaceSamples": 200000,
+      "lightChangesPixels": true,
+      "lightPreservesGeometry": true,
+      "inspectionModes": true
+    },
+    {
+      "id": 97,
+      "count": 200000,
+      "prefixStable": true,
+      "surfaceSamples": 200000,
+      "lightChangesPixels": true,
+      "lightPreservesGeometry": true,
+      "inspectionModes": true
+    },
+    {
+      "id": 98,
+      "count": 200000,
+      "prefixStable": true,
+      "surfaceSamples": 200000,
+      "lightChangesPixels": true,
+      "lightPreservesGeometry": true,
+      "inspectionModes": true
+    },
+    {
+      "id": 99,
+      "count": 200000,
+      "prefixStable": true,
+      "surfaceSamples": 200000,
+      "lightChangesPixels": true,
+      "lightPreservesGeometry": true,
+      "inspectionModes": true
+    },
+    {
+      "id": 100,
+      "count": 200000,
+      "prefixStable": true,
+      "surfaceSamples": 200000,
+      "lightChangesPixels": true,
+      "lightPreservesGeometry": true,
+      "inspectionModes": true
+    }
+  ],
+  "errors": []
+}

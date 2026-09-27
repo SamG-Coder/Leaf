@@ -1,0 +1,16 @@
+{
+  "newMapSize": 1024,
+  "readOnlyDimensions": true,
+  "terrainResizeRejected": true,
+  "scales": [
+    2.5,
+    0.25,
+    0.3,
+    0.45
+  ],
+  "sunPreviewBeforeRelease": true,
+  "elevationPreviewBeforeRelease": true,
+  "geometryReused": true,
+  "lightUndo": true,
+  "errors": []
+}

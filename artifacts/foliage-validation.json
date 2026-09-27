@@ -1,0 +1,1229 @@
+{
+  "resolution": [
+    768,
+    768
+  ],
+  "count": 100000,
+  "results": [
+    {
+      "id": 0,
+      "key": "english-oak",
+      "name": "English oak",
+      "geometryHash": "a9a344612dfc1e0605b1c22265c274e5a7046193511ed98ac9f951cb09579e58",
+      "pixelsHash": "27e49296af31f3e11e2e9422cc1d7cac8d446b1ea8ae5ed9bf910ce2bf8dd4eb",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.125024
+    },
+    {
+      "id": 1,
+      "key": "red-maple",
+      "name": "Red maple",
+      "geometryHash": "646d342454f9a4195384d75355c1263a3a3017c190f25285152ed93be56a33c8",
+      "pixelsHash": "ba99edcc13c19050b2f2519ce428d3740f78c39b83a608ff1f2b17689a112e08",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.15088
+    },
+    {
+      "id": 2,
+      "key": "silver-birch",
+      "name": "Silver birch",
+      "geometryHash": "83a492a6a8636fcf71823d870d99846adf0188d700dc40a73209eead29b31e23",
+      "pixelsHash": "10bd49c1a1dc78218946e92b667fdbd302e5bb3f2b433048e59103f40249ccbd",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.080352
+    },
+    {
+      "id": 3,
+      "key": "weeping-willow",
+      "name": "Weeping willow",
+      "geometryHash": "cca01f5a315579fcee56f0ca9787e011814894c6ec4b53f90c92bdd8fa92c278",
+      "pixelsHash": "3c6cd42fc517530e30923423f443079c9881acf2aa404f9c92d3a83f86584946",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.191648
+    },
+    {
+      "id": 4,
+      "key": "norway-spruce",
+      "name": "Norway spruce",
+      "geometryHash": "75425b0ebd6d10fa651441a6c778d3df99546b7696bdc9f9f5dc471af860718a",
+      "pixelsHash": "3f55e3e1608ee11de2b31853bbe07bf5df0073c933263e3eb8da957f6bd7981f",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.112416
+    },
+    {
+      "id": 5,
+      "key": "stone-pine",
+      "name": "Stone pine",
+      "geometryHash": "89f0e36216015bfd6d828f8ef217383b5fd16098dfe2167cf2dd29702bb11db0",
+      "pixelsHash": "43434c65e0ad7805d924cb6733da1495573d31b1f001993f9954976d828050fd",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.150784
+    },
+    {
+      "id": 6,
+      "key": "lombardy-poplar",
+      "name": "Lombardy poplar",
+      "geometryHash": "31798c502cc2da131dcf072e2509f21816b8be1d9cb93589f5d87f8eaecda00f",
+      "pixelsHash": "b320f282ff1707c585a963a5be88c711d09b236335717cf266172d44f37872cc",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.125952
+    },
+    {
+      "id": 7,
+      "key": "italian-cypress",
+      "name": "Italian cypress",
+      "geometryHash": "936f9974cb1e5a996203360ab965cb5d25c07332eb1c79330a377076ca0ca046",
+      "pixelsHash": "8425c45e747be6d9bf3034dceb02a21997ee3bc3b19b29603e681baf8fbaaafe",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.082592
+    },
+    {
+      "id": 8,
+      "key": "blue-gum",
+      "name": "Blue gum",
+      "geometryHash": "60c88e9757ac4cf1e340cd1f1533b3ed18b675077eea8e3cab00b4084d7eda61",
+      "pixelsHash": "777c69c67df1e0de488a8708f627905581f9aabdb48cf8f842302f0664e55454",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.185344
+    },
+    {
+      "id": 9,
+      "key": "canary-island-date-palm",
+      "name": "Canary Island date palm",
+      "geometryHash": "d80b559e650f301d8c2633f987e078810b4332fbddfa909c44aa569f730bdc53",
+      "pixelsHash": "c4500bbc1b439789d592aae6e8d3924286ad1bd80bd50e30773114afb310bedf",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 1.352352
+    },
+    {
+      "id": 10,
+      "key": "grass",
+      "name": "Instanced grass",
+      "geometryHash": "2e8fa29555c6a42fe87aaeb2f5abefc61daf46e4f3f3fd951f33190c6497b382",
+      "pixelsHash": "ff5fa0092c7b30893a0b024c0db581e7a72a8bf9a2a3736d9003fc00175fad4d",
+      "windChangesPixels": true,
+      "rootsFixed": true,
+      "medianGpuMs": 0.103776
+    },
+    {
+      "id": 11,
+      "key": "boxwood",
+      "name": "Boxwood",
+      "geometryHash": "3638a275f7ec2216dd5604bf86777efe4bf746f0c655a025177002f01fac5bd8",
+      "pixelsHash": "0e1a8675284c13a4e8332993868cd9525904c8c5f279ba09741eae93cbdf2df5",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.170048
+    },
+    {
+      "id": 12,
+      "key": "english-lavender",
+      "name": "English lavender",
+      "geometryHash": "d0feefb661972e352132fbb0896083a2404d23b372a8a43f380be0b3c93fd9e7",
+      "pixelsHash": "ead3b3a8388d8afeaa77d89c3f824bc27bfd21898b7754008d32108598a44bae",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.22176
+    },
+    {
+      "id": 13,
+      "key": "rosemary",
+      "name": "Rosemary",
+      "geometryHash": "073c97b00ea85b7d8b0dc863963e6124005bafb828e7b1e6b1f98ed21572c283",
+      "pixelsHash": "ccd79a1674b3239a943cc1d8d7a45d7f20abde5c334c64e6fccf8a88d44da11b",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.251328
+    },
+    {
+      "id": 14,
+      "key": "bigleaf-hydrangea",
+      "name": "Bigleaf hydrangea",
+      "geometryHash": "2d00acd2cad025d585c9162e347c2f41dab373d8e410a614a55f2b831a1d90ec",
+      "pixelsHash": "caba61efc0654088d8a234b57d73168e2f67c5eca8b2ae30a6f1a6884a3782cc",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.481248
+    },
+    {
+      "id": 15,
+      "key": "catawba-rhododendron",
+      "name": "Catawba rhododendron",
+      "geometryHash": "709b1045329b005f7cb9e66b6088b125a4bcd3e23e62daac3b3a779528ac248a",
+      "pixelsHash": "11538a209b24c8f8e36af72c1c80506fa2d1cb96e3f2d24eec3773466dafc825",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.491744
+    },
+    {
+      "id": 16,
+      "key": "southern-indian-azalea",
+      "name": "Southern Indian azalea",
+      "geometryHash": "a8f7e0321bb0e0160f9d026b98485be7aeac3848486431943a26431b03ce1840",
+      "pixelsHash": "c3842d8715ea92654b957108f240ce925a9ca4c3e97972db4fbc13908fbaa130",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.2312
+    },
+    {
+      "id": 17,
+      "key": "border-forsythia",
+      "name": "Border forsythia",
+      "geometryHash": "ce25ddff34aa149e8a7aaadef7dd0b349f913bd7906e80dfa775dfd7fa0358e6",
+      "pixelsHash": "04b54e1a9c5add5f5d1e5f5b3a582b35af8b96c27dda4ea90283b0996da67cff",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.245952
+    },
+    {
+      "id": 18,
+      "key": "creeping-juniper",
+      "name": "Creeping juniper",
+      "geometryHash": "148d608feb984f5f2b52efc0793c693e12fe9f9f298c6ec92830ae1f1e6587d0",
+      "pixelsHash": "27dc589235def5b74b43b5d1717b794af050f025eb24bf50763330fc42a29a41",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.101888
+    },
+    {
+      "id": 19,
+      "key": "japanese-holly",
+      "name": "Japanese holly",
+      "geometryHash": "794032a9858ff16eee2d049c9db2303f6064147c8a0f4587755c0b0852c549b5",
+      "pixelsHash": "2526f367658248001623b4025baa2ab30b10e2a13e831ebe34651f18a61d00dc",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.123104
+    },
+    {
+      "id": 20,
+      "key": "japanese-barberry",
+      "name": "Japanese barberry",
+      "geometryHash": "820219291f01035de9cc3bdab0a51020358a50c6d1f81e839163303c69b890b0",
+      "pixelsHash": "6fc66783ed6f0485809ad25eaee0dbc0ffbe5d9ef3a61c93536e178d3e8ac413",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.119488
+    },
+    {
+      "id": 21,
+      "key": "sunflower",
+      "name": "Sunflower",
+      "geometryHash": "344db595c14d58134395bfb8b0d23bd741f28a07b8b6e8af27e36a3422ea478e",
+      "pixelsHash": "0659cc167644018e94356a83a6253f0b72ffa7971595e765e86075d3ec8a53cc",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.082016
+    },
+    {
+      "id": 22,
+      "key": "shasta-daisy",
+      "name": "Shasta daisy",
+      "geometryHash": "0eb8344304debea9e4581be1d2fabc6bec0e07c2b5e21fb8c3cb4f67d6edca5b",
+      "pixelsHash": "1dc7da92af122393ce6564af7308a9b0fb988b16587d3a25817c9b2af9ccb451",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.08192
+    },
+    {
+      "id": 23,
+      "key": "tulip",
+      "name": "Tulip",
+      "geometryHash": "48e16cfd82240a9fbd0cfbe6f18f322d8694ceffa72ad1606dc1908ac169e5d7",
+      "pixelsHash": "ec8b477c144842feb3434cce79e66483a17cc24b8a95b1ce87a14f1bb5c20c92",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.08176
+    },
+    {
+      "id": 24,
+      "key": "daffodil",
+      "name": "Daffodil",
+      "geometryHash": "ccd01df0985f591aaabd8a90b49b336be1c39f249ab94495d9967bcc5f22c86f",
+      "pixelsHash": "ca701a6953ee96707b673078a4f0deb648830a9a3238766b66bdfa91914c859a",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.081632
+    },
+    {
+      "id": 25,
+      "key": "common-poppy",
+      "name": "Common poppy",
+      "geometryHash": "fd80181fcfda9650babc9b7d3849512950034daffe9ea518e317b8d2cf0cdf13",
+      "pixelsHash": "3a8d04e651bd3fd0068d793139c298c25381ba6fb724603d0606c03ed74e13a3",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.082304
+    },
+    {
+      "id": 26,
+      "key": "garden-rose",
+      "name": "Garden rose",
+      "geometryHash": "4a0ea8bb6a92a9831bd9db853c746b1fec0290815be973fdb723b34f8043b8c0",
+      "pixelsHash": "d53d0b13e7613a5dad4e0d27515450b9e1dd41e98587bea87bb2a7e69a146233",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.081728
+    },
+    {
+      "id": 27,
+      "key": "cosmos",
+      "name": "Cosmos",
+      "geometryHash": "d04d8f9688c9f3c5fcf24c30ca640c24f68c139f3273bed904c9b57f1f4df3ae",
+      "pixelsHash": "7fd2cf66ac358c5bf5771dcabc850a6786a5907652c7c8c60c5b8234ce4a591d",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.080448
+    },
+    {
+      "id": 28,
+      "key": "purple-coneflower",
+      "name": "Purple coneflower",
+      "geometryHash": "d3d3af4bcfae0301043066956accd43b64a85feb7de55df9d6c2f9fad42fb25c",
+      "pixelsHash": "e5de580f13092026890d90551d318032ca1ede5b630c6b99b92d91b5d8ebb2d9",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.080416
+    },
+    {
+      "id": 29,
+      "key": "english-bluebell",
+      "name": "English bluebell",
+      "geometryHash": "e64b8e4efe971b4405af9a9896ce6eeec615b17eede4503b1d89363ac3eeca21",
+      "pixelsHash": "64cbfc755f9a4d6dbd63fb6fdbc31d64313c0f9d11b80a5a2b9d507f6886d2f1",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.082592
+    },
+    {
+      "id": 30,
+      "key": "bearded-iris",
+      "name": "Bearded iris",
+      "geometryHash": "4bf192b1fa9d3763ef29765a572becd7470adbe04f43697bec6fb3c4de1647ee",
+      "pixelsHash": "21255cd7961e8cdbca9f09b8fdbf6cddbb4021370ed831c15755e33a68e8b8cd",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.081856
+    },
+    {
+      "id": 31,
+      "key": "boston-fern",
+      "name": "Boston fern",
+      "geometryHash": "b2944871f7fae66f55edb83137c41a24ef05d1883d98cc47273b8b8d9c42ab64",
+      "pixelsHash": "40a77aed43d8dd951d5bb736d38ebf890b48523ade3a3c7260cbf54d9f892b09",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.062784
+    },
+    {
+      "id": 32,
+      "key": "ostrich-fern",
+      "name": "Ostrich fern",
+      "geometryHash": "acdb5796990b5b8e171ff2af4153857eb7394b6337f322c85232bb30e994c767",
+      "pixelsHash": "e0aaf54710f955da15d1e703e537f766d00752ab260dacd5168ff071e87d7139",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.059424
+    },
+    {
+      "id": 33,
+      "key": "northern-maidenhair-fern",
+      "name": "Northern maidenhair fern",
+      "geometryHash": "6cbb21e78a146d93a093532b6baa6cc75b50180c858b509c8f64b5ad1c8a9f58",
+      "pixelsHash": "a95f25c1c120c995b379ee0d380ebb15adcdba246de7e21397b71249bc23f367",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.061632
+    },
+    {
+      "id": 34,
+      "key": "autumn-fern",
+      "name": "Autumn fern",
+      "geometryHash": "43efe8bef44decc9c62a36a59124817cbd7c7d9bd1ace54be76216c5b5fbdc8e",
+      "pixelsHash": "fa213a38078159705da9cbb7e8e7b6211bec91d0dc00dea069e585ed2884a091",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.065152
+    },
+    {
+      "id": 35,
+      "key": "japanese-painted-fern",
+      "name": "Japanese painted fern",
+      "geometryHash": "083e48018758dbd5e909a74cfeb510fb6992f4ad9401c4c251e5519c61070768",
+      "pixelsHash": "df7f44cdd04d9679fdd42f6dfe86b9d6e9058cad9fda034db1ada665a7fa16e3",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.063776
+    },
+    {
+      "id": 36,
+      "key": "birds-nest-fern",
+      "name": "Bird’s nest fern",
+      "geometryHash": "02fa89a645fd2acff1e342f914514a80cd31b5c3de39786d52db82066ea72a48",
+      "pixelsHash": "446d438376ca4ef53a60e9b0bb2f24252c05ae69cdef1e12c21855162d6c655d",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.060192
+    },
+    {
+      "id": 37,
+      "key": "japanese-holly-fern",
+      "name": "Japanese holly fern",
+      "geometryHash": "1ea850d288fe4e62ad62f48fe785251740d3dea9a033766aa6d7ed9a0f853035",
+      "pixelsHash": "988c2fddcc83faf30571f5425f8e12253f3f1068b30f610b91edf497402ffdfd",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.063264
+    },
+    {
+      "id": 38,
+      "key": "christmas-fern",
+      "name": "Christmas fern",
+      "geometryHash": "54240207d5223584372c33d8ecdd73caaf897746ee83b7f2b5920b38f41daf28",
+      "pixelsHash": "ac8d31052e442ad36612f366872d3c00e0a0186eedb27820c92f7aaedb772385",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.060416
+    },
+    {
+      "id": 39,
+      "key": "royal-fern",
+      "name": "Royal fern",
+      "geometryHash": "6c55d5631fa3ea3a75ecbd71115286a3d81531ed2051dcbe5c40077df4a79bdf",
+      "pixelsHash": "5eb21a70039d38989c6da2eabb7dad963da7dec0c1bea453017f41140cc5c59c",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.067808
+    },
+    {
+      "id": 40,
+      "key": "sensitive-fern",
+      "name": "Sensitive fern",
+      "geometryHash": "bf337660aaee691fba57f71646df8833312a84d749206c7470c9da0e8528a86d",
+      "pixelsHash": "32ae46f534db30491214977e018d29446a959d6ea5a2271ed87e2b69d777647e",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.059648
+    },
+    {
+      "id": 41,
+      "key": "pincushion-moss",
+      "name": "Pincushion moss",
+      "geometryHash": "31ef5d4473550464999be95e16a1850ca6127ddd15e0361c0e75d223d0457584",
+      "pixelsHash": "dc617409ee13d2bb67d59fa04ca99b2de22c74e36d1482b13a513730610ca0b7",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.056736
+    },
+    {
+      "id": 42,
+      "key": "common-haircap-moss",
+      "name": "Common haircap moss",
+      "geometryHash": "ab5aa758a6771d5e24e0dd0e6bf68550bf4ed5d72704785c6d5329d9fea253dd",
+      "pixelsHash": "e30625d4e1e6675716c3bbb557ffadb7cf225be656cf9974a37b82cc43cb5b80",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.05856
+    },
+    {
+      "id": 43,
+      "key": "broom-fork-moss",
+      "name": "Broom fork-moss",
+      "geometryHash": "7d6794841850a028997e9d9671109e67705525b6882b834e1e6bdac0f38b2d01",
+      "pixelsHash": "e1bb64641eb12caae06efaa78ddcc07d46df0ba2fad915d8667d4861b62da07f",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.042336
+    },
+    {
+      "id": 44,
+      "key": "cypress-leaved-plait-moss",
+      "name": "Cypress-leaved plait-moss",
+      "geometryHash": "43e902c259efd4a1794942af45d35ba4b2d9a38fc01211a030d29b4b69997a88",
+      "pixelsHash": "176a416469e99fb529785341252e74eb4c931f906b5e4ee4db953b9b7b9e328c",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.057568
+    },
+    {
+      "id": 45,
+      "key": "tamarisk-moss",
+      "name": "Tamarisk moss",
+      "geometryHash": "c73cb2eb4858f1fa202c1b3a3251025586745b779ac987c6ad35c1c367178a09",
+      "pixelsHash": "a473d9b6e3a1fb2fb2e03f9d96f17b733a844fad2973af843126c05f0ae01322",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.05744
+    },
+    {
+      "id": 46,
+      "key": "glittering-wood-moss",
+      "name": "Glittering wood-moss",
+      "geometryHash": "5669033f89c25218e8c719ba5a73f06810b1ddad3f4e4604e4902dc67309b71d",
+      "pixelsHash": "8f42d5c4cd4ca2f9cc771ccdaa63c388251dc02a3baa16a342df7f935991dfb2",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.057344
+    },
+    {
+      "id": 47,
+      "key": "springy-turf-moss",
+      "name": "Springy turf-moss",
+      "geometryHash": "3c6dc1a0981d29fb615272d501cc14ef17fbc67571a180441b90a1d73abee121",
+      "pixelsHash": "e34a6eaf0421315e9d4d77371c3d139da8bd2d4a6f0fc9c356c84639db0ac961",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.057312
+    },
+    {
+      "id": 48,
+      "key": "tree-moss",
+      "name": "Tree moss",
+      "geometryHash": "fcfe32d8db123e1f17efc6cb2a8b7718537ba74464d84fa53928618b64463816",
+      "pixelsHash": "23cb53020c9d6218509848f3be2b136f8a452583d8c3989012e0e74ffeb3dbb5",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.058656
+    },
+    {
+      "id": 49,
+      "key": "blunt-leaved-bog-moss",
+      "name": "Blunt-leaved bog-moss",
+      "geometryHash": "a1a01a91ef4d6d3295e4edb7c07847fb101043b515de88c5b2e8f475259c7e49",
+      "pixelsHash": "a36b30a08de11aee10c5f3f694e425fdeedc327ac1594d5ba2107e125cab9d60",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.057824
+    },
+    {
+      "id": 50,
+      "key": "silvery-thread-moss",
+      "name": "Silvery thread-moss",
+      "geometryHash": "dba089c4eb43b48f8982d6e9a6854268eff208bbaaac8d56e2f74d8ef5d8fe86",
+      "pixelsHash": "b2dcc477001e43fcd93557e77646ea300cec8e645888adcd7205876fbbbf61d6",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.057504
+    },
+    {
+      "id": 51,
+      "key": "english-ivy",
+      "name": "English ivy",
+      "geometryHash": "d446f7bfe3bc981bb595de1699581bad7228c7e74bd51e84f4053a158d682c35",
+      "pixelsHash": "7221b8894c5711b80f22cb1bb4876c93f85f5a8fc3a1e03bba31e1d9341a60a5",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.184032
+    },
+    {
+      "id": 52,
+      "key": "canary-ivy",
+      "name": "Canary ivy",
+      "geometryHash": "3fa77b49797a509242a685e51480443ae9e6840c97606519fd0f71241bf29d71",
+      "pixelsHash": "13c12b20a14a38ae5409d1608fed08535e5fd74b3e5bc7f8c05c37495b155bd2",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.184128
+    },
+    {
+      "id": 53,
+      "key": "boston-ivy",
+      "name": "Boston ivy",
+      "geometryHash": "5b6c66dfb6f352ea2724c529b8d575c47ac3f410e94912913f07fb3e3cc201cb",
+      "pixelsHash": "5e98631d800dc2961ed6071821117697e5675e12653d72e21b5fa4a20577b9f4",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.184
+    },
+    {
+      "id": 54,
+      "key": "virginia-creeper",
+      "name": "Virginia creeper",
+      "geometryHash": "37372bddb7b7803ce62376949348bcd86d4bcfbca0acd29546edaa439016152e",
+      "pixelsHash": "e42e8aac30e46e952368593907471801bf48005edad714d4676649fb9aba06c0",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.182944
+    },
+    {
+      "id": 55,
+      "key": "grape-vine",
+      "name": "Grape vine",
+      "geometryHash": "f1739cf2de7707e77fb1e0dc8cd57bd2a07bcb2ce4d3d3465a73d76c16e9c582",
+      "pixelsHash": "1e48c698f6564a359514d4c3ada363d8069e951a029364218ea3e6bdbced3a54",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.064768
+    },
+    {
+      "id": 56,
+      "key": "chinese-wisteria",
+      "name": "Chinese wisteria",
+      "geometryHash": "95e1387666d8fe96058c7cfc8c732d1a96875a6cd6ef5227d32ce7933e5f94e9",
+      "pixelsHash": "bf93e0f2b65291973ff87e6a24221687b840cf2bdc4807b4237388c99e8b6618",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.18448
+    },
+    {
+      "id": 57,
+      "key": "coral-honeysuckle",
+      "name": "Coral honeysuckle",
+      "geometryHash": "2b4659efea9b780068653973c1473d8a63f5f4753ab336032f1425a6e609725f",
+      "pixelsHash": "a0a85944c0f5762d97d5fb25b8108d63c7494d1deb932e78ebdf0b533231fd3e",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.18336
+    },
+    {
+      "id": 58,
+      "key": "virgins-bower",
+      "name": "Virgin’s bower",
+      "geometryHash": "7d2d856ffd26ce9f105cc4d3ffb1b316cf909c636e03378f1b81a10ca00205c2",
+      "pixelsHash": "eb0b3c8eb9a609a0018e73a2e74849479074e56e940c1d4a20fced447ba2113f",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.066496
+    },
+    {
+      "id": 59,
+      "key": "morning-glory",
+      "name": "Morning glory",
+      "geometryHash": "ef2f0fc997507e9409917568583071b880fdbbd06e875f68d1a9caab0fc9ed4a",
+      "pixelsHash": "9d2f4c24b8674eb0e7912bb629fe12be47e9141e75e434e2e686a4b313464a69",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.184512
+    },
+    {
+      "id": 60,
+      "key": "creeping-fig",
+      "name": "Creeping fig",
+      "geometryHash": "7c745e3e0740f3f98852707d41442f0837899c1094c82366ce82b04d0454ddd4",
+      "pixelsHash": "af8f40ad07a074533490ffadcf2b10c1f0d709c6c816b5320c32eeb4e6f6ab27",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.184928
+    },
+    {
+      "id": 61,
+      "key": "blue-fescue",
+      "name": "Blue fescue",
+      "geometryHash": "0abd3210f65ac5af4af010893c29d6af354019b26b7c2f170d5d01498c5d5dc4",
+      "pixelsHash": "e97c9bfd89f28cb61970511de39be6a580c179b4125d40136cab438dca5e0e40",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.287552
+    },
+    {
+      "id": 62,
+      "key": "red-fescue",
+      "name": "Red fescue",
+      "geometryHash": "e49b7d69cc42b8495e0464e1fe73ba8ba83d9358e91ee6a4dd4fd19b3800d07a",
+      "pixelsHash": "187c4414ff564596937613f7ac23e6b880381196529472efd4c22f6124a156e1",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.150304
+    },
+    {
+      "id": 63,
+      "key": "kentucky-bluegrass",
+      "name": "Kentucky bluegrass",
+      "geometryHash": "316f7324789d9c804c46dfad2a04124ddf33a2b99c26ddaeea1f74698120629d",
+      "pixelsHash": "f9c9f52dcddf66d2d1d4e4c521a03c308668a552a84c7f3acc84771dd996f1e7",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.150976
+    },
+    {
+      "id": 64,
+      "key": "perennial-ryegrass",
+      "name": "Perennial ryegrass",
+      "geometryHash": "3c4c607775ce36cf66182c6a47df393087f405147c9f3975a4d81e974eaeaf53",
+      "pixelsHash": "7508a9e5c939794b46c0c8442447b0c6ad49a7b94c48ea30ca61561d719f32d6",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.204064
+    },
+    {
+      "id": 65,
+      "key": "bermudagrass",
+      "name": "Bermudagrass",
+      "geometryHash": "fd22b9ff5465ce143bc796bf58d010dcc9a3bc602c398dfe0e721aa4e62ff848",
+      "pixelsHash": "691eadbe47b1005b3fe0ff5e600293a804e82fa25d1056092c9bf0a346b6ebde",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.088224
+    },
+    {
+      "id": 66,
+      "key": "zoysiagrass",
+      "name": "Zoysiagrass",
+      "geometryHash": "fcf9c1566209e80de8f25d34d55d8279a5c9eaee7093f669d5557ff8d1fa67f5",
+      "pixelsHash": "c2f2e5f8198b400c63132f5c931e8b0fe1c5a36f31286918d9eee990fe7b3e59",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.09056
+    },
+    {
+      "id": 67,
+      "key": "chinese-silvergrass",
+      "name": "Chinese silvergrass",
+      "geometryHash": "b8e525841e109c0b5c7974f392d29628ae7882451c409627d7a2c5d1764e4ca3",
+      "pixelsHash": "7bb8e6e47fae8ce5b1123f9a623f9fa0534c87f0b8a256af51f246ab22a4629f",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 1.152096
+    },
+    {
+      "id": 68,
+      "key": "switchgrass",
+      "name": "Switchgrass",
+      "geometryHash": "f039f3109772213b45e2768dc75c3f50fbf97340dd06ec72d33b7591c5af8656",
+      "pixelsHash": "95ceede611a5990e36950c06a19be91731d3f49c2ab5e62fa2039d24f07951ce",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.813696
+    },
+    {
+      "id": 69,
+      "key": "fountain-grass",
+      "name": "Fountain grass",
+      "geometryHash": "4e578746cd29f6311c0c782d3e039c635a7c34963962181e8aec6afe4de082ba",
+      "pixelsHash": "6013442c3f1af20503b2c1329cf0ec7f6548a55fca0551e944fde9d1b9cea545",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.570112
+    },
+    {
+      "id": 70,
+      "key": "mexican-feather-grass",
+      "name": "Mexican feather grass",
+      "geometryHash": "0dd538d21c79a735d53cb06d13707191a9330d739f23a4e46e82fb363883b84d",
+      "pixelsHash": "cb58d0fa38bd69128a90683c4ae4a343729f5a16bc4a767f1dcf1c487f6a5f2d",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.400448
+    },
+    {
+      "id": 71,
+      "key": "wheat",
+      "name": "Wheat",
+      "geometryHash": "1037097508bb9800fd284cbe24f0027691c3b07dc4a9b28ad14b639ac754fca3",
+      "pixelsHash": "3c05a505f719361db79dd67e272c72993b5e330200fa35ed1aa797abf3abed55",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.05136
+    },
+    {
+      "id": 72,
+      "key": "barley",
+      "name": "Barley",
+      "geometryHash": "fd77be25c0dc6375b844eccfe6b0eb88620096867e29f53f6730d64645d526e2",
+      "pixelsHash": "75519b611a39767bd99313b7f9f758758b6e887d5539f9eb160c27528cd713fc",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.065376
+    },
+    {
+      "id": 73,
+      "key": "oats",
+      "name": "Oats",
+      "geometryHash": "f6de09a7cbd4d9b7b9a5b7080fc25b194b456250e1121af661cc5a6980ccd019",
+      "pixelsHash": "7668bd2f434904bc63c17e1b4d31fd6e70b1aa5b6bdcae034cf44cb96f34b124",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.065696
+    },
+    {
+      "id": 74,
+      "key": "rice",
+      "name": "Rice",
+      "geometryHash": "122cc6f8603ba05a558e7f0cdce9fe9cd6f3a484cd0a38dbc1c62b59f609fabe",
+      "pixelsHash": "5220f5731f6639736b300ece70991ff9329f08d76f65e1e716628bf23525f2aa",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.063168
+    },
+    {
+      "id": 75,
+      "key": "maize",
+      "name": "Maize",
+      "geometryHash": "da95c4c4e803b535c19d0bcd1dee04997d34a3efada85cc7231baab42c55a204",
+      "pixelsHash": "ad066f0b16182cb3878667af0a77b84f0d21c45b75678e8f8836ea87f12df61a",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.07152
+    },
+    {
+      "id": 76,
+      "key": "grain-sorghum",
+      "name": "Grain sorghum",
+      "geometryHash": "b8a51a7f56788ec7748b7165e6cf0b99fc576694995fbc9d8f4dc205106cd005",
+      "pixelsHash": "7679435eb05fb50652f61119533850ca5e385e71a546d4f9e6ce17412e320cbd",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.07232
+    },
+    {
+      "id": 77,
+      "key": "pearl-millet",
+      "name": "Pearl millet",
+      "geometryHash": "6ca9e12b2cd058e1a9bc8a7faf68844b5f72e63c1c7f50cc6389d177e2e50c4c",
+      "pixelsHash": "f93c23e4ec10100eb045dc03359cd44fa8ae1561a1dbd8ba71429d8a7bcc93ab",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.067616
+    },
+    {
+      "id": 78,
+      "key": "sugarcane",
+      "name": "Sugarcane",
+      "geometryHash": "c1f8c139b65838850cd6c4ccd9a44b38ec5730b699be3114771cde8bc0554168",
+      "pixelsHash": "a5188870d5e651dca4a09861bc0ecb95c2cebdd1c569f0150f2993a8d330b43d",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.059232
+    },
+    {
+      "id": 79,
+      "key": "soybean",
+      "name": "Soybean",
+      "geometryHash": "f264d98b934a47be97ddd2e768a5f0d5ea8d068a6eb988f5e0af73514cfd8511",
+      "pixelsHash": "54fa872e9c5f0c1e92ee74dea6418982e22b9ed9670b33ca8b4303dbbf70dd70",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.05392
+    },
+    {
+      "id": 80,
+      "key": "cotton",
+      "name": "Cotton",
+      "geometryHash": "84da56c1c60a225a47566f846a6440371698590dd1b4c0c08402811f9f67e26f",
+      "pixelsHash": "cc4b45d64e78151c00648261faa3ac30078e6c99d81d0437ec8398fbacd11c3b",
+      "windChangesPixels": true,
+      "rootsFixed": null,
+      "medianGpuMs": 0.048448
+    },
+    {
+      "id": 81,
+      "key": "fly-agaric",
+      "name": "Fly agaric",
+      "geometryHash": "045f9efd942d23b508bceef8e1264d0e816b15c1cc08670290d27cc4be365786",
+      "pixelsHash": "c5817498f4661a30d500f6a04a9873bab7b05b81e206c196e32061fc4b10b29e",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.057056
+    },
+    {
+      "id": 82,
+      "key": "porcini",
+      "name": "Porcini",
+      "geometryHash": "287865e590c6c56144258ce440fa7edf6b12697180724f83566884a12299be14",
+      "pixelsHash": "875d9471541fd9ca16356321d23da87358e02bf1e64d6920dd77ab22ba004600",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.057504
+    },
+    {
+      "id": 83,
+      "key": "chanterelle",
+      "name": "Chanterelle",
+      "geometryHash": "65273d310adc1e431b102138660a52b166327f2063e5129103a837d6bcef1a90",
+      "pixelsHash": "ad574075959b28f82b0f07393dd5be02c31c474bdaec452c58e835187a68f06f",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.062272
+    },
+    {
+      "id": 84,
+      "key": "amethyst-deceiver",
+      "name": "Amethyst deceiver",
+      "geometryHash": "15d4fb34e7190ce3099c5a6d3c504a8b3873b49125b45a86054582ac6c9cf02b",
+      "pixelsHash": "97d6e62a980a491f6e4bee19130b5df0d96c8d1cee656f27f0155256373c03b1",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.051584
+    },
+    {
+      "id": 85,
+      "key": "shaggy-inkcap",
+      "name": "Shaggy inkcap",
+      "geometryHash": "e8d37597eb628f1806890c3a69fbe9e09ea2eea30e9b0f5381de93bee1d7bc58",
+      "pixelsHash": "7df887c5c7317c86c1e331edf33924a5931566d8d60856d730958a1c709287f1",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.05744
+    },
+    {
+      "id": 86,
+      "key": "sulphur-tuft",
+      "name": "Sulphur tuft",
+      "geometryHash": "c2d57d3cdc33ff123d7c3144e471c1d856b15fad7229bcfcbdc518900220bfbb",
+      "pixelsHash": "180ea388ee9e9b7b4e521f85642e3299eba779705f2250a55ff2d50301e4a2c6",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.155872
+    },
+    {
+      "id": 87,
+      "key": "oyster-mushroom",
+      "name": "Oyster mushroom",
+      "geometryHash": "0ac5aea7102016373721cdd0f3cd04d8196c16525aad15b0488be1b4ebc690bf",
+      "pixelsHash": "77073d7defaf1cf25d1ced85deb1256f247f61409cadea302f11ae36da108b8c",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.18816
+    },
+    {
+      "id": 88,
+      "key": "turkey-tail",
+      "name": "Turkey tail",
+      "geometryHash": "0ac5aea7102016373721cdd0f3cd04d8196c16525aad15b0488be1b4ebc690bf",
+      "pixelsHash": "24242ad89cbda5961d5f7ad181305efd589a178220f1261f8df7edcd24ffbad2",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.18768
+    },
+    {
+      "id": 89,
+      "key": "common-puffball",
+      "name": "Common puffball",
+      "geometryHash": "bf2828385a3561e5ea5a4b9f2d390dfd778c415b9af2b9081a099d9a6fd6edd4",
+      "pixelsHash": "e238f639a54fb88e27498650f33df09e69cb6ccb2ea7a6e31eb12d4f17bf7df5",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.060928
+    },
+    {
+      "id": 90,
+      "key": "fairy-ring-champignon",
+      "name": "Fairy-ring champignon",
+      "geometryHash": "1880db914984322d262355d05721c19c9a72708721245ccaa06d207dacf2b9ea",
+      "pixelsHash": "f3a6fce80ba09aad41023ff686741bf5184b8853a93576c5512801b2ddd604db",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.06192
+    },
+    {
+      "id": 91,
+      "key": "granite-boulders",
+      "name": "Granite boulders",
+      "geometryHash": "dfb649f9ce88841807cbe18dc26cddd3237dc6b0a8bc619dcbcef20582a37e60",
+      "pixelsHash": "4f87068d25168bec9ecdf58630b7c9d3c9bddcd8951792f4e3c99c49c4cc19c5",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.147296
+    },
+    {
+      "id": 92,
+      "key": "basalt-columns",
+      "name": "Basalt columns",
+      "geometryHash": "519077038afa663f116eba803347c803334b6734b427d21bc1ef08c3b14f006a",
+      "pixelsHash": "d23c054ab0a9fc911f22d53c7da973f8415af98cdf36b694a1140cdd34b3b5e7",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.162752
+    },
+    {
+      "id": 93,
+      "key": "sandstone-outcrop",
+      "name": "Sandstone outcrop",
+      "geometryHash": "52f7de90dc1ad41d5600d29bbffb770940d88da5bad241f162721ab393e0448b",
+      "pixelsHash": "709c59622bb8a8a7b421af47ec1971f331e6143c434832cbdb5906ba73f2119d",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.136096
+    },
+    {
+      "id": 94,
+      "key": "slate-slabs",
+      "name": "Slate slabs",
+      "geometryHash": "35d2033e39e533557d9cbeac38a43868ceef27c1b0495170602d64d9a1b13d85",
+      "pixelsHash": "6aff1a3b2989d0f182b3d79664f5e0caafe2338ae2f9dd62f0e71183a14c0e07",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.152576
+    },
+    {
+      "id": 95,
+      "key": "limestone-boulders",
+      "name": "Limestone boulders",
+      "geometryHash": "dfb649f9ce88841807cbe18dc26cddd3237dc6b0a8bc619dcbcef20582a37e60",
+      "pixelsHash": "99e88583454f13b72dcd93ae3b34fa9ac4049eb766d5ce8a9d3b735c024ad4a0",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.15168
+    },
+    {
+      "id": 96,
+      "key": "quartz-cluster",
+      "name": "Quartz cluster",
+      "geometryHash": "f6063b0db5192e899bf0edd3d87f4449161fa5f305fddbbfc7b50227ced6b798",
+      "pixelsHash": "c440b8d35ccb34639a68ceb2bdcba350eeea4c04a5699b32126a2d38429643d5",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.156736
+    },
+    {
+      "id": 97,
+      "key": "amethyst-cluster",
+      "name": "Amethyst cluster",
+      "geometryHash": "f6063b0db5192e899bf0edd3d87f4449161fa5f305fddbbfc7b50227ced6b798",
+      "pixelsHash": "9900e24d151c8920b690dbdf499f97e6052abfcc7122deae7807c4b76c162771",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.160032
+    },
+    {
+      "id": 98,
+      "key": "smoky-quartz",
+      "name": "Smoky quartz",
+      "geometryHash": "f6063b0db5192e899bf0edd3d87f4449161fa5f305fddbbfc7b50227ced6b798",
+      "pixelsHash": "7a211850e37e49c3f01b3a2ca2ef9a20b1db5119522ef0ee6d938c8aba9691cb",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.141216
+    },
+    {
+      "id": 99,
+      "key": "pyrite-cubes",
+      "name": "Pyrite cubes",
+      "geometryHash": "886f4c27274b47b68ccfa3f1ae0aa410b0f9717cc6cf1d7988eaf464eafc7c15",
+      "pixelsHash": "fddc986d88b499489399823b842b621f767d27a894e2b8d5229bd7d6666ae49e",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.161248
+    },
+    {
+      "id": 100,
+      "key": "fluorite-cubes",
+      "name": "Fluorite cubes",
+      "geometryHash": "886f4c27274b47b68ccfa3f1ae0aa410b0f9717cc6cf1d7988eaf464eafc7c15",
+      "pixelsHash": "f91e5e269c27119024b21a49bdeb383627924ddcf5b2a00adfc88852f89f744d",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.160928
+    },
+    {
+      "id": 101,
+      "key": "oak-leaf-litter",
+      "name": "Oak leaf litter",
+      "geometryHash": "1058848a848ff1a75c363f3db0f730628b5faad7550176e4bd288dc9e5de42d1",
+      "pixelsHash": "f7ad41850706aa2b919af7d18ec0bb3ebefe3062f7bca4891caadf1b79ff1ca8",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.04384
+    },
+    {
+      "id": 102,
+      "key": "maple-leaf-litter",
+      "name": "Maple leaf litter",
+      "geometryHash": "a98e6b7df5b414fa4b842848808562de2d9a93968a7f08e77586b6eb8bb24010",
+      "pixelsHash": "eed516c22d7c67e267c2032bc3cab92ae8d56053b07afcee6bdc24450272315f",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.043904
+    },
+    {
+      "id": 103,
+      "key": "birch-leaf-litter",
+      "name": "Birch leaf litter",
+      "geometryHash": "703aeff65314edff5c69d6f5e9854159644f8612904922873ed728f5e2ccf96c",
+      "pixelsHash": "31c002eba4686e847e3cbef11a8aa5dd9a72539e4e515d691830c7e7b60219db",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.043712
+    },
+    {
+      "id": 104,
+      "key": "pine-needle-litter",
+      "name": "Pine needle litter",
+      "geometryHash": "bf77f23b3e09be78a6187e6c9fdb2a41f7409f7e3a5e5295a251b7c4ccada986",
+      "pixelsHash": "f29d01fded354fd95b4838e428080fdd00a72256c470fff96b00ea7868ff00c6",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.043328
+    },
+    {
+      "id": 105,
+      "key": "fallen-twigs",
+      "name": "Fallen twigs",
+      "geometryHash": "519f75ae281fa8d4dd16157967b4aedc64ad69e66e6daddc1e72a7ee0198be51",
+      "pixelsHash": "0c7bf4056118c089da631d1dc84989bf10555f37523a983ee4dd241b515c340a",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.050656
+    },
+    {
+      "id": 106,
+      "key": "bark-chips",
+      "name": "Bark chips",
+      "geometryHash": "6cce17a3252b6ab2304fca790f8a678be18b5a5241917c9f5ca26c0e3e5edcf9",
+      "pixelsHash": "02d5512e9fbdf6f7e8e92056f1aa81b947c424280bf3acb0d88451e36edd9d8d",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.046656
+    },
+    {
+      "id": 107,
+      "key": "fallen-pine-cones",
+      "name": "Fallen pine cones",
+      "geometryHash": "aad59b28e8cc4c964ef1f39da673e101b303c650927b50d881a252d0ac95e7d0",
+      "pixelsHash": "6b6ddbf2d13b3ce5b65deabd928672256d88228710f9c25e63700f8b9ec15b93",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.044
+    },
+    {
+      "id": 108,
+      "key": "fallen-acorns",
+      "name": "Fallen acorns",
+      "geometryHash": "f8b968ccd6d69a0f22cac2f3e891640682ce170b2c8ee8550b60ae91d19a8376",
+      "pixelsHash": "4b5530719114444ca96e2ff2b6ec0e62508d9b0ecc012ae98dcef93e421515c2",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.042336
+    },
+    {
+      "id": 109,
+      "key": "pebble-scatter",
+      "name": "Pebble scatter",
+      "geometryHash": "ec373346bfc8a14d466c4ee5d388a362fc349386bfcef45f40987fe5274bad30",
+      "pixelsHash": "4cca3a2a55faadcd9b68e3fa08904c861b4f5572bc552257dc9a6bb02b60d739",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.049184
+    },
+    {
+      "id": 110,
+      "key": "mixed-forest-litter",
+      "name": "Mixed forest litter",
+      "geometryHash": "ebf3c8f1c20ac08bbf2cf81d9ef4a5c5cbe050a233498f812cbc6c15051473e3",
+      "pixelsHash": "94eec2aa7ef2b8ab74ae8a00bb1f1b1b171cfc12e6e31e40a6b7ff80ee51a94b",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.04128
+    },
+    {
+      "id": 111,
+      "key": "fallen-log",
+      "name": "Fallen log",
+      "geometryHash": "70eee67a71573e0d3bf7d433836314b475cb8d1cb6fbbc5cac4ce5e3a306c0eb",
+      "pixelsHash": "5f593231a4a8ed4fafd74e773f502ed676d02de7ef7c08c45df124be24b6a39e",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.0752
+    },
+    {
+      "id": 112,
+      "key": "hollow-log",
+      "name": "Hollow log",
+      "geometryHash": "ceb9a801e7e98b785b847c358f153383d533d7b8808214c2a575e171e0814bc6",
+      "pixelsHash": "ce1a7d17bc3f9d95825b8ab12ec3707a7f68f853cfcaf1c8e364c89319b949c4",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.075648
+    },
+    {
+      "id": 113,
+      "key": "cut-stump",
+      "name": "Cut stump",
+      "geometryHash": "44a650f8828e96785ee2f726903228432ceef0c67c472b37771087dc6149c374",
+      "pixelsHash": "f6b6c9cfe71f4c01e7016b752c05961b7509207e0c838fd61d4f8fe3e12aac26",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.09184
+    },
+    {
+      "id": 114,
+      "key": "snapped-stump",
+      "name": "Snapped stump",
+      "geometryHash": "c5fa3690f8653b76478d37ca620f2657e653c60833bf1658d748e256c144b218",
+      "pixelsHash": "faf9ce9c1dfe5542e167c8140a89c1f40a76048b01bbb04864b5641662d1e3cc",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.088288
+    },
+    {
+      "id": 115,
+      "key": "root-stump",
+      "name": "Root stump",
+      "geometryHash": "659dc98eb4b908e63ef7dc006d4eba6230300c2e29ad758e580ca150e8175c51",
+      "pixelsHash": "f56fa20c47edc70f987e3c6340b1fff637d28332f3f5956593380e64bea651bc",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.085824
+    },
+    {
+      "id": 116,
+      "key": "driftwood",
+      "name": "Driftwood",
+      "geometryHash": "a23c1846dc8f76483e5ac4f2a3fb4d7e698f6ee913cffbfda2c7644bde18504a",
+      "pixelsHash": "275ccf3283cef2de0e37ef7e10e69ce9aac8a604ce71ac4e8f76b0659f7d0419",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.08624
+    },
+    {
+      "id": 117,
+      "key": "fallen-birch-log",
+      "name": "Fallen birch log",
+      "geometryHash": "70eee67a71573e0d3bf7d433836314b475cb8d1cb6fbbc5cac4ce5e3a306c0eb",
+      "pixelsHash": "8be169e733eb2d620e2c43b5706fe89de966239e4ed3b074111d6311075b8124",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.076224
+    },
+    {
+      "id": 118,
+      "key": "split-log",
+      "name": "Split log",
+      "geometryHash": "aba466dd06c82cb56f4279bbab5050f716ecf3a8463e5929c2e0bbab1462993f",
+      "pixelsHash": "5c9060e0f57fb76e16e8d9945c0d43cc1cc8602910d1da88e6df1207e7ff93d6",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.074112
+    },
+    {
+      "id": 119,
+      "key": "log-pile",
+      "name": "Log pile",
+      "geometryHash": "153eed644630f39a2702db824631f94af161264c85c23b39eea3fbbba42fd868",
+      "pixelsHash": "e5119537eb633d1e6fd7cec9927ea2d174072981edd562b0ee9e9663e776b4bc",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.080992
+    },
+    {
+      "id": 120,
+      "key": "dead-snag",
+      "name": "Dead snag",
+      "geometryHash": "0da682d64e2fcf0a91918c62eb7116c4321623c92d74aa295bb1b4415524ec88",
+      "pixelsHash": "b57382a0693c03bd0e8ff07e0e97656297b6637846938fa1194cf0e14f0612c6",
+      "windChangesPixels": false,
+      "rootsFixed": null,
+      "medianGpuMs": 0.075904
+    }
+  ],
+  "prefixStable": true,
+  "additional": {
+    "grassMax": true,
+    "prefixStable": true,
+    "rejectedInvalidOptions": 4,
+    "customVisible": true,
+    "noBranches": true,
+    "customLightPreservesGeometry": true
+  },
+  "errors": []
+}

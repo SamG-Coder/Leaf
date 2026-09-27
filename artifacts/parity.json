@@ -1,0 +1,101 @@
+{
+  "profileImagesMatched": 3,
+  "additionalChecks": [
+    [
+      {
+        "baseline": true,
+        "n": 100000,
+        "scale": 95,
+        "seed": 817,
+        "yaw": 2.1,
+        "tilt": 0.65,
+        "time": 7.3,
+        "wind": 0.35,
+        "mode": 0,
+        "samples": 5,
+        "stages": {
+          "generate": 0.003456,
+          "lighting": 0.00208,
+          "clear": 0.006688,
+          "raster": 0.058176,
+          "branches": 23.99616,
+          "resolve": 0.010688
+        },
+        "steadyGpuMs": 24.07152,
+        "hash": "6ebe0928116022a1a42aa39bb4a34e8eb070f5492d68e9ead3c5f9728b635759",
+        "errors": []
+      },
+      {
+        "baseline": false,
+        "n": 100000,
+        "scale": 95,
+        "seed": 817,
+        "yaw": 2.1,
+        "tilt": 0.65,
+        "time": 7.3,
+        "wind": 0.35,
+        "mode": 0,
+        "samples": 5,
+        "stages": {
+          "generate": 0.002976,
+          "lighting": 0.001856,
+          "clear": 0.006176,
+          "raster": 0.058368,
+          "branches": 0.230464,
+          "resolve": 0.010016
+        },
+        "steadyGpuMs": 0.30499200000000004,
+        "hash": "6ebe0928116022a1a42aa39bb4a34e8eb070f5492d68e9ead3c5f9728b635759",
+        "errors": []
+      }
+    ],
+    [
+      {
+        "baseline": true,
+        "n": 100000,
+        "scale": 95,
+        "seed": 123,
+        "yaw": -1.7,
+        "tilt": -0.35,
+        "time": 3.1,
+        "wind": 0.1,
+        "mode": 3,
+        "samples": 5,
+        "stages": {
+          "generate": 0.003168,
+          "lighting": 0.002048,
+          "clear": 0.0064,
+          "raster": 0.057792,
+          "branches": 28.469632,
+          "resolve": 0.011168
+        },
+        "steadyGpuMs": 28.549088,
+        "hash": "c58a20aec17184b5ef6a64ea8b4752463e35251843739caedd3781297f7bbdc5",
+        "errors": []
+      },
+      {
+        "baseline": false,
+        "n": 100000,
+        "scale": 95,
+        "seed": 123,
+        "yaw": -1.7,
+        "tilt": -0.35,
+        "time": 3.1,
+        "wind": 0.1,
+        "mode": 3,
+        "samples": 5,
+        "stages": {
+          "generate": 0.002976,
+          "lighting": 0.001792,
+          "clear": 0.0064,
+          "raster": 0.059648,
+          "branches": 0.276832,
+          "resolve": 0.010464
+        },
+        "steadyGpuMs": 0.353376,
+        "hash": "c58a20aec17184b5ef6a64ea8b4752463e35251843739caedd3781297f7bbdc5",
+        "errors": []
+      }
+    ]
+  ]
+}

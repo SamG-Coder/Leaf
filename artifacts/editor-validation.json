@@ -1,0 +1,19 @@
+{
+  "passed": [
+    "drag/drop placement",
+    "transform inspector",
+    "GPU pick and drag",
+    "duplicate",
+    "radius multi-selection",
+    "terrain brush",
+    "terrain attachment",
+    "cache reuse",
+    "undo redo terrain stroke",
+    "map file roundtrip",
+    "terrain-only roundtrip",
+    "invalid import preserves map",
+    "autosave reload",
+    "example render"
+  ],
+  "errors": []
+}

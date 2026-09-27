@@ -1,0 +1,15 @@
+{
+  "treeMasks": [
+    0,
+    0.8297703517204548,
+    0.8169527733272297,
+    0,
+    0
+  ],
+  "removalClears": true,
+  "lightUpdates": true,
+  "geometryReused": true,
+  "moss": true,
+  "stone": true,
+  "errors": []
+}

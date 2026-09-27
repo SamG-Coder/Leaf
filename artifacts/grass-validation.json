@@ -1,0 +1,105 @@
+{
+  "results": [
+    {
+      "id": 61,
+      "count": 200000,
+      "prefixStable": true,
+      "leaves": 200000,
+      "petals": 0,
+      "lightChangesPixels": true,
+      "lightPreservesGeometry": true,
+      "inspectionModes": true
+    },
+    {
+      "id": 62,
+      "count": 200000,
+      "prefixStable": true,
+      "leaves": 200000,
+      "petals": 0,
+      "lightChangesPixels": true,
+      "lightPreservesGeometry": true,
+      "inspectionModes": true
+    },
+    {
+      "id": 63,
+      "count": 200000,
+      "prefixStable": true,
+      "leaves": 200000,
+      "petals": 0,
+      "lightChangesPixels": true,
+      "lightPreservesGeometry": true,
+      "inspectionModes": true
+    },
+    {
+      "id": 64,
+      "count": 200000,
+      "prefixStable": true,
+      "leaves": 200000,
+      "petals": 0,
+      "lightChangesPixels": true,
+      "lightPreservesGeometry": true,
+      "inspectionModes": true
+    },
+    {
+      "id": 65,
+      "count": 200000,
+      "prefixStable": true,
+      "leaves": 200000,
+      "petals": 0,
+      "lightChangesPixels": true,
+      "lightPreservesGeometry": true,
+      "inspectionModes": true
+    },
+    {
+      "id": 66,
+      "count": 200000,
+      "prefixStable": true,
+      "leaves": 200000,
+      "petals": 0,
+      "lightChangesPixels": true,
+      "lightPreservesGeometry": true,
+      "inspectionModes": true
+    },
+    {
+      "id": 67,
+      "count": 200000,
+      "prefixStable": true,
+      "leaves": 199731,
+      "petals": 269,
+      "lightChangesPixels": true,
+      "lightPreservesGeometry": true,
+      "inspectionModes": true
+    },
+    {
+      "id": 68,
+      "count": 200000,
+      "prefixStable": true,
+      "leaves": 199731,
+      "petals": 269,
+      "lightChangesPixels": true,
+      "lightPreservesGeometry": true,
+      "inspectionModes": true
+    },
+    {
+      "id": 69,
+      "count": 200000,
+      "prefixStable": true,
+      "leaves": 199731,
+      "petals": 269,
+      "lightChangesPixels": true,
+      "lightPreservesGeometry": true,
+      "inspectionModes": true
+    },
+    {
+      "id": 70,
+      "count": 200000,
+      "prefixStable": true,
+      "leaves": 199731,
+      "petals": 269,
+      "lightChangesPixels": true,
+      "lightPreservesGeometry": true,
+      "inspectionModes": true
+    }
+  ],
+  "errors": []
+}
