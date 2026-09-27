@@ -36,4 +36,3 @@ try{
  assert.deepEqual(errors,[]);
  await writeFile('artifacts/shadows-validation.json',JSON.stringify({result,island,errors},null,2));console.log(JSON.stringify({result,island,errors}));
 }finally{await browser.close();}
-
