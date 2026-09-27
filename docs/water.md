@@ -6,7 +6,7 @@ Drag **Water plane** or **Grass area** from the Scene asset library into the vie
 
 Use **W** for move, **E** for rotation around Y, and **R** for uniform scale. X/Z movement keeps ordinary objects and grass attached to terrain. Only water polygons have a vertical Y handle. These shortcuts leave RMB + WASD flight controls intact. Transforms support undo and redo.
 
-Ocean/coastal water blends sand into shores and seabeds. Ponds and lakes use earthy, wet bank materials. Material transitions use actual ground height relative to the surface and distance from each rotated plane boundary. Water colour changes with depth, with limited transmission of the existing scene in shallows and a narrow foam band. No image textures are required.
+Ocean/coastal water blends sand into shores and seabeds. Ponds and lakes use earthy, wet bank materials. Material transitions use actual ground height relative to the surface and distance from each rotated plane boundary. Water colour changes with depth, with depth-dependent transmission of the existing scene in shallows and a narrow foam band. No image textures are required.
 
 ## ClearWater adaptation
 
@@ -32,3 +32,5 @@ Plans currently support grass and water fills. Grass tile spacing, scale and spe
 Validation: test-plans.mjs checks concave filling, invalid edges, on-object edge insertion, vertex and body dragging, water-only height, buried surfaces, serialization and undo. test-water.mjs checks ocean, polygon editing, shared wind and animation. test-scene-tools.mjs checks move/rotate/scale handles, actual previews before placement, water-only Y handles and Terrain ocean controls. The forest water benchmark before polygon additions measured 9.17 ms dry versus 9.71 ms with ocean (10 versus 11 dispatches); these local warmed measurements are not a worst-case bound for 49 water surfaces.
 
 Select a corner and use **Delete selected node** to remove it; deletion is disabled at three nodes. **Smooth curved edges** rounds the corners for both grass clipping and water rendering while retaining editable control nodes. Curves use up to 128 sampled boundary points. **Seeded random grass rotation** can be disabled for aligned tiles; the grass rotation seed produces repeatable rotation per tile without changing position or scale.
+
+Transparency uses exponential attenuation over the underwater viewing-ray distance. Shallow water reveals terrain and submerged objects; deeper water becomes opaque. Coastal water is clearest, lakes intermediate, and ponds murkier. Fresnel reflection and shoreline foam remain visible. This composites the existing scene without refractive distortion; pixels without a rendered seabed retain the water colour.

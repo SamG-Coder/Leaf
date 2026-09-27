@@ -13,6 +13,10 @@ float angle=windDirection*.0174532925f;float u=x*cosf(angle)+z*sinf(angle);float
 float tone=wave>.4f?1.08f:wave<-.4f?.92f:1.0f;float band=1.0f+(tone-1.0f)*fade;r*=light*band;g*=light*band;b*=light*band;float reflection=fminf(.85f,fresnel);r=r*(1.0f-reflection)+.40f*reflection;g=g*(1.0f-reflection)+.67f*reflection;b=b*(1.0f-reflection)+.80f*reflection;
 float hx=lx-dx;float hy=ly-dy;float hz=lz-dz;float hl=sqrtf(hx*hx+hy*hy+hz*hz);float highlight=powf(fmaxf(0.0f,(nx*hx+ny*hy+nz*hz)/fmaxf(.01f,hl)),96.0f)*.35f*fade;
 float foam=(1.0f-fminf(1.0f,waterDepth/1.0f))*(.55f+.45f*sinf(u*2.0f+v*.7f-time));foam=foam>.5f?.65f:0.0f;float footprint=closest*tangent*2.0f/(float)h/fmaxf(.08f,-dy);float strokeFade=1.0f/(1.0f+footprint*footprint*16.0f);float fleck=noise3(u*.8f-drift*.3f,8.0f,v*1.8f);float strokes=fmaxf(0.0f,fleck-.65f)*.10f*fade*strokeFade*(1.0f+rain);float skyDim=1.0f-rain*.25f;r=(r+highlight+strokes)*skyDim;g=(g+highlight+strokes)*skyDim;b=(b+highlight+strokes)*skyDim;r=r*(1.0f-foam)+.78f*foam;g=g*(1.0f-foam)+.91f*foam;b=b*(1.0f-foam)+.85f*foam;
-float transmission=expf(-waterDepth*.7f)*.35f;if(depth[i]==4294967295u)transmission=0.0f;unsigned int old=pixels[i];r=r*(1.0f-transmission)+(float)(old&255u)/255.0f*transmission;g=g*(1.0f-transmission)+(float)((old>>8)&255u)/255.0f*transmission;b=b*(1.0f-transmission)+(float)((old>>16)&255u)/255.0f*transmission;
+// Beer-Lambert attenuation along the viewing ray, rather than a fixed opacity.
+// Keep surface reflection and foam visible even in transparent shallows.
+float pathLength=waterDepth/fmaxf(.08f,-dy);if(depth[i]!=4294967295u)pathLength=fmaxf(0.0f,(float)depth[i]/(1000.0f*fmaxf(.001f,forward))-closest);
+float absorption=info.z<.5f?.55f:info.z<1.5f?.32f:.22f;
+float transmission=expf(-pathLength*absorption)*(1.0f-reflection)*(1.0f-foam);if(depth[i]==4294967295u)transmission=0.0f;unsigned int old=pixels[i];r=r*(1.0f-transmission)+(float)(old&255u)/255.0f*transmission;g=g*(1.0f-transmission)+(float)((old>>8)&255u)/255.0f*transmission;b=b*(1.0f-transmission)+(float)((old>>16)&255u)/255.0f*transmission;
 depth[i]=key;picks[i]=0u;pixels[i]=(unsigned int)(fminf(1.0f,r)*255.0f)|((unsigned int)(fminf(1.0f,g)*255.0f)<<8)|((unsigned int)(fminf(1.0f,b)*255.0f)<<16)|4278190080u;
 }
