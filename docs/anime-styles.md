@@ -27,3 +27,7 @@ The CUDA finish processes the selected style for terrain, vegetation, props, wat
 Paper texture and brush placement are screen-space, so camera movement can change their placement. Outlines use depth and object boundaries, rather than drawn anatomical lines. The watercolour look is an appearance treatment, not fluid pigment simulation. Existing depth-dependent water transparency remains unchanged.
 
 Build: `npm run build`. Browser validation: start the local server, then `node scripts/test-anime-styles.mjs`. The test checks distinct renders, the real dropdown and bypass control, geometry reuse, unchanged map data, and fixed-time day/night lighting across all three modes. Comparisons are in `artifacts/anime-painted.png`, `anime-cel.png` and `anime-watercolour.png`.
+
+## Cast shadows
+
+All three styles process the cast-shadow result. See [Cast shadows](shadows.md) for controls, implementation, validation and current limits.

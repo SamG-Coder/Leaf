@@ -2,56 +2,56 @@
   "results": [
     {
       "mode": "painted",
-      "digest": "fcda903219bbdc8eb41fea0fb48d021f00cfa28b39960cc34b8ae45dd7096661"
+      "digest": "fcef0519c06a2ec397c153811bfe05ac80721083ba920dc0baed36cd4ee34165"
     },
     {
       "mode": "cel",
-      "digest": "dc8e3dc3b4d9aae0d569774663501a9d8118951fb3d30843144ad5f43b443dd4"
+      "digest": "c4ca478f2899eaeaa1cf9997039e8afb9d6a1ee2d33e1f6eea8b088c53c39012"
     },
     {
       "mode": "watercolour",
-      "digest": "0007b54d5b83f7147bef58709b909089d21068d93ba1ede20d79c940ef905fa9"
+      "digest": "349511cb61e74c5fff5b816e13de1bb614ea87a4671acac7be18b2f6178b7512"
     },
     {
       "mode": "painted",
-      "digest": "c95868a689d97d49ccaa431a5f37aa3f49589e0517df46857cf8050b2b7da3ac"
+      "digest": "0c0ce7e186b40256eb33e9656da592d95a9fd32d1366c53ffebd1267ba100c94"
     }
   ],
   "lighting": [
     {
       "mode": "painted",
       "hour": 14,
-      "mean": 0.36446730199075117,
+      "mean": 0.3578300693008074,
       "sky": 0.5800804350082422
     },
     {
       "mode": "painted",
       "hour": 22,
-      "mean": 0.09123825568501298,
+      "mean": 0.09123829043316518,
       "sky": 0.022673538480396018
     },
     {
       "mode": "cel",
       "hour": 14,
-      "mean": 0.36559633703680755,
+      "mean": 0.35899795034365894,
       "sky": 0.5780758200163785
     },
     {
       "mode": "cel",
       "hour": 22,
-      "mean": 0.11453323663867765,
+      "mean": 0.11453357947474598,
       "sky": 0.018500626552285387
     },
     {
       "mode": "watercolour",
       "hour": 14,
-      "mean": 0.473487107005371,
+      "mean": 0.46579591570083284,
       "sky": 0.6804878125408836
     },
     {
       "mode": "watercolour",
       "hour": 22,
-      "mean": 0.19283605483513958,
+      "mean": 0.19283590454703767,
       "sky": 0.0740479625816995
     }
   ],

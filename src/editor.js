@@ -104,6 +104,8 @@ $('radiusNumber').onchange=()=>{$('radius').value=Math.max(.5,Math.min(256,Numbe
 const animeDescriptions={painted:'Soft painted colour clusters with warm light and cool shadows.',cel:'Clean light bands, saturated colour and strong silhouette ink.',watercolour:'Pale colour washes, paper pigment and broken ink contours.'};
 function refreshAnimeControls(){const off=view.anime===false,cel=$('animeMode').value==='cel';$('animeMode').disabled=off;$('colourSoftness').disabled=off||cel;$('paintTexture').disabled=off||cel;$('outlineStrength').disabled=off;}
 $('animeMode').onchange=()=>{view.animeMode=$('animeMode').value;refreshAnimeControls();$('animeModeDescription').textContent=animeDescriptions[view.animeMode];request();};
+$('castShadows').onchange=()=>{view.shadows=$('castShadows').checked;$('shadowStrength').disabled=!view.shadows;request();};
+$('shadowStrength').oninput=()=>{view.shadowStrength=Number($('shadowStrength').value);request();};
 $('animeStyle').onchange=()=>{view.anime=$('animeStyle').checked;refreshAnimeControls();request();};
 $('outlineStrength').oninput=()=>{view.outline=Number($('outlineStrength').value);request();};
 

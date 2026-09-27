@@ -9,7 +9,8 @@
     "profile": "node scripts/profile.mjs",
     "check": "node scripts/check.mjs",
     "build:pages": "npm run build && node scripts/build-pages.mjs",
-    "test:model": "node scripts/test-map-model.mjs"
+    "test:model": "node scripts/test-map-model.mjs",
+    "test:shadows": "node scripts/test-shadows.mjs"
   },
   "description": "Seeded procedural vegetation and a CUDA WebShader world editor",
   "devDependencies": {
