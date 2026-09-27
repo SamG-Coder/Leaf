@@ -1,7 +1,7 @@
 import {transformGizmo} from './transform-gizmo.js';
 import {planEditor} from './plan-editor.js';
 import {waterEditor} from './water-editor.js';
-import {forestExample} from './forest-example.js';
+import {islandExample} from './island-example.js';
 import {defaultScale} from './asset-scale.js';
 import {restoreMap,autosaveMap} from './map-storage.js';
 import {PRESETS} from './species.js';
@@ -82,7 +82,7 @@ $('load').onclick=()=>$('file').click();$('file').onchange=async()=>{const f=$('
 $('new').onclick=()=>{$('newMapName').value='Untitled woodland';$('newMapDialog').showModal();};
 $('cancelNewMap').onclick=()=>$('newMapDialog').close();
 $('newMapForm').onsubmit=e=>{e.preventDefault();const next=emptyMap();next.name=$('newMapName').value.trim()||'Untitled woodland';next.extent=Number($('newMapExtent').value);selection.clear();commit(next);$('newMapDialog').close();fit();toast('New map created. Its dimensions are fixed. Undo restores the previous map.');};
-function example(){selection.clear();commit(forestExample());view.yaw=-.30;view.pitch=-.28;view.speed=25;view.grid=false;$('grid').checked=false;frameCamera(view,[8,18,30],65);request();toast('Forest stress test: '+map.objects.length.toLocaleString()+' placements on 512 m of rolling hills.');}
+function example(){selection.clear();planUI.cancel();commit(islandExample());view.yaw=-.35;view.pitch=-.65;view.speed=50;view.grid=false;$('grid').checked=false;frameCamera(view,[0,12,0],410);request();toast('1 km island: coastal forest, grass areas, lagoon and flowing river.');}
 $('example').onclick=example;$('emptyExample').onclick=example;
 async function draw(){if(busy||!dirty||!renderer)return;busy=true;dirty=false;$('status').textContent='Updating scene…';const start=performance.now();const previous=window.mapDiagnostics.lastRenderStart;window.mapDiagnostics.lastRenderStart=start;try{await renderer.render(placementPreview??map,new Set(selection),{...view,position:[...view.position]});window.mapDiagnostics.frames++;const log=window.mapDiagnostics.timings??=[];log.push({ms:performance.now()-start,startGap:previous?start-previous:0,position:[...view.position],...renderer.profile});if(log.length>300)log.shift();$('status').textContent='Ready · '+map.objects.length+' objects';$('stats').textContent=`${(performance.now()-start).toFixed(0)} ms update · ${renderer.rendered} visible / ${map.objects.length} objects · ${renderer.cache.size+renderer.highCache.size} geometry variants`;overlay();}catch(e){fail(e);}finally{busy=false;if(renderer?.pendingDetail)dirty=true;if(dirty)request();}}
 

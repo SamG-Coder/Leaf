@@ -34,3 +34,9 @@ Validation: test-plans.mjs checks concave filling, invalid edges, on-object edge
 Select a corner and use **Delete selected node** to remove it; deletion is disabled at three nodes. **Smooth curved edges** rounds the corners for both grass clipping and water rendering while retaining editable control nodes. Curves use up to 128 sampled boundary points. **Seeded random grass rotation** can be disabled for aligned tiles; the grass rotation seed produces repeatable rotation per tile without changing position or scale.
 
 Transparency uses exponential attenuation over the underwater viewing-ray distance. Shallow water reveals terrain and submerged objects; deeper water becomes opaque. Coastal water is clearest, lakes intermediate, and ponds murkier. Fresnel reflection and shoreline foam remain visible. This composites the existing scene without refractive distortion; pixels without a rendered seabed retain the water colour.
+
+Water uses broad irregular wave shading with distance-filtered ripples and a narrow, softly varying shoreline wash. Beyond map edges the synthetic seabed stays submerged, avoiding an unrendered land strip between terrain and ocean.
+
+Water polygon inspectors include Directional river flow, direction (0 degrees along +X, 90 along +Z), and speed in metres per second. Current advects the procedural surface pattern independently of shared wind and persists with the map. Surfaces remain horizontal: this is a visual current, not downhill fluid simulation.
+
+The Example button now creates a 1000 by 1000 metre island map: ocean and sandy shores, two wooded uplands, four curved grass areas using seeded rotation, a lagoon and a carved river channel. The original forest generator remains available in source for stress testing.

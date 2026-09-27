@@ -6,7 +6,7 @@ Ten tree presets, ten bush presets, ten flower presets, ten fern presets, ten mo
 
 ## Map editor
 
-Open `editor.html` for the Scene and Terrain workspaces: all 121 assets, drag/drop, radius selection, transforms, height brushes, automatic ground attachment, undo/redo, autosave and JSON map/terrain save-load. The editor now has a perspective camera with Unity-style right-mouse flight, Alt-orbit, pan and selection framing. Worlds support up to 65,536 m width and 100,000 stored placements, with sparse terrain and bounded visible rendering. Use **Example** to load the 512 m forest hills stress test: 7,923 placements, mixed woodland, clearings and rolling terrain. See `docs/editor.md` for controls, limits and tests.
+Open `editor.html` for the Scene and Terrain workspaces: all 121 assets, drag/drop, radius selection, transforms, height brushes, automatic ground attachment, undo/redo, autosave and JSON map/terrain save-load. The editor now has a perspective camera with Unity-style right-mouse flight, Alt-orbit, pan and selection framing. Worlds support up to 65,536 m width and 100,000 stored placements, with sparse terrain and bounded visible rendering. Use **Example** to load the 1 km island: wooded uplands, sandy beaches, four curved grass areas with seeded rotations, a lagoon and a river with directional surface flow. See `docs/editor.md` for controls, limits and tests.
 
 ## Run
 
