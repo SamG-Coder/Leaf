@@ -13,7 +13,7 @@ let initial=emptyMap();try{const saved=await restoreMap();if(saved)initial=valid
 let saving=Promise.resolve();let placementKind=null,draggingAsset=false,placementPreview=null;
 
 const history=new MapHistory(initial);let map=history.map,selection=new Set(),active=0,workspace='scene',tool='select',renderer,dirty=true,busy=false,gesture=null,space=false,downPointer=null,lastWorld={x:0,z:0},toastTimer,framePending=false,panTool=false;
-const view=createCamera(),keys=new Set();window.mapDiagnostics={ready:false,errors:[],frames:0};
+const view=createCamera(),keys=new Set();view.animateWater=true;window.mapDiagnostics={ready:false,errors:[],frames:0};
 function toast(text){$('toast').textContent=text;$('toast').style.display='block';clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').style.display='none',5000);}
 function fail(error){const text=String(error?.message||error);window.mapDiagnostics.errors.push(text);$('status').textContent='Renderer error';toast(text);console.error(error);}
 function request(){dirty=true;if(!framePending){framePending=true;requestAnimationFrame(()=>{framePending=false;draw();});}}
