@@ -50,3 +50,11 @@ __global__ void water_reflections(const float4* waves,const float4* waters,const
  previous=length;length+=stride;stride*=1.45f;}
  if(hit>=0){unsigned int colour=pixels[hit];reflections[i]=make_float4((float)(colour&255u)/255.0f,(float)((colour>>8)&255u)/255.0f,(float)((colour>>16)&255u)/255.0f,weight);}
 }
+
+// Underwater view: depth absorption, a bright surface window and restrained distortion.
+__global__ void scene_underwater(const unsigned int* source,const unsigned int* depth,unsigned int* target,int w,int h,float cy,float level,float yaw,float pitch,float tangent,float aspect,float time,float day){
+ unsigned int i=blockIdx.x*blockDim.x+threadIdx.x;if(i>=(unsigned int)(w*h))return;int x=(int)(i%(unsigned int)w);int y=(int)(i/(unsigned int)w);float sx=(((float)x+.5f)/(float)w*2.0f-1.0f)*tangent*aspect;float sy=(1.0f-((float)y+.5f)/(float)h*2.0f)*tangent;float rayY=sinf(pitch)+cosf(pitch)*sy;float rayLength=sqrtf(1.0f+sx*sx+sy*sy);float distance=depth[i]==4294967295u?120.0f:(float)depth[i]*.001f*rayLength;float toSurface=120.0f;if(rayY>.0001f)toSurface=fmaxf(0.0f,(level-cy)/rayY)*rayLength;distance=fminf(distance,toSurface);float immersion=fminf(1.0f,fmaxf(0.0f,(level-cy)*3.0f));float fog=1.0f-expf(-distance*.055f);float illumination=.18f+.82f*day;int ox=(int)(sinf((float)y*.035f+time*1.4f)*1.5f*immersion);int oy=(int)(sinf((float)x*.026f-time)*immersion);unsigned int c=source[min(h-1,max(0,y+oy))*w+min(w-1,max(0,x+ox))];float r=(float)(c&255u)/255.0f;float g=(float)((c>>8)&255u)/255.0f;float b=(float)((c>>16)&255u)/255.0f;
+ r=r*expf(-distance*.07f)*(1.0f-fog)+.025f*illumination*fog;g=g*(1.0f-fog)+.29f*illumination*fog;b=b*(1.0f-fog)+.34f*illumination*fog;
+ if(toSurface<120.0f&&toSurface<=distance+.01f){float window=fmaxf(0.0f,rayY/rayLength);float ripple=.5f+.5f*sinf((float)x*.028f+time*1.5f+sinf((float)y*.037f));float aperture=fminf(1.0f,fmaxf(0.0f,(window-.62f)/.14f));float surface=.85f+.15f*ripple;r=r*aperture+.035f*surface*illumination*(1.0f-aperture);g=g*aperture+.28f*surface*illumination*(1.0f-aperture);b=b*aperture+.33f*surface*illumination*(1.0f-aperture);float tint=.03f+.04f*ripple;r+=tint*window*illumination;g+=tint*window*illumination;b+=tint*window*illumination;}
+ target[i]=(unsigned int)(fminf(1.0f,r)*255.0f)|((unsigned int)(fminf(1.0f,g)*255.0f)<<8)|((unsigned int)(fminf(1.0f,b)*255.0f)<<16)|4278190080u;
+}
