@@ -256,7 +256,7 @@ __global__ void scene_anime(const unsigned int* waterMask,const unsigned int* pi
  unsigned int i=blockIdx.x*blockDim.x+threadIdx.x;if(i>=(unsigned int)(w*h))return;int x=(int)(i%(unsigned int)w);int y=(int)(i/(unsigned int)w);unsigned int packed=pixels[i];float r=(float)(packed&255u)/255.0f;float g=(float)((packed>>8)&255u)/255.0f;float b=(float)((packed>>16)&255u)/255.0f;
  if(depth[i]==4294967295u&&atmosphere!=0&&styleMode==0){styled[i]=packed;return;}if(depth[i]==4294967295u&&atmosphere==0){float t=(float)y/(float)h;r=0.24f+0.32f*t;g=0.56f+0.27f*t;b=0.81f+0.13f*t;}
  if(depth[i]!=4294967295u){
- unsigned int id=picks[i];
+ unsigned int id=picks[i];float finishGrain=0.0f;
  // Overlapping, irregular brush dabs sample the existing lit surface, never another object.
  if(paint>0.0f&&styleMode!=1){float size=5.0f;if(id!=0u){unsigned int sk=id*8u;float span=(float)(stats[sk+2u]-stats[sk]+stats[sk+3u]-stats[sk+1u])*0.5f;size=fminf(16.0f,fmaxf(3.0f,span*0.026f));}
  float ox=0.0f;float oy=0.0f;if(id!=0u){ox=(float)stats[id*8u];oy=(float)stats[id*8u+1u];}
@@ -266,10 +266,12 @@ __global__ void scene_anime(const unsigned int* waterMask,const unsigned int* pi
  unsigned int c=pixels[j];float cr=(float)(c&255u)/255.0f;float cg=(float)((c>>8)&255u)/255.0f;float cb=(float)((c>>16)&255u)/255.0f;float light=cr*0.2126f+cg*0.7152f+cb*0.0722f;float difference=(light-localL)/0.12f;float weight=fminf(1.0f,(1.0f-edge)*8.0f)*expf(-difference*difference);float pigment=0.92f+0.16f*rnd(seed+3u);sr+=cr*pigment*weight;sg+=cg*pigment*weight;sb+=cb*pigment*weight;total+=weight;}
  if(total>0.001f){float amount=paint*0.72f;r=r*(1.0f-amount)+sr/total*amount;g=g*(1.0f-amount)+sg/total*amount;b=b*(1.0f-amount)+sb/total*amount;}
  // Fine dry pigment remains subtle so it does not replace the underlying lighting.
- float grain=(rnd((unsigned int)x*1664525u+(unsigned int)y*1013904223u+id)-0.5f)*0.045f*paint;float bristle=sinf(gx*35.0f+gy*8.0f)*0.012f*paint;r=fmaxf(0.0f,r+grain+bristle);g=fmaxf(0.0f,g+grain+bristle);b=fmaxf(0.0f,b+grain+bristle);
+ float grain=(rnd((unsigned int)x*1664525u+(unsigned int)y*1013904223u+id)-0.5f)*0.045f*paint;float bristle=sinf(gx*35.0f+gy*8.0f)*0.012f*paint;finishGrain=grain+bristle;
  }
  // Broad light bands are applied after object-space-on-screen colour filtering.
- float l=r*0.2126f+g*0.7152f+b*0.0722f;float band=floorf(l*5.0f+0.5f)/5.0f;float scale=1.0f;if(styleMode==0)scale=(l*0.65f+band*0.35f)/fmaxf(0.025f,l);r*=scale;g*=scale;b*=scale;float lift=0.025f*(1.0f-l);r=r*1.08f+lift;g=g*1.04f+lift;b=b+lift;
+ float l=r*0.2126f+g*0.7152f+b*0.0722f;float bandBase=floorf(l*5.0f);float bandBlend=fminf(1.0f,fmaxf(0.0f,(l*5.0f-bandBase-.30f)/.40f));float band=(bandBase+bandBlend*bandBlend*(3.0f-2.0f*bandBlend))/5.0f;float scale=1.0f;if(styleMode==0)scale=(l*0.65f+band*0.35f)/fmaxf(0.025f,l);r*=scale;g*=scale;b*=scale;float lift=0.025f*(1.0f-l);r=r*1.08f+lift;g=g*1.04f+lift;b=b+lift;
+ // Apply fine pigment after light bands: noise must not flip whole pixels between exposure bands.
+ r=fmaxf(0.0f,r+finishGrain);g=fmaxf(0.0f,g+finishGrain);b=fmaxf(0.0f,b+finishGrain);
  float edges=0.0f;for(int k=0;k<4;k++){int xx=x;int yy=y;if(k==0)xx--;if(k==1)xx++;if(k==2)yy--;if(k==3)yy++;if(xx<0||xx>=w||yy<0||yy>=h)continue;int j=yy*w+xx;if(picks[j]!=id&&depth[j]>depth[i]&&((float)depth[j]-(float)depth[i])>fmaxf(250.0f,(float)depth[i]*0.025f))edges+=1.0f;}
  if(edges>=(styleMode==0?2.0f:1.0f)){float ink=outline*0.65f;if(styleMode==1)ink=fminf(0.95f,outline*1.45f);if(styleMode==2)ink=outline*(0.35f+0.65f*rnd((unsigned int)(x/3)*73856093u^(unsigned int)(y/3)*19349663u));r=r*(1.0f-ink)+0.09f*ink;g=g*(1.0f-ink)+0.14f*ink;b=b*(1.0f-ink)+0.17f*ink;}
  }

@@ -17,7 +17,8 @@
     "test:building-shadows": "node scripts/test-building-shadows.mjs",
     "profile:building-paths": "node scripts/profile-building-paths.mjs artifacts/building-path-performance-after.json",
     "test:camera-projector": "node scripts/test-camera-projector.mjs",
-    "test:performance-parity": "node scripts/compare-building-path-performance.mjs"
+    "test:performance-parity": "node scripts/compare-building-path-performance.mjs",
+    "test:castle": "node scripts/test-castle-model.mjs && node scripts/test-castle-editor.mjs"
   },
   "description": "Seeded procedural vegetation and a CUDA WebShader world editor",
   "devDependencies": {
