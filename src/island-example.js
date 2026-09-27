@@ -3,7 +3,7 @@ import {defaultScale} from './asset-scale.js';
 import {insidePlan,planOutline,planCells} from './plan-model.js';
 // One kilometre map: offshore margin, coastal shelf, wooded uplands and an estuary.
 export function islandExample(){
- const m=emptyMap();m.name='Island - 1 km';m.extent=1000;m.light={azimuth:235,elevation:38};m.water.ocean={enabled:true,level:0};m.water.weather={windDirection:35,windSpeed:3,rain:0};
+ const m=emptyMap();m.name='Island - 1 km';m.extent=1000;m.environment={...m.environment,enabled:true,hour:14};m.light={azimuth:235,elevation:38};m.water.ocean={enabled:true,level:0};m.water.weather={windDirection:35,windSpeed:3,rain:0};
  const riverX=z=>28*Math.sin((z+80)/100);
  const height=(x,z)=>{const a=Math.atan2(z,x),r=Math.hypot(x/1.06,z),shore=350+24*Math.sin(a*3)+16*Math.cos(a*5),inland=shore-r;let h=inland<0?inland*.18:Math.min(24,inland*.20);h+=65*Math.exp(-((x+135)**2+(z+100)**2)/10000)*Math.min(1,Math.max(0,inland/80))+42*Math.exp(-((x-150)**2+(z+95)**2)/6500);if(z>-95&&z<390){const d=Math.abs(x-riverX(z));const cut=Math.max(0,Math.min(1,(58-d)/36));const blend=cut*cut*(3-2*cut);h=h*(1-blend)+(-4)*blend;}const lake=Math.hypot(x,z+55);if(lake<70)h=Math.min(h,-3+(lake/70)**4*15);return h;};
  for(let z=0;z<65;z++)for(let x=0;x<65;x++)m.terrain[z*65+x]=height((x/64-.5)*1000,(z/64-.5)*1000);

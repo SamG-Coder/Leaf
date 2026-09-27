@@ -132,3 +132,5 @@ The CUDA WebShader compiler/runtime is vendored with its license in `vendor/LICE
 ## Water
 
 The editor's Scene library includes draggable Water plane and Grass area polygon objects with live placement previews, corner editing and W/E/R transform handles. Only water supports vertical movement. Horizon ocean and shared water-weather controls live under Terrain. Water-aware ground shading adds sandy coasts, wet earthy banks and seabeds. A lightweight ClearWater-derived CUDA surface shader shares wind/rain inputs across all water and uses the existing anime finish. See [water controls, design and limitations](docs/water.md). Run `node scripts/test-water.mjs` with the local server running to validate editing and compatibility.
+
+The Terrain panel includes an optional day/night clock and manual or time-driven weather, with animated clouds, rain, water impact rings, and terrain wetness. See [weather controls and limits](docs/weather.md).
