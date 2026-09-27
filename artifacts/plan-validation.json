@@ -1,0 +1,11 @@
+{
+  "concaveFill": true,
+  "invalidCrossingRejected": true,
+  "edgeInsertion": true,
+  "vertexDrag": true,
+  "waterOnlyHeight": true,
+  "undergroundWater": true,
+  "roundtrip": true,
+  "undo": true,
+  "errors": []
+}

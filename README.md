@@ -127,3 +127,8 @@ Requires Node.js 24 or newer. Run `npm ci`, `npm run build`, then `npm start`; o
 `npm run check` verifies JavaScript syntax; `npm run test:model` checks the map model; `npm run build:pages` compiles every CUDA entry point and stages the complete static site in `dist/`. Pushes to main run those checks in GitHub Actions and deploy GitHub Pages. Pull requests run the build without deploying. CI does not run the local GPU benchmarks.
 
 The CUDA WebShader compiler/runtime is vendored with its license in `vendor/LICENSE.cuda-webshader`. Rendering kernels are authored in `.cu`; JavaScript handles UI, input, data and GPU dispatch. Performance work is ongoing: isolated local benchmark improvements do not establish that all rapid-travel hitches have been eliminated.
+
+
+## Water
+
+The editor's Scene library includes draggable Water plane and Grass area polygon objects with live placement previews, corner editing and W/E/R transform handles. Only water supports vertical movement. Horizon ocean and shared water-weather controls live under Terrain. Water-aware ground shading adds sandy coasts, wet earthy banks and seabeds. A lightweight ClearWater-derived CUDA surface shader shares wind/rain inputs across all water and uses the existing anime finish. See [water controls, design and limitations](docs/water.md). Run `node scripts/test-water.mjs` with the local server running to validate editing and compatibility.

@@ -1,0 +1,135 @@
+{
+  "dry": {
+    "frames": [
+      {
+        "ms": 12.3299999833107,
+        "dispatches": 10,
+        "submissions": 3
+      },
+      {
+        "ms": 9.165000021457672,
+        "dispatches": 10,
+        "submissions": 3
+      },
+      {
+        "ms": 11.7049999833107,
+        "dispatches": 10,
+        "submissions": 3
+      },
+      {
+        "ms": 11.625,
+        "dispatches": 10,
+        "submissions": 3
+      },
+      {
+        "ms": 8.644999980926514,
+        "dispatches": 10,
+        "submissions": 3
+      },
+      {
+        "ms": 9.909999966621399,
+        "dispatches": 10,
+        "submissions": 3
+      },
+      {
+        "ms": 7.985000014305115,
+        "dispatches": 10,
+        "submissions": 3
+      },
+      {
+        "ms": 8.610000014305115,
+        "dispatches": 10,
+        "submissions": 3
+      },
+      {
+        "ms": 8.10999995470047,
+        "dispatches": 10,
+        "submissions": 3
+      },
+      {
+        "ms": 8.835000038146973,
+        "dispatches": 10,
+        "submissions": 3
+      }
+    ],
+    "stats": {
+      "candidates": 3074,
+      "budgetDropped": 0,
+      "triangleObjects": 1079,
+      "blendingObjects": 458,
+      "promoted": 0,
+      "subpixelDetail": 2867,
+      "high": 16,
+      "samples": 712136,
+      "maxSamples": 36317
+    },
+    "digest": "9ecb1520769ce50001e367481115c0f6ccb51c799a0c3c5ab98686e061c9563b"
+  },
+  "wet": {
+    "frames": [
+      {
+        "ms": 13.030000030994415,
+        "dispatches": 11,
+        "submissions": 4
+      },
+      {
+        "ms": 11.589999973773956,
+        "dispatches": 11,
+        "submissions": 4
+      },
+      {
+        "ms": 9.030000030994415,
+        "dispatches": 11,
+        "submissions": 4
+      },
+      {
+        "ms": 8.9549999833107,
+        "dispatches": 11,
+        "submissions": 4
+      },
+      {
+        "ms": 8.639999985694885,
+        "dispatches": 11,
+        "submissions": 4
+      },
+      {
+        "ms": 8.665000021457672,
+        "dispatches": 11,
+        "submissions": 4
+      },
+      {
+        "ms": 8.024999976158142,
+        "dispatches": 11,
+        "submissions": 4
+      },
+      {
+        "ms": 9.709999978542328,
+        "dispatches": 11,
+        "submissions": 4
+      },
+      {
+        "ms": 10.584999978542328,
+        "dispatches": 11,
+        "submissions": 4
+      },
+      {
+        "ms": 10.985000014305115,
+        "dispatches": 11,
+        "submissions": 4
+      }
+    ],
+    "stats": {
+      "candidates": 3074,
+      "budgetDropped": 0,
+      "triangleObjects": 1079,
+      "blendingObjects": 458,
+      "promoted": 0,
+      "subpixelDetail": 2867,
+      "high": 16,
+      "samples": 712136,
+      "maxSamples": 36317
+    },
+    "digest": "caca5279e31ab6db42f4536c4db507978e6f45b2e3cd5e446e51c3e5890d88ec"
+  },
+  "errors": []
+}

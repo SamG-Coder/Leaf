@@ -1,0 +1,9 @@
+{
+  "move": true,
+  "rotate": true,
+  "scale": true,
+  "previewBeforeDrop": true,
+  "waterYOnly": true,
+  "terrainOcean": true,
+  "errors": []
+}

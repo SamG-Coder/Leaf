@@ -6,3 +6,7 @@ nav{flex-wrap:wrap;height:auto;min-height:54px}#objectSearch{width:100%;margin-t
 #radiusNumber{width:65px;padding:5px}#radiusValue{display:none}
 
 dialog{width:440px;max-width:90vw;background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:26px}dialog::backdrop{background:#0009}dialog h2{font-size:20px}dialog label{display:block;margin:18px 0}dialog input{display:block;width:100%;margin-top:8px}dialog .actions{justify-content:flex-end;margin-top:24px}input[readonly]{color:var(--muted);cursor:default}
+
+#overlay .plan-handle{pointer-events:all;cursor:grab}#overlay .plan-edge{pointer-events:all;cursor:copy}#planVertices{width:100%;background:#242c32;color:#e4e9ec;border:1px solid #38434a}#planList{width:100%;margin-top:12px}
+
+#overlay .transform-handle{pointer-events:all;cursor:grab}#overlay .transform-handle text{pointer-events:none}.asset.plan-asset{min-height:92px;background:linear-gradient(135deg,#284740,#163440)}.plan-asset strong{font-size:30px;display:block;margin:8px;color:#8bd9d7}

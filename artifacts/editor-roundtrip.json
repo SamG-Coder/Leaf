@@ -4235,6 +4235,19 @@
     0
   ],
   "terrainTiles": {},
+  "water": {
+    "ocean": {
+      "enabled": false,
+      "level": 0
+    },
+    "planes": [],
+    "weather": {
+      "windDirection": 45,
+      "windSpeed": 4,
+      "rain": 0
+    }
+  },
+  "plans": [],
   "objects": [
     {
       "id": 1,
