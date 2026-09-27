@@ -15,14 +15,18 @@ __global__ void shadow_stamp(unsigned int* shadow,const float4* casters,int coun
  float rr=radius*radius;float A=(kx*kx+kz*kz)/rr+1.0f/(vertical*vertical);
  for(int iz=top;iz<=bottom;iz++)for(int ix=left;ix<=right;ix++){float qx=originX+((float)ix+.5f)*cell-px;float qz=originZ+((float)iz+.5f)*cell-pz;float B=(qx*kx+qz*kz)/rr;float C=(qx*qx+qz*qz)/rr-1.0f;float D=B*B-A*C;if(D<0.0f)continue;float height=y+(-B+sqrtf(D))/A;atomicMax(&shadow[iz*1024+ix],(unsigned int)(fmaxf(0.0f,height+65536.0f)*1024.0f));}
 }
-__global__ void scene_shadows(const unsigned int* shadow,const unsigned int* depth,const unsigned int* picks,unsigned int* pixels,int w,int h,float cx,float cy,float cz,float yaw,float pitch,float aspect,float tangent,float originX,float originZ,float cell,float lx,float ly,float lz,float strength){
+__global__ void scene_shadows(const unsigned int* buildings,const unsigned int* shadow,const unsigned int* depth,const unsigned int* picks,unsigned int* pixels,int w,int h,float cx,float cy,float cz,float yaw,float pitch,float aspect,float tangent,float originX,float originZ,float cell,float lx,float ly,float lz,int buildingCount,float strength){
  unsigned int i=blockIdx.x*blockDim.x+threadIdx.x;if(i>=(unsigned int)(w*h)||depth[i]==4294967295u)return;
  float distance=(float)depth[i]*.001f;float sx=(((float)(i%(unsigned int)w)+.5f)/(float)w*2.0f-1.0f)*tangent*aspect;float sy=(1.0f-((float)(i/(unsigned int)w)+.5f)/(float)h*2.0f)*tangent;
  float cp=cosf(pitch);float sp=sinf(pitch);float ca=cosf(yaw);float sa=sinf(yaw);float x=cx+(sa*cp+ca*sx-sa*sp*sy)*distance;float y=cy+(sp+cp*sy)*distance;float z=cz+(ca*cp-sa*sx-ca*sp*sy)*distance;
+ // Receiver-plane depth corrects PCF taps on sloped roofs and walls, avoiding self-shadow acne.
+ float nx=0.0f;float ny=1.0f;float nz=0.0f;int px=(int)(i%(unsigned int)w);int py=(int)(i/(unsigned int)w);
+ if(buildingCount>0&&px+1<w&&py+1<h&&picks[i+1u]==picks[i]&&picks[i+(unsigned int)w]==picks[i]){float d1=(float)depth[i+1u]*.001f;float d2=(float)depth[i+(unsigned int)w]*.001f;if(fabsf(d1-distance)<fmaxf(.3f,distance*.02f)&&fabsf(d2-distance)<fmaxf(.3f,distance*.02f)){float sx1=sx+2.0f*tangent*aspect/(float)w;float sy2=sy-2.0f*tangent/(float)h;float ax=cx+(sa*cp+ca*sx1-sa*sp*sy)*d1-x;float ay=cy+(sp+cp*sy)*d1-y;float az=cz+(ca*cp-sa*sx1-ca*sp*sy)*d1-z;float bx=cx+(sa*cp+ca*sx-sa*sp*sy2)*d2-x;float by=cy+(sp+cp*sy2)*d2-y;float bz=cz+(ca*cp-sa*sx-ca*sp*sy2)*d2-z;nx=ay*bz-az*by;ny=az*bx-ax*bz;nz=ax*by-ay*bx;}}
+ float slope=nx*lx/ly+ny+nz*lz/ly;
  float gx=(x-y*lx/ly-originX)/cell-.5f;float gz=(z-y*lz/ly-originZ)/cell-.5f;int ix=(int)floorf(gx);int iz=(int)floorf(gz);float u=gx-(float)ix;float v=gz-(float)iz;float shade=0.0f;
  // Bilinear PCF: fixed four depth comparisons, with a receiver bias for shell approximation.
  float bias=.10f+cell*.5f;if(picks[i]!=0u)bias+=.40f;
- for(int dz=0;dz<2;dz++)for(int dx=0;dx<2;dx++){int xx=ix+dx;int zz=iz+dz;if(xx<0||xx>=1024||zz<0||zz>=1024)continue;float weight=(dx==0?1.0f-u:u)*(dz==0?1.0f-v:v);float top=(float)shadow[zz*1024+xx]/1024.0f-65536.0f;if(top>y+bias)shade+=weight;}
+ for(int dz=0;dz<2;dz++)for(int dx=0;dx<2;dx++){int xx=ix+dx;int zz=iz+dz;if(xx<0||xx>=1024||zz<0||zz>=1024)continue;float weight=(dx==0?1.0f-u:u)*(dz==0?1.0f-v:v);float top=(float)shadow[zz*1024+xx]/1024.0f-65536.0f;float buildingTop=buildingCount>0?(float)buildings[zz*1024+xx]/1024.0f-65536.0f:-65536.0f;float receiver=y;if(fabsf(slope)>.000001f){float qx=originX+((float)xx+.5f)*cell-(x-y*lx/ly);float qz=originZ+((float)zz+.5f)*cell-(z-y*lz/ly);receiver-=fminf(cell*8.0f,fmaxf(-cell*8.0f,(nx*qx+nz*qz)/slope));}if(top>y+bias||buildingTop>receiver+.045f+cell*.10f)shade+=weight;}
  float edge=fminf(fminf(gx,gz),fminf(1023.0f-gx,1023.0f-gz));shade*=fminf(1.0f,fmaxf(0.0f,edge/32.0f))*strength;
  unsigned int colour=pixels[i];float r=(float)(colour&255u)*(1.0f-shade*.62f);float g=(float)((colour>>8)&255u)*(1.0f-shade*.53f);float b=(float)((colour>>16)&255u)*(1.0f-shade*.36f);
  pixels[i]=(unsigned int)r|((unsigned int)g<<8)|((unsigned int)b<<16)|4278190080u;

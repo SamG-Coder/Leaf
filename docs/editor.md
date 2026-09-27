@@ -173,7 +173,7 @@ Recorded before/after medians: CPU prepare 3.34/2.11 ms, total 16.37/14.98 ms; p
 
 ## Startup and projects
 
-The viewport shows Opening workspace, Compiling GPU shaders (completed pipelines out of 30), and Loading map. GPU compilation progress is measured from completed pipeline creation, not a timer. Map loading remains visible through the first completed frame; later distance-dependent LOD work remains incremental. Controls are unavailable during loading. A shader failure leaves a visible explanation and Reload editor action.
+The viewport shows Opening workspace, Compiling GPU shaders (completed pipelines out of 32), and Loading map. GPU compilation progress is measured from completed pipeline creation, not a timer. Map loading remains visible through the first completed frame; later distance-dependent LOD work remains incremental. Controls are unavailable during loading. A shader failure leaves a visible explanation and Reload editor action.
 
 A fresh workspace opens New Project after initialization. Existing autosaved projects restore automatically. Templates offers Blank landscape with editable dimensions or Island with its authored 1,000 m extent locked. Cancelling preserves the current project. The Example toolbar button, stress-test prompt and unused old forest generator have been removed. Invalid imported map files preserve the current map and restore editor controls.
 

@@ -30,6 +30,10 @@ The left library contains procedural asset collections and the Water plane, Gras
 
 [Watch the live island showcase](https://samg-coder.github.io/Leaf/showcase.html) for daylight, sunset, night, sunrise and weather views.
 
+## Build structures
+
+Open **Building** for the modular parts bar. Drag platforms, foundations, walls, stairs and roofs into the viewport. Cyan snap points align neighbouring pieces. Each piece has a material selector and dimensions; raised platforms extend supports down to the ground. See the [building guide](buildings.md) for the full workflow and the downloadable example.
+
 ## Create paths
 
 Drag **Spline path** from the library onto the terrain. Round handles move nodes; square handles bend connections. Use **Extend / connect** to add nodes or join existing ones, and **Split selected connection** for more curve control. Choose from 14 surfaces, including Sand, Dirt, Stone and Pebbles. Paths follow terrain edits and clear grass from their footprint without deleting saved placements.

@@ -10,6 +10,8 @@ Ten tree presets, ten bush presets, ten flower presets, ten fern presets, ten mo
 
 Open `editor.html` for the Scene and Terrain workspaces: all 121 assets, drag/drop, radius selection, transforms, height brushes, automatic ground attachment, undo/redo, autosave and JSON map/terrain save-load. The editor now has a perspective camera with Unity-style right-mouse flight, Alt-orbit, pan and selection framing. Worlds support up to 65,536 m width and 100,000 stored placements, with sparse terrain and bounded visible rendering. Use **New Project → Templates → Island** to load the 1 km island: wooded uplands, sandy beaches, four curved grass areas with seeded rotations, a lagoon and a river with directional surface flow. See `docs/editor.md` for controls, limits and tests.
 
+The **Building** workspace adds 13 modular parts with drag/drop previews, snapping, per-piece materials and terrain-reaching platform supports. Structures persist with the map and have basic Play mode collision. See the [building guide](docs/buildings.md) and [loadable building example](artifacts/building-example.json).
+
 ## Run
 
 ```powershell

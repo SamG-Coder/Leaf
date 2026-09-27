@@ -1,3 +1,4 @@
+import {validateBuildings} from './building-model.js';
 import {validatePaths} from './path-model.js';
 import {defaultEnvironment,validateEnvironment} from './environment.js';
 import {validatePlans} from './plan-model.js';
@@ -5,7 +6,7 @@ import {defaultWater,validateWater} from './water-model.js';
 import {presetFor} from './species.js';
 export const LIMIT=100000;
 export const MAX_EXTENT=65536,TILE_CELLS=32,TERRAIN_CELL=2,MAX_TILES=4096;
-export function emptyMap(){return {format:'leaf-map',version:1,name:'Untitled woodland',extent:32,light:{azimuth:305,elevation:40},terrain:Array(65*65).fill(0),terrainTiles:{},environment:defaultEnvironment(),water:defaultWater(),plans:[],paths:[],spawn:{x:0,z:0,yaw:0},objects:[]};}
+export function emptyMap(){return {format:'leaf-map',version:1,name:'Untitled woodland',extent:32,light:{azimuth:305,elevation:40},terrain:Array(65*65).fill(0),terrainTiles:{},environment:defaultEnvironment(),water:defaultWater(),plans:[],paths:[],buildings:[],spawn:{x:0,z:0,yaw:0},objects:[]};}
 export function validateMap(input){
  if(!input||input.format!=='leaf-map'||input.version!==1)throw Error('Unsupported map format or version.');
  if(typeof input.name!=='string'||input.name.length>100)throw Error('Map name must be 100 characters or fewer.');
@@ -19,7 +20,7 @@ export function validateMap(input){
  for(const k of ['x','z','scale','rotation'])if(!Number.isFinite(o[k]))throw Error('Object transforms must be finite.');
  if(Math.abs(o.x)>input.extent/2||Math.abs(o.z)>input.extent/2||o.scale<.1||o.scale>3||o.rotation<0||o.rotation>=360||!Number.isInteger(o.seed)||o.seed<0||o.seed>4294967295||typeof o.visible!=='boolean')throw Error('Object is outside supported bounds.');
  return {id:o.id,preset,x:o.x,z:o.z,scale:o.scale,rotation:o.rotation,seed:o.seed,visible:o.visible};});
- return {format:'leaf-map',version:1,name:input.name,extent:input.extent,light:{azimuth:input.light.azimuth,elevation:input.light.elevation},terrain:[...terrain],terrainTiles,spawn:{x:spawn.x,z:spawn.z,yaw:spawn.yaw},environment:validateEnvironment(input.environment),water:validateWater(input.water),plans:validatePlans(input.plans,input.extent),paths:validatePaths(input.paths,input.extent),objects};
+ return {format:'leaf-map',version:1,name:input.name,extent:input.extent,light:{azimuth:input.light.azimuth,elevation:input.light.elevation},terrain:[...terrain],terrainTiles,spawn:{x:spawn.x,z:spawn.z,yaw:spawn.yaw},environment:validateEnvironment(input.environment),water:validateWater(input.water),plans:validatePlans(input.plans,input.extent),paths:validatePaths(input.paths,input.extent),buildings:validateBuildings(input.buildings,input.extent),objects};
 }
 export class MapHistory{
  constructor(map=emptyMap()){this.map=validateMap(map);this.past=[];this.future=[];}

@@ -1,0 +1,38 @@
+{
+  "ground": 5829,
+  "sky": 0,
+  "depth": 0,
+  "picks": 0,
+  "doorway": {
+    "opening": 0,
+    "jamb": 67109976,
+    "lintel": 67111480
+  },
+  "window": {
+    "opening": 0,
+    "sill": 67109440,
+    "lintel": 67111480
+  },
+  "cached": true,
+  "centroids": [
+    {
+      "x": 0,
+      "z": -1.7420774647887325,
+      "n": 852
+    },
+    {
+      "x": 0,
+      "z": 1.7420774647887325,
+      "n": 852
+    }
+  ],
+  "offscreen": 18132,
+  "visible": 0,
+  "removed": {
+    "x": null,
+    "z": null,
+    "n": 0
+  },
+  "invalidated": true,
+  "terrain": true
+}

@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {BUILD_TYPES,BUILD_MATERIALS,newBuilding,validateBuildings,buildingSockets} from '../src/building-model.js';
+import {emptyMap,validateMap,MapHistory,brushTerrain} from '../src/map-model.js';
+import {BuildingCollision} from '../src/building-collision.js';
+import {PlayController} from '../src/play-controller.js';
+const m=emptyMap(),deck=newBuilding(1,0,0,0);deck.level=1;m.buildings=[deck];assert.equal(BUILD_TYPES.length,13);assert.equal(BUILD_MATERIALS.length,7);assert.deepEqual(validateMap(JSON.parse(JSON.stringify(m))).buildings,m.buildings);const legacy={...m};delete legacy.buildings;assert.deepEqual(validateMap(legacy).buildings,[]);
+for(const bad of [{...deck,width:NaN},{...deck,height:0},{...deck,material:7},{...deck,type:20},{...deck,level:Infinity},{...deck,support:7}])assert.throws(()=>validateBuildings([bad],m.extent));assert.throws(()=>validateBuildings([deck,deck],m.extent));
+const second=newBuilding(2,0,4,0);assert(buildingSockets(deck,second).some(s=>s.x===4&&s.z===0&&s.level===1));const rotated={...deck,rotation:90};assert(buildingSockets(rotated,second).some(s=>Math.abs(s.x)<1e-6&&Math.abs(s.z-4)<1e-6&&s.rotation===90));const stair=newBuilding(2,6,0,-4);stair.height=1;stair.level=0;m.buildings.push(stair);assert(buildingSockets(deck,stair).some(s=>s.z===-4&&s.level===0));
+const history=new MapHistory(m);history.commit({...m,buildings:[]});history.undo();assert.equal(history.map.buildings.length,2);history.redo();assert.equal(history.map.buildings.length,0);
+const collision=new BuildingCollision(m);assert.equal(collision.floor(0,0,1,0),1);assert.equal(collision.spawnFloor(0,0,0),1);m.spawn={x:0,z:-6,yaw:0};const player=new PlayController(m);for(let i=0;i<80;i++)player.step(1/60,new Set(['KeyW']));assert(player.y>.99&&player.z>-2,'walk up stairs onto deck');
+const wall=newBuilding(3,2,0,1);wall.level=1;m.buildings.push(wall);const blocked=new PlayController({...m,spawn:{x:0,z:0,yaw:0}});for(let i=0;i<60;i++)blocked.step(1/60,new Set(['KeyW']));assert(blocked.z<.6,'wall stops player');m.buildings[2]={...wall,type:4};const door=new PlayController({...m,spawn:{x:0,z:0,yaw:0}});for(let i=0;i<25;i++)door.step(1/60,new Set(['KeyW']));assert(door.z>1.3,'door opening is passable');
+const old=structuredClone(m.buildings);brushTerrain(m,0,0,4,1,'raise');assert.deepEqual(m.buildings,old,'terrain edits preserve building heights');console.log('Building validation, rotated sockets, persistence, undo, stairs, platform floors and wall/door collision passed.');
