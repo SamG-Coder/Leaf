@@ -3,6 +3,9 @@ export const add=(a,b)=>a.map((v,i)=>v+b[i]),mul=(a,s)=>a.map(v=>v*s),dot=(a,b)=
 export function basis(c){const cp=Math.cos(c.pitch),sp=Math.sin(c.pitch),sy=Math.sin(c.yaw),cy=Math.cos(c.yaw);return {forward:[sy*cp,sp,cy*cp],right:[cy,0,-sy],up:[-sy*sp,cp,-cy*sp]};}
 export function createCamera(){return {position:[18,16,-22],yaw:-.65,pitch:-.45,pivot:[0,0,0],distance:30,speed:10,fov:60,aspect:4/3,grid:true};}
 export function projectPoint(c,p,w=1024,h=768){const b=basis(c),r=p.map((v,i)=>v-c.position[i]),z=dot(r,b.forward),f=1/Math.tan(c.fov*Math.PI/360);return {x:w*.5+dot(r,b.right)*f/c.aspect/Math.max(.001,z)*w*.5,y:h*.5-dot(r,b.up)*f/Math.max(.001,z)*h*.5,depth:z};}
+// Reuse camera trigonometry while projecting many bounds in one frame.
+// Arithmetic order matches projectPoint so culling stays pixel-identical.
+export function cameraProjector(c,w=1024,h=768){const b=basis(c),f=1/Math.tan(c.fov*Math.PI/360),cx=c.position[0],cy=c.position[1],cz=c.position[2];return (x,y,z)=>{const rx=x-cx,ry=y-cy,rz=z-cz,depth=0+rx*b.forward[0]+ry*b.forward[1]+rz*b.forward[2],right=0+rx*b.right[0]+ry*b.right[1]+rz*b.right[2],up=0+rx*b.up[0]+ry*b.up[1]+rz*b.up[2];return {x:w*.5+right*f/c.aspect/Math.max(.001,depth)*w*.5,y:h*.5-up*f/Math.max(.001,depth)*h*.5,depth};};}
 export function ray(c,p,w=1024,h=768){const b=basis(c),t=Math.tan(c.fov*Math.PI/360);const v=add(b.forward,add(mul(b.right,(p.x/w*2-1)*t*c.aspect),mul(b.up,(1-p.y/h*2)*t)));return mul(v,1/Math.hypot(...v));}
 export function frameCamera(c,p,radius){c.pivot=[...p];c.distance=Math.max(3,radius/Math.tan(c.fov*Math.PI/360)*1.25);c.position=add(c.pivot,mul(basis(c).forward,-c.distance));}
 export function orbitCamera(c,dx,dy){c.yaw-=dx*.005;c.pitch=Math.max(-1.53,Math.min(1.53,c.pitch+dy*.005));c.position=add(c.pivot,mul(basis(c).forward,-c.distance));}

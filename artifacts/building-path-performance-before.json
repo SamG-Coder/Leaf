@@ -1,0 +1,1576 @@
+{
+  "resolution": [
+    1024,
+    768
+  ],
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36 Edg/154.0.0.0",
+  "adapter": {},
+  "results": [
+    {
+      "name": "empty",
+      "checkpoints": [
+        {
+          "frame": 0,
+          "colour": "a082512c8403d98b7a8f19cc2a82abf8da9e137d57eaa5d4e692c035898cd887",
+          "depth": "5947b119b2dccea77d4a70592b67118e341b8da5c76fefd15a053a3cb89a5751",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        },
+        {
+          "frame": 12,
+          "colour": "c52808244ecac6abd4ee91af1f8190c427633f67af4e49f5aeb3aed912f918e5",
+          "depth": "c740a2dbba7b8954e6b60ef02c28b35b165a28d96a865da21abe2804b654f700",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        },
+        {
+          "frame": 24,
+          "colour": "52ac056599f10cf29fdc1e1ef2bd8b678a32def541eeace4dff320ea0b0d6df2",
+          "depth": "b8c26dda305383d8bd9659c0ffd04a9b9615a7a70f91cec9aab6c07f3712cc3c",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        },
+        {
+          "frame": 36,
+          "colour": "2d88daca3b968a27f53c4cad388bad6fc8bf1432aa2049d35fea50860542b801",
+          "depth": "5947b119b2dccea77d4a70592b67118e341b8da5c76fefd15a053a3cb89a5751",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        },
+        {
+          "frame": 48,
+          "colour": "d803d49b9e2e7264af098c11c293dc13deb0ea720e3d6fc1049cd0ae0eaa2600",
+          "depth": "096d2db418f2ce324e0bf027d24fd51970e4329df46d9f514e50eac9f1807ab0",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        },
+        {
+          "frame": 60,
+          "colour": "e80af7519920f4568803002432913f685e726d0f719611ad9295d7043d216cb4",
+          "depth": "a3842cde35b16675f681d358516e4e59bb660b5944da8aad0d37ed85c7e001f7",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        }
+      ],
+      "buildings": 0,
+      "paths": 0,
+      "segments": 0,
+      "maxPathCell": 0,
+      "visibleBuildings": {
+        "min": 0,
+        "max": 0
+      },
+      "shadowUpdates": 0,
+      "samples": 72,
+      "timing": {
+        "total": {
+          "p50": 3,
+          "p95": 4.200000047683716,
+          "max": 5.399999976158142
+        },
+        "pathUpload": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0.10000002384185791
+        },
+        "placements": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0.09999990463256836
+        },
+        "buildingPrepare": {
+          "p50": 0,
+          "p95": 0.10000002384185791,
+          "max": 0.10000002384185791
+        },
+        "shadowPrepare": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "validation": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        }
+      },
+      "isolatedStages": {
+        "paths": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "prepare": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "ground": {
+          "p50": 2.9000000953674316,
+          "p95": 4.099999904632568,
+          "max": 4.099999904632568
+        },
+        "geometry": {
+          "p50": 2.9000000953674316,
+          "p95": 4.300000071525574,
+          "max": 4.300000071525574
+        },
+        "buildings": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "water": {
+          "p50": 0.09999990463256836,
+          "p95": 0.20000004768371582,
+          "max": 0.20000004768371582
+        },
+        "shadows": {
+          "p50": 2.899999976158142,
+          "p95": 3,
+          "max": 3
+        },
+        "weather": {
+          "p50": 0.09999990463256836,
+          "p95": 0.10000002384185791,
+          "max": 0.10000002384185791
+        },
+        "post": {
+          "p50": 3,
+          "p95": 3.9000000953674316,
+          "max": 3.9000000953674316
+        },
+        "total": {
+          "p50": 11.900000095367432,
+          "p95": 13.099999904632568,
+          "max": 13.099999904632568
+        }
+      }
+    },
+    {
+      "name": "buildings-256-cached",
+      "checkpoints": [
+        {
+          "frame": 0,
+          "colour": "461058d2952582a89df045c4939855817d1629d072ad27c90d3711d7e6ba78c0",
+          "depth": "45b2583e4f1979501a72419f13336eea545b34943bc373093593b0fe1c134a0f",
+          "picks": "52535c17625780a4b38809ee55e9e9132a300cde32c3c05087ebfea281fcfa77",
+          "shadow": "fc195ac752b72bfe6b720c1c4b0771f19a78774f0e911c516564674e3b783dfe"
+        },
+        {
+          "frame": 12,
+          "colour": "461058d2952582a89df045c4939855817d1629d072ad27c90d3711d7e6ba78c0",
+          "depth": "45b2583e4f1979501a72419f13336eea545b34943bc373093593b0fe1c134a0f",
+          "picks": "52535c17625780a4b38809ee55e9e9132a300cde32c3c05087ebfea281fcfa77",
+          "shadow": "fc195ac752b72bfe6b720c1c4b0771f19a78774f0e911c516564674e3b783dfe"
+        },
+        {
+          "frame": 24,
+          "colour": "461058d2952582a89df045c4939855817d1629d072ad27c90d3711d7e6ba78c0",
+          "depth": "45b2583e4f1979501a72419f13336eea545b34943bc373093593b0fe1c134a0f",
+          "picks": "52535c17625780a4b38809ee55e9e9132a300cde32c3c05087ebfea281fcfa77",
+          "shadow": "fc195ac752b72bfe6b720c1c4b0771f19a78774f0e911c516564674e3b783dfe"
+        },
+        {
+          "frame": 36,
+          "colour": "461058d2952582a89df045c4939855817d1629d072ad27c90d3711d7e6ba78c0",
+          "depth": "45b2583e4f1979501a72419f13336eea545b34943bc373093593b0fe1c134a0f",
+          "picks": "52535c17625780a4b38809ee55e9e9132a300cde32c3c05087ebfea281fcfa77",
+          "shadow": "fc195ac752b72bfe6b720c1c4b0771f19a78774f0e911c516564674e3b783dfe"
+        },
+        {
+          "frame": 48,
+          "colour": "461058d2952582a89df045c4939855817d1629d072ad27c90d3711d7e6ba78c0",
+          "depth": "45b2583e4f1979501a72419f13336eea545b34943bc373093593b0fe1c134a0f",
+          "picks": "52535c17625780a4b38809ee55e9e9132a300cde32c3c05087ebfea281fcfa77",
+          "shadow": "fc195ac752b72bfe6b720c1c4b0771f19a78774f0e911c516564674e3b783dfe"
+        },
+        {
+          "frame": 60,
+          "colour": "461058d2952582a89df045c4939855817d1629d072ad27c90d3711d7e6ba78c0",
+          "depth": "45b2583e4f1979501a72419f13336eea545b34943bc373093593b0fe1c134a0f",
+          "picks": "52535c17625780a4b38809ee55e9e9132a300cde32c3c05087ebfea281fcfa77",
+          "shadow": "fc195ac752b72bfe6b720c1c4b0771f19a78774f0e911c516564674e3b783dfe"
+        }
+      ],
+      "buildings": 256,
+      "paths": 0,
+      "segments": 0,
+      "maxPathCell": 0,
+      "visibleBuildings": {
+        "min": 66,
+        "max": 66
+      },
+      "shadowUpdates": 0,
+      "samples": 72,
+      "timing": {
+        "total": {
+          "p50": 3.0999999046325684,
+          "p95": 4.100000023841858,
+          "max": 5.100000023841858
+        },
+        "pathUpload": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "placements": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0.10000002384185791
+        },
+        "buildingPrepare": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0.10000002384185791
+        },
+        "shadowPrepare": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0.10000002384185791
+        },
+        "validation": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        }
+      },
+      "isolatedStages": {
+        "paths": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "prepare": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "ground": {
+          "p50": 3.899999976158142,
+          "p95": 4.100000023841858,
+          "max": 4.100000023841858
+        },
+        "geometry": {
+          "p50": 3,
+          "p95": 3.100000023841858,
+          "max": 3.100000023841858
+        },
+        "buildings": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "water": {
+          "p50": 3,
+          "p95": 3.899999976158142,
+          "max": 3.899999976158142
+        },
+        "shadows": {
+          "p50": 2.799999952316284,
+          "p95": 4.200000047683716,
+          "max": 4.200000047683716
+        },
+        "weather": {
+          "p50": 0.2999999523162842,
+          "p95": 3,
+          "max": 3
+        },
+        "post": {
+          "p50": 3.899999976158142,
+          "p95": 4,
+          "max": 4
+        },
+        "total": {
+          "p50": 16.5,
+          "p95": 20,
+          "max": 20
+        }
+      }
+    },
+    {
+      "name": "buildings-256-orbit",
+      "checkpoints": [
+        {
+          "frame": 0,
+          "colour": "461058d2952582a89df045c4939855817d1629d072ad27c90d3711d7e6ba78c0",
+          "depth": "45b2583e4f1979501a72419f13336eea545b34943bc373093593b0fe1c134a0f",
+          "picks": "52535c17625780a4b38809ee55e9e9132a300cde32c3c05087ebfea281fcfa77",
+          "shadow": "fc195ac752b72bfe6b720c1c4b0771f19a78774f0e911c516564674e3b783dfe"
+        },
+        {
+          "frame": 12,
+          "colour": "f1b5473dbf392061f88ba0457c394ba976103e23c979edfd37ec1fc3314a7fe2",
+          "depth": "2ca47f0cfe1809ba06679f5515fefb4be1128c365560b20a7b547d1ed72e29c3",
+          "picks": "f400a5856d891e1e4cac398e2fb988f599040fdfd00d262f135ccf9e8e1f8d91",
+          "shadow": "fc195ac752b72bfe6b720c1c4b0771f19a78774f0e911c516564674e3b783dfe"
+        },
+        {
+          "frame": 24,
+          "colour": "ea912cb73189e25606c119a204ae1353fce90127e858829dbd65bd3d9e6a8d4e",
+          "depth": "3f2735dc920ccc7ce020310f283a32d998cc2732a0c80b2a4a43a36b827bb33f",
+          "picks": "98efea74617142dec08047ffe3e5ad51f3f26cb3c6de83ff5e659f2194064b2c",
+          "shadow": "fc195ac752b72bfe6b720c1c4b0771f19a78774f0e911c516564674e3b783dfe"
+        },
+        {
+          "frame": 36,
+          "colour": "0884de2bd81632d77e5f0e57b23c5b58aa6e99d36e180eabd927931604ffc105",
+          "depth": "9638314ca783248c822de39d51beecfb8a744c666d35a6ffbcd0f18645b54d0a",
+          "picks": "67d2ddab7952ea47a94299c514b7bffee3461d04d8e20741aed05a16338e3c66",
+          "shadow": "fc195ac752b72bfe6b720c1c4b0771f19a78774f0e911c516564674e3b783dfe"
+        },
+        {
+          "frame": 48,
+          "colour": "f4f997b3be9b4268a5fefa1d4a1b2100ac6b59a5c340cd970733df0a3761a0fd",
+          "depth": "6a785610d9b7d412b0e50b5671335d25372c709fc7f6718b885eece7a5b6931c",
+          "picks": "3cb8f7d09ac847cea72ec58d61690f5bde9aba761e27924643ccd0b697eda7a7",
+          "shadow": "fc195ac752b72bfe6b720c1c4b0771f19a78774f0e911c516564674e3b783dfe"
+        },
+        {
+          "frame": 60,
+          "colour": "a74aa14ab3402d8055ac109ee401351e4ff5227b7532c4539b5cdcfff0da6fc4",
+          "depth": "834970a1c4f07807caef69a6ce1f70329232e28b193ddced278da2db69f0c2f9",
+          "picks": "db4a1ce02d7d3d334b970428849fbdcb9e2f3200362adc971cf575aa75caac11",
+          "shadow": "fc195ac752b72bfe6b720c1c4b0771f19a78774f0e911c516564674e3b783dfe"
+        }
+      ],
+      "buildings": 256,
+      "paths": 0,
+      "segments": 0,
+      "maxPathCell": 0,
+      "visibleBuildings": {
+        "min": 54,
+        "max": 178
+      },
+      "shadowUpdates": 0,
+      "samples": 72,
+      "timing": {
+        "total": {
+          "p50": 4.599999904632568,
+          "p95": 6,
+          "max": 15
+        },
+        "pathUpload": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0.10000002384185791
+        },
+        "placements": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0.09999990463256836
+        },
+        "buildingPrepare": {
+          "p50": 1.1999999284744263,
+          "p95": 1.9000000953674316,
+          "max": 2.200000047683716
+        },
+        "shadowPrepare": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0.10000002384185791
+        },
+        "validation": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        }
+      },
+      "isolatedStages": {
+        "paths": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "prepare": {
+          "p50": 0,
+          "p95": 0.10000002384185791,
+          "max": 0.10000002384185791
+        },
+        "ground": {
+          "p50": 2.899999976158142,
+          "p95": 3.100000023841858,
+          "max": 3.100000023841858
+        },
+        "geometry": {
+          "p50": 3.100000023841858,
+          "p95": 3.899999976158142,
+          "max": 3.899999976158142
+        },
+        "buildings": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "water": {
+          "p50": 2.899999976158142,
+          "p95": 3.100000023841858,
+          "max": 3.100000023841858
+        },
+        "shadows": {
+          "p50": 3.100000023841858,
+          "p95": 4.399999976158142,
+          "max": 4.399999976158142
+        },
+        "weather": {
+          "p50": 0.10000002384185791,
+          "p95": 0.19999992847442627,
+          "max": 0.19999992847442627
+        },
+        "post": {
+          "p50": 2.9000000953674316,
+          "p95": 3.899999976158142,
+          "max": 3.899999976158142
+        },
+        "total": {
+          "p50": 15.300000071525574,
+          "p95": 15.899999976158142,
+          "max": 15.899999976158142
+        }
+      }
+    },
+    {
+      "name": "buildings-2048-fast-flight",
+      "checkpoints": [
+        {
+          "frame": 0,
+          "colour": "d44fc3f66cc022100dbc23fd22c4423b43d0ca67e04f88f6705609c66a317edb",
+          "depth": "1722b0e627055bc0e81d4246b36bb1b2c6d2e1ec2bef4439812c770a3052d0e9",
+          "picks": "fb552ffe73ff86136cb37af4d49051b62c231eac75d29a0d0568f2e76cfff621",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        },
+        {
+          "frame": 12,
+          "colour": "944622ec9126862e08c8b6081ef4ae7bb1801970a2c9cb0f5238a833dc996f5d",
+          "depth": "c60af5e21bbffc429e207cc0d8a9e28c19ee475497ad41f604733bbfffef2479",
+          "picks": "ffa38c34b52523030434574abb2f307e51e82c0fdb8cf2cabf62870e2cc4de27",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        },
+        {
+          "frame": 24,
+          "colour": "40aa7e739bc92418a315038a6b51c70279823b820fc2eaac4792ab99d547eebc",
+          "depth": "cf6449c57a1b77cd44ac57e5f03fb851ce2d4aef1fef9005b0f7b3db5ceba739",
+          "picks": "e23bc0b0bdec51560d002051e56a9c1e66963f2b6b68cd579496d1cd9d77525d",
+          "shadow": "7f262516af3d6eaf0baff41d868a077ad181ba2b403565df0832fac2c48b6624"
+        },
+        {
+          "frame": 36,
+          "colour": "ffc2c363fe6e663aa03e2cddf19d1aa2db0ee1dfc3feaf3e5843b6242a124fc0",
+          "depth": "7caf2147540211cf87b42921ff3d4a7607ecfbeefd58a73a6dd3f4bc8536396f",
+          "picks": "90103fdd24650c464ee0717de0096f31c93b763ea49b531db25ed027a419ed92",
+          "shadow": "9cbc4180075b661c8f641216ac6a1a095aa70df813d54259b8b4b8a07253a0f8"
+        },
+        {
+          "frame": 48,
+          "colour": "d235a28658e322b08763c63e2fb8836cf9a4a3a76df5676cd3b95c4f897f83ee",
+          "depth": "79ccd2673d5eea5dd79c62929cc2528f34843a497757c6421d262073b890c027",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        },
+        {
+          "frame": 60,
+          "colour": "aa720def4737b732e29451133c15d2c8127bcbb71ea0752f969e93f52d650906",
+          "depth": "9a244cb43dc706d3f6e1c6788dc7f2b59130ffa0da5c5cbb0773e9f237b462a6",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        }
+      ],
+      "buildings": 2048,
+      "paths": 0,
+      "segments": 0,
+      "maxPathCell": 0,
+      "visibleBuildings": {
+        "min": 0,
+        "max": 1900
+      },
+      "shadowUpdates": 32,
+      "samples": 72,
+      "timing": {
+        "total": {
+          "p50": 17.899999976158142,
+          "p95": 19.5,
+          "max": 21.200000047683716
+        },
+        "pathUpload": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0.10000002384185791
+        },
+        "placements": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "buildingPrepare": {
+          "p50": 9.899999976158142,
+          "p95": 10.800000071525574,
+          "max": 11.800000071525574
+        },
+        "shadowPrepare": {
+          "p50": 4.599999904632568,
+          "p95": 5.699999928474426,
+          "max": 7.399999976158142
+        },
+        "validation": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        }
+      },
+      "isolatedStages": {
+        "paths": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "prepare": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "ground": {
+          "p50": 3,
+          "p95": 4.100000023841858,
+          "max": 4.100000023841858
+        },
+        "geometry": {
+          "p50": 3.0999999046325684,
+          "p95": 3.399999976158142,
+          "max": 3.399999976158142
+        },
+        "buildings": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "water": {
+          "p50": 0.10000002384185791,
+          "p95": 2.9000000953674316,
+          "max": 2.9000000953674316
+        },
+        "shadows": {
+          "p50": 3,
+          "p95": 4,
+          "max": 4
+        },
+        "weather": {
+          "p50": 0.09999990463256836,
+          "p95": 0.19999992847442627,
+          "max": 0.19999992847442627
+        },
+        "post": {
+          "p50": 2.8000000715255737,
+          "p95": 3.5,
+          "max": 3.5
+        },
+        "total": {
+          "p50": 12.100000023841858,
+          "p95": 15.599999904632568,
+          "max": 15.599999904632568
+        }
+      }
+    },
+    {
+      "name": "buildings-2048-close",
+      "checkpoints": [
+        {
+          "frame": 0,
+          "colour": "9cd8574495d692ea070b0f26098441d97cbc71bde44bea5a3c344ca869a6691b",
+          "depth": "949e4ab89aa6e57fff7488e778610e0fb975791ab58d984107eef40d0e1d34d0",
+          "picks": "fb61a193e8d815b120d81ed3ee1273711aa91cfb7c705262cef0bd9c0a8f415d",
+          "shadow": "ac5847ee234200a88601d280e903128e7b9974e3fa2834129fd92731838aac9b"
+        },
+        {
+          "frame": 12,
+          "colour": "99afabcf88823bf987cc2a59f133541e4a1d6915c47eccc901005e0a7fb0712b",
+          "depth": "1fec50b3a8cfdaf15a929b82ca1ea507cb3b17059587764ac500e60a64cb444d",
+          "picks": "879a595cccb5f20e754a846fdbf11ab191e06ea0459be65211d202fbaf3e246f",
+          "shadow": "ac5847ee234200a88601d280e903128e7b9974e3fa2834129fd92731838aac9b"
+        },
+        {
+          "frame": 24,
+          "colour": "460a8179bb96c22ac00e92cbb2efda0bf7a779374957429ad7b7af16d2cc5d64",
+          "depth": "ef6aba50385508b60188569ce9d6be79151f6ef78a313545dce47e06ed34fc56",
+          "picks": "bfa6af284ea578015aa0026bcda2cf220be2360c211a3dff07d7a30b6322ab67",
+          "shadow": "ac5847ee234200a88601d280e903128e7b9974e3fa2834129fd92731838aac9b"
+        },
+        {
+          "frame": 36,
+          "colour": "928518c9ad06a70a330e73a3b3d2e41aea52b175bb37d77e7defad5b1ce343bc",
+          "depth": "66af39a788ff158ba292dbd932e2510b844f0490f04797878f9955dc9411a965",
+          "picks": "7b73bd167d2d80bb8ea786c4ea120cb626f5e03372e0dd2dfaf4b29a4104582c",
+          "shadow": "ac5847ee234200a88601d280e903128e7b9974e3fa2834129fd92731838aac9b"
+        },
+        {
+          "frame": 48,
+          "colour": "4f271bbc80800f6dd4e4c076324f8b4ebeb001f65ab1d5d6abc070f555582482",
+          "depth": "ffbb98ca791ae56a74888984f56edccbf58681e7e73b76c0038aeaf08174762f",
+          "picks": "3dfcfc9adb02feb7b960f11d3fc630f72366e8dac4c8bff9dd6c8fbf0ee5c352",
+          "shadow": "ac5847ee234200a88601d280e903128e7b9974e3fa2834129fd92731838aac9b"
+        },
+        {
+          "frame": 60,
+          "colour": "6a198b42cd998f3f1438204dba203d597cbe0f51fd6c405495cbd9b3794890e7",
+          "depth": "415833bedab69e256fda39396ff2e64c9bced2f64085663c583875155cdc157e",
+          "picks": "ab0bef72b71827ed339f2a415ec28c3c9de6f0578822d321c63477d34b07978d",
+          "shadow": "ac5847ee234200a88601d280e903128e7b9974e3fa2834129fd92731838aac9b"
+        }
+      ],
+      "buildings": 2048,
+      "paths": 0,
+      "segments": 0,
+      "maxPathCell": 0,
+      "visibleBuildings": {
+        "min": 71,
+        "max": 1455
+      },
+      "shadowUpdates": 0,
+      "samples": 72,
+      "timing": {
+        "total": {
+          "p50": 11,
+          "p95": 13,
+          "max": 20.90000009536743
+        },
+        "pathUpload": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "placements": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0.10000002384185791
+        },
+        "buildingPrepare": {
+          "p50": 7.200000047683716,
+          "p95": 9,
+          "max": 12.200000047683716
+        },
+        "shadowPrepare": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0.10000002384185791
+        },
+        "validation": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        }
+      },
+      "isolatedStages": {
+        "paths": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "prepare": {
+          "p50": 0,
+          "p95": 0.30000007152557373,
+          "max": 0.30000007152557373
+        },
+        "ground": {
+          "p50": 2.6999999284744263,
+          "p95": 3,
+          "max": 3
+        },
+        "geometry": {
+          "p50": 2.799999952316284,
+          "p95": 4.600000023841858,
+          "max": 4.600000023841858
+        },
+        "buildings": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "water": {
+          "p50": 2.799999952316284,
+          "p95": 3.899999976158142,
+          "max": 3.899999976158142
+        },
+        "shadows": {
+          "p50": 4,
+          "p95": 4.100000023841858,
+          "max": 4.100000023841858
+        },
+        "weather": {
+          "p50": 0.10000002384185791,
+          "p95": 0.20000004768371582,
+          "max": 0.20000004768371582
+        },
+        "post": {
+          "p50": 2.899999976158142,
+          "p95": 3,
+          "max": 3
+        },
+        "total": {
+          "p50": 15.5,
+          "p95": 17.100000023841858,
+          "max": 17.100000023841858
+        }
+      }
+    },
+    {
+      "name": "building-edit",
+      "checkpoints": [
+        {
+          "frame": 0,
+          "colour": "f1b52570a7060253ccc6b34073e8f9655d9de62589408f0136553640927a48e7",
+          "depth": "ab8660a3eb13e7bf8cedfe7b39eafbe5e21fc03d735bc46dd32bb11759efe4f8",
+          "picks": "026dfa160deb638c78fed6ef27f553aee4251a2bbf038a4ccc6a2d4503fdabfc",
+          "shadow": "90dd18cc804a0d9a682d7e6219526c00fe67e9c4fdf1ae0495b10991f7eb047e"
+        },
+        {
+          "frame": 12,
+          "colour": "a1552959093518b70ba815c9176c94080b08ea5f6b79f82d9d8dca80d29b776b",
+          "depth": "d1acabda8758a150ff262702b4654a5163445059efc8a0dacba45c74fddd56f1",
+          "picks": "774280dd3e415406d908a869a3605cf42012354b0931dbb6f2c35a6bf0208f49",
+          "shadow": "00d01279e38c9ad22d1b9d282abb87f3fbc4aa519b8b486c7ba98108152668c4"
+        },
+        {
+          "frame": 24,
+          "colour": "9f61930bf86d89330a74da082aa086fe7df22742dbd3e2d3c750e40b4779b781",
+          "depth": "c351414888d353c448135a037ff904f610212247a6e9f9d46162b910c7474084",
+          "picks": "a19cd9e3a31e3a1947089803eae78c8e03e28aff6087b391a3443d9eb803063e",
+          "shadow": "a6d02f2fe72e5943f1813607ee61b320ccdc09103935214bfa26fb4c1aeccff3"
+        },
+        {
+          "frame": 36,
+          "colour": "9635a2b9c974365c0a5adf2877e986cb1cd1d53943c392d6901c1cbb70a2c6c4",
+          "depth": "870e54b9622a9ffb372374406ed59138db3304294f824b40b7e385d2180ef3c7",
+          "picks": "b71ec2cb3b46463ec9779c23ac12c9b701c7434875d0e62acdfa79da7a156c78",
+          "shadow": "81363bab9730228721de4181c2adac0b8dccde1f5d225428b24876b5dce40635"
+        },
+        {
+          "frame": 48,
+          "colour": "c0f5236b3f0e5212069c6fadbbbc99a87471e429d9900f227e566ff908548604",
+          "depth": "45b2583e4f1979501a72419f13336eea545b34943bc373093593b0fe1c134a0f",
+          "picks": "52535c17625780a4b38809ee55e9e9132a300cde32c3c05087ebfea281fcfa77",
+          "shadow": "632569aeebc5eb1c6cdccd9dfa7025963c13988278b76f315ba9f100ef399ce3"
+        },
+        {
+          "frame": 60,
+          "colour": "97ef1c72a648cb25a351aaaf66f41b84e6de6da8cbe12d101b925946fd7f66cf",
+          "depth": "1f4eb402dae89e771f1e12ac5d05352fbe7996de87ef123d9891527dfff35ddb",
+          "picks": "bd0c8aa1eada3ba7aa8f74b43d1f71caea478cca10cb605de3004a924b85880b",
+          "shadow": "7782cdbd17f8844bd339781a4883df4e19bfcdc8b1c53f12a2aecd9e31157486"
+        }
+      ],
+      "buildings": 256,
+      "paths": 0,
+      "segments": 0,
+      "maxPathCell": 0,
+      "visibleBuildings": {
+        "min": 66,
+        "max": 66
+      },
+      "shadowUpdates": 72,
+      "samples": 72,
+      "timing": {
+        "total": {
+          "p50": 5,
+          "p95": 6.899999976158142,
+          "max": 32.40000009536743
+        },
+        "pathUpload": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "placements": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0.10000002384185791
+        },
+        "buildingPrepare": {
+          "p50": 1.0999999046325684,
+          "p95": 1.600000023841858,
+          "max": 2.700000047683716
+        },
+        "shadowPrepare": {
+          "p50": 0.7000000476837158,
+          "p95": 1.100000023841858,
+          "max": 1.2999999523162842
+        },
+        "validation": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        }
+      },
+      "isolatedStages": {
+        "paths": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "prepare": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "ground": {
+          "p50": 3,
+          "p95": 3.100000023841858,
+          "max": 3.100000023841858
+        },
+        "geometry": {
+          "p50": 2.899999976158142,
+          "p95": 3,
+          "max": 3
+        },
+        "buildings": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "water": {
+          "p50": 3.0999999046325684,
+          "p95": 4,
+          "max": 4
+        },
+        "shadows": {
+          "p50": 2.700000047683716,
+          "p95": 3.100000023841858,
+          "max": 3.100000023841858
+        },
+        "weather": {
+          "p50": 0.19999992847442627,
+          "p95": 3.4000000953674316,
+          "max": 3.4000000953674316
+        },
+        "post": {
+          "p50": 2.9000000953674316,
+          "p95": 3.3000000715255737,
+          "max": 3.3000000715255737
+        },
+        "total": {
+          "p50": 14.100000023841858,
+          "p95": 17,
+          "max": 17
+        }
+      }
+    },
+    {
+      "name": "building-sun-change",
+      "checkpoints": [
+        {
+          "frame": 0,
+          "colour": "519ca303e0b67693c32e53680569d1c3bad943dfdc2071424eb7bf13c6bb1db6",
+          "depth": "45b2583e4f1979501a72419f13336eea545b34943bc373093593b0fe1c134a0f",
+          "picks": "52535c17625780a4b38809ee55e9e9132a300cde32c3c05087ebfea281fcfa77",
+          "shadow": "7aa87a4866b95f1a2db76f9c7644e677cb1562fc49745f88c9117840a3362cd3"
+        },
+        {
+          "frame": 12,
+          "colour": "6fda73ca8abce0a89d3d7d6ad248074cd4f627cc7302319d2cb0aba52aefb8e7",
+          "depth": "45b2583e4f1979501a72419f13336eea545b34943bc373093593b0fe1c134a0f",
+          "picks": "52535c17625780a4b38809ee55e9e9132a300cde32c3c05087ebfea281fcfa77",
+          "shadow": "c5e4de98530179e214f97d4351cf6bb423082c102cccaf20efe12a120d0f0646"
+        },
+        {
+          "frame": 24,
+          "colour": "69d69dba5dbffbaea4d7049988750de8dd92e33d771fbbdaf8c85092e23b5569",
+          "depth": "45b2583e4f1979501a72419f13336eea545b34943bc373093593b0fe1c134a0f",
+          "picks": "52535c17625780a4b38809ee55e9e9132a300cde32c3c05087ebfea281fcfa77",
+          "shadow": "dbe41b5ef99b6b8c7a66fd8b79201ddae02e3811247510baafdf5c2ad44367d2"
+        },
+        {
+          "frame": 36,
+          "colour": "bca57fad0d7d3d20f552d933952d1def88268b843a5d3b5d7cc6b4df846f3d77",
+          "depth": "45b2583e4f1979501a72419f13336eea545b34943bc373093593b0fe1c134a0f",
+          "picks": "52535c17625780a4b38809ee55e9e9132a300cde32c3c05087ebfea281fcfa77",
+          "shadow": "d6772e9e316e764f0768ca86e8b285bea3c4a411bb36ed4ca98634fe99ce39b2"
+        },
+        {
+          "frame": 48,
+          "colour": "273023c4a9d33d4ec9d0cd2e7da3095ec3b029af0ccb74332e2d37ab581d430e",
+          "depth": "45b2583e4f1979501a72419f13336eea545b34943bc373093593b0fe1c134a0f",
+          "picks": "52535c17625780a4b38809ee55e9e9132a300cde32c3c05087ebfea281fcfa77",
+          "shadow": "9a509288aa7de1f40fe363e1f515ce45792d94c96c0e9b9d5986a64dfdea254d"
+        },
+        {
+          "frame": 60,
+          "colour": "bd2ca15df9487d5f6105f1868c5cc800806aa63469ed43d866df5b838847d029",
+          "depth": "45b2583e4f1979501a72419f13336eea545b34943bc373093593b0fe1c134a0f",
+          "picks": "52535c17625780a4b38809ee55e9e9132a300cde32c3c05087ebfea281fcfa77",
+          "shadow": "5106e424bdf0d180c4bf19e257dbe1bfcffbf2756bf6757dae6aa13061d0d855"
+        }
+      ],
+      "buildings": 256,
+      "paths": 0,
+      "segments": 0,
+      "maxPathCell": 0,
+      "visibleBuildings": {
+        "min": 66,
+        "max": 66
+      },
+      "shadowUpdates": 72,
+      "samples": 72,
+      "timing": {
+        "total": {
+          "p50": 4,
+          "p95": 4.5,
+          "max": 5.200000047683716
+        },
+        "pathUpload": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0.10000002384185791
+        },
+        "placements": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "buildingPrepare": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "shadowPrepare": {
+          "p50": 0.6999999284744263,
+          "p95": 0.8999999761581421,
+          "max": 1.2000000476837158
+        },
+        "validation": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        }
+      },
+      "isolatedStages": {
+        "paths": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "prepare": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "ground": {
+          "p50": 2.8000000715255737,
+          "p95": 2.899999976158142,
+          "max": 2.899999976158142
+        },
+        "geometry": {
+          "p50": 3,
+          "p95": 3.3000000715255737,
+          "max": 3.3000000715255737
+        },
+        "buildings": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "water": {
+          "p50": 3,
+          "p95": 4,
+          "max": 4
+        },
+        "shadows": {
+          "p50": 2.899999976158142,
+          "p95": 3.299999952316284,
+          "max": 3.299999952316284
+        },
+        "weather": {
+          "p50": 0.20000004768371582,
+          "p95": 0.20000004768371582,
+          "max": 0.20000004768371582
+        },
+        "post": {
+          "p50": 2.899999976158142,
+          "p95": 3,
+          "max": 3
+        },
+        "total": {
+          "p50": 13.899999976158142,
+          "p95": 15,
+          "max": 15
+        }
+      }
+    },
+    {
+      "name": "paths-14-orbit",
+      "checkpoints": [
+        {
+          "frame": 0,
+          "colour": "2d78e3737ba6df48b7edd027c87c7e184a2ca1e30e3d5c122b9729bfdd557a14",
+          "depth": "5947b119b2dccea77d4a70592b67118e341b8da5c76fefd15a053a3cb89a5751",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        },
+        {
+          "frame": 12,
+          "colour": "1ce85970c32c60715149b337cd1499f5ad213eee497a3f87a1933fa06d4cebd5",
+          "depth": "c740a2dbba7b8954e6b60ef02c28b35b165a28d96a865da21abe2804b654f700",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        },
+        {
+          "frame": 24,
+          "colour": "5caac34adbc8364d1a3bc7e8de240e653e93568560a0bc616a7c87d8439c73a5",
+          "depth": "b8c26dda305383d8bd9659c0ffd04a9b9615a7a70f91cec9aab6c07f3712cc3c",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        },
+        {
+          "frame": 36,
+          "colour": "c6e725f61e7cd0a4a7a2a2b66bbbd425629a72120fc3e806cdaa93f9169c7ca1",
+          "depth": "5947b119b2dccea77d4a70592b67118e341b8da5c76fefd15a053a3cb89a5751",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        },
+        {
+          "frame": 48,
+          "colour": "261005aeff64a638546940b746b53f0c42cb5d7d94fb408280de55667668509e",
+          "depth": "096d2db418f2ce324e0bf027d24fd51970e4329df46d9f514e50eac9f1807ab0",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        },
+        {
+          "frame": 60,
+          "colour": "b160cde29e856322e75016930762bb9cfa9024c214c81ddc9040914a7f5d6a5d",
+          "depth": "a3842cde35b16675f681d358516e4e59bb660b5944da8aad0d37ed85c7e001f7",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        }
+      ],
+      "buildings": 0,
+      "paths": 14,
+      "segments": 5642,
+      "maxPathCell": 64,
+      "visibleBuildings": {
+        "min": 0,
+        "max": 0
+      },
+      "shadowUpdates": 0,
+      "samples": 72,
+      "timing": {
+        "total": {
+          "p50": 3,
+          "p95": 4,
+          "max": 4.100000023841858
+        },
+        "pathUpload": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "placements": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0.10000002384185791
+        },
+        "buildingPrepare": {
+          "p50": 0,
+          "p95": 0.10000002384185791,
+          "max": 0.20000004768371582
+        },
+        "shadowPrepare": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0.10000002384185791
+        },
+        "validation": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        }
+      },
+      "isolatedStages": {
+        "paths": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "prepare": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "ground": {
+          "p50": 3.600000023841858,
+          "p95": 4.100000023841858,
+          "max": 4.100000023841858
+        },
+        "geometry": {
+          "p50": 3,
+          "p95": 3.100000023841858,
+          "max": 3.100000023841858
+        },
+        "buildings": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "water": {
+          "p50": 0.19999992847442627,
+          "p95": 0.3999999761581421,
+          "max": 0.3999999761581421
+        },
+        "shadows": {
+          "p50": 2.8000000715255737,
+          "p95": 3.200000047683716,
+          "max": 3.200000047683716
+        },
+        "weather": {
+          "p50": 0.09999990463256836,
+          "p95": 0.10000002384185791,
+          "max": 0.10000002384185791
+        },
+        "post": {
+          "p50": 2.399999976158142,
+          "p95": 2.899999976158142,
+          "max": 2.899999976158142
+        },
+        "total": {
+          "p50": 11,
+          "p95": 12.399999976158142,
+          "max": 12.399999976158142
+        }
+      }
+    },
+    {
+      "name": "paths-32-orbit",
+      "checkpoints": [
+        {
+          "frame": 0,
+          "colour": "f115423c31b1ffa7bd6e0a84786e15d741d889de0a5b29fa7a535e0ce7b6acb8",
+          "depth": "5947b119b2dccea77d4a70592b67118e341b8da5c76fefd15a053a3cb89a5751",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        },
+        {
+          "frame": 12,
+          "colour": "7479a2b8ffa6b6fd8c93b9d266d7c3590511a1279b1c1c7cee653c1af69f5b17",
+          "depth": "c740a2dbba7b8954e6b60ef02c28b35b165a28d96a865da21abe2804b654f700",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        },
+        {
+          "frame": 24,
+          "colour": "bd5ddb54e4021027bd56894b62747b316d1b1c3db5d0a3a0b520761ff59e8f8c",
+          "depth": "b8c26dda305383d8bd9659c0ffd04a9b9615a7a70f91cec9aab6c07f3712cc3c",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        },
+        {
+          "frame": 36,
+          "colour": "47e20a3025c03ff4e3f4e3f108412671ffd2522c55aa2a19f07486882b6b660d",
+          "depth": "5947b119b2dccea77d4a70592b67118e341b8da5c76fefd15a053a3cb89a5751",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        },
+        {
+          "frame": 48,
+          "colour": "92ca589d889c692b2c2d275ebb47defa6046459a4fbe80b9c765270cc17ba556",
+          "depth": "096d2db418f2ce324e0bf027d24fd51970e4329df46d9f514e50eac9f1807ab0",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        },
+        {
+          "frame": 60,
+          "colour": "1aaf60c6983d45e21e8ddc6e3008fd0dd2d01155fa20d869c8444440a85296c5",
+          "depth": "a3842cde35b16675f681d358516e4e59bb660b5944da8aad0d37ed85c7e001f7",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        }
+      ],
+      "buildings": 0,
+      "paths": 32,
+      "segments": 12896,
+      "maxPathCell": 64,
+      "visibleBuildings": {
+        "min": 0,
+        "max": 0
+      },
+      "shadowUpdates": 0,
+      "samples": 72,
+      "timing": {
+        "total": {
+          "p50": 3,
+          "p95": 4.199999928474426,
+          "max": 4.699999928474426
+        },
+        "pathUpload": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0.10000002384185791
+        },
+        "placements": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0.10000002384185791
+        },
+        "buildingPrepare": {
+          "p50": 0,
+          "p95": 0.10000002384185791,
+          "max": 0.10000002384185791
+        },
+        "shadowPrepare": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0.10000002384185791
+        },
+        "validation": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        }
+      },
+      "isolatedStages": {
+        "paths": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "prepare": {
+          "p50": 0,
+          "p95": 0.10000002384185791,
+          "max": 0.10000002384185791
+        },
+        "ground": {
+          "p50": 3,
+          "p95": 3.899999976158142,
+          "max": 3.899999976158142
+        },
+        "geometry": {
+          "p50": 3,
+          "p95": 3.3000000715255737,
+          "max": 3.3000000715255737
+        },
+        "buildings": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "water": {
+          "p50": 0.10000002384185791,
+          "p95": 0.10000002384185791,
+          "max": 0.10000002384185791
+        },
+        "shadows": {
+          "p50": 2.899999976158142,
+          "p95": 3.9000000953674316,
+          "max": 3.9000000953674316
+        },
+        "weather": {
+          "p50": 0.10000002384185791,
+          "p95": 0.2999999523162842,
+          "max": 0.2999999523162842
+        },
+        "post": {
+          "p50": 2.899999976158142,
+          "p95": 3,
+          "max": 3
+        },
+        "total": {
+          "p50": 11,
+          "p95": 13.100000023841858,
+          "max": 13.100000023841858
+        }
+      }
+    },
+    {
+      "name": "path-node-edit",
+      "checkpoints": [
+        {
+          "frame": 0,
+          "colour": "f115423c31b1ffa7bd6e0a84786e15d741d889de0a5b29fa7a535e0ce7b6acb8",
+          "depth": "5947b119b2dccea77d4a70592b67118e341b8da5c76fefd15a053a3cb89a5751",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        },
+        {
+          "frame": 12,
+          "colour": "f115423c31b1ffa7bd6e0a84786e15d741d889de0a5b29fa7a535e0ce7b6acb8",
+          "depth": "5947b119b2dccea77d4a70592b67118e341b8da5c76fefd15a053a3cb89a5751",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        },
+        {
+          "frame": 24,
+          "colour": "f115423c31b1ffa7bd6e0a84786e15d741d889de0a5b29fa7a535e0ce7b6acb8",
+          "depth": "5947b119b2dccea77d4a70592b67118e341b8da5c76fefd15a053a3cb89a5751",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        },
+        {
+          "frame": 36,
+          "colour": "f115423c31b1ffa7bd6e0a84786e15d741d889de0a5b29fa7a535e0ce7b6acb8",
+          "depth": "5947b119b2dccea77d4a70592b67118e341b8da5c76fefd15a053a3cb89a5751",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        },
+        {
+          "frame": 48,
+          "colour": "f115423c31b1ffa7bd6e0a84786e15d741d889de0a5b29fa7a535e0ce7b6acb8",
+          "depth": "5947b119b2dccea77d4a70592b67118e341b8da5c76fefd15a053a3cb89a5751",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        },
+        {
+          "frame": 60,
+          "colour": "f115423c31b1ffa7bd6e0a84786e15d741d889de0a5b29fa7a535e0ce7b6acb8",
+          "depth": "5947b119b2dccea77d4a70592b67118e341b8da5c76fefd15a053a3cb89a5751",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        }
+      ],
+      "buildings": 0,
+      "paths": 32,
+      "segments": 12936,
+      "maxPathCell": 80,
+      "visibleBuildings": {
+        "min": 0,
+        "max": 0
+      },
+      "shadowUpdates": 0,
+      "samples": 72,
+      "timing": {
+        "total": {
+          "p50": 5.900000095367432,
+          "p95": 7.899999976158142,
+          "max": 10.299999952316284
+        },
+        "pathUpload": {
+          "p50": 1.2000000476837158,
+          "p95": 2.100000023841858,
+          "max": 2.3000000715255737
+        },
+        "placements": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "buildingPrepare": {
+          "p50": 0,
+          "p95": 0.10000002384185791,
+          "max": 0.19999992847442627
+        },
+        "shadowPrepare": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0.10000002384185791
+        },
+        "validation": {
+          "p50": 1.100000023841858,
+          "p95": 2.600000023841858,
+          "max": 3.1999999284744263
+        }
+      },
+      "isolatedStages": {
+        "paths": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "prepare": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "ground": {
+          "p50": 3,
+          "p95": 4,
+          "max": 4
+        },
+        "geometry": {
+          "p50": 3,
+          "p95": 3.5,
+          "max": 3.5
+        },
+        "buildings": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "water": {
+          "p50": 0.10000002384185791,
+          "p95": 0.10000002384185791,
+          "max": 0.10000002384185791
+        },
+        "shadows": {
+          "p50": 2.899999976158142,
+          "p95": 3,
+          "max": 3
+        },
+        "weather": {
+          "p50": 0.10000002384185791,
+          "p95": 0.3999999761581421,
+          "max": 0.3999999761581421
+        },
+        "post": {
+          "p50": 2.899999976158142,
+          "p95": 2.9000000953674316,
+          "max": 2.9000000953674316
+        },
+        "total": {
+          "p50": 11.5,
+          "p95": 12.100000023841858,
+          "max": 12.100000023841858
+        }
+      }
+    },
+    {
+      "name": "combined-flight",
+      "checkpoints": [
+        {
+          "frame": 0,
+          "colour": "f84d4f3eb262758ac5302fe52abbd980bc1e0566649e06f3f8b1ba985da7ba9a",
+          "depth": "3b32d650f01da9fddf2a1d000926946602a9b925a9c3a344933424a37a256506",
+          "picks": "1215c9ac0dd3f456e1d11082a459c903fc57707bcc583e93221e00d5e53c5974",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        },
+        {
+          "frame": 12,
+          "colour": "6fa11446abc353d264a7c231428c09709dff57810e93c74c31e33bca63b5d18e",
+          "depth": "6aa9ba049858e51c2170420cab03b5eb55c5dc957e482b188cdc148dc8b653f7",
+          "picks": "01548d9442257fa0d8557e78cefcba1d0931f016ececa502bd89fcc1617e3a6f",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        },
+        {
+          "frame": 24,
+          "colour": "e5aa9bb9e7b171ddca18cb541b486a5d437a131540529c2ca8a8138274a8176e",
+          "depth": "1d6bf36e108d38f82256f82b2643d6a4570d1d91ca1a8139850243519306ced5",
+          "picks": "e3ea18bbb0a6f01bffe7ab3e2d14f332f676dd8eec12f4f8878302fb716f8277",
+          "shadow": "1faa36138b64fe98fb71d9ee04b2c01864293c1d7f78b2a8f9eeb1648c712f05"
+        },
+        {
+          "frame": 36,
+          "colour": "716d1fe34a057c3544d99ed20b9a7c719b2863435bde65b2b12874182bfe62ee",
+          "depth": "7caf2147540211cf87b42921ff3d4a7607ecfbeefd58a73a6dd3f4bc8536396f",
+          "picks": "90103fdd24650c464ee0717de0096f31c93b763ea49b531db25ed027a419ed92",
+          "shadow": "cd6f75c77149f38235c1f09bc41bebb1008230544e12f74f58a03861eac3dd11"
+        },
+        {
+          "frame": 48,
+          "colour": "1d05d7a73a1e81f0cd357fc4cf48aa19fefa33d19e9fefed22ab61b53c7b20cd",
+          "depth": "79ccd2673d5eea5dd79c62929cc2528f34843a497757c6421d262073b890c027",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        },
+        {
+          "frame": 60,
+          "colour": "aa720def4737b732e29451133c15d2c8127bcbb71ea0752f969e93f52d650906",
+          "depth": "9a244cb43dc706d3f6e1c6788dc7f2b59130ffa0da5c5cbb0773e9f237b462a6",
+          "picks": "bbd05cf6097ac9b1f89ea29d2542c1b7b67ee46848393895f5a9e43fa1f621e5",
+          "shadow": "bb9f8df61474d25e71fa00722318cd387396ca1736605e1248821cc0de3d3af8"
+        }
+      ],
+      "buildings": 512,
+      "paths": 14,
+      "segments": 5642,
+      "maxPathCell": 64,
+      "visibleBuildings": {
+        "min": 0,
+        "max": 512
+      },
+      "shadowUpdates": 32,
+      "samples": 72,
+      "timing": {
+        "total": {
+          "p50": 7,
+          "p95": 8.100000023841858,
+          "max": 9.399999976158142
+        },
+        "pathUpload": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "placements": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "buildingPrepare": {
+          "p50": 2.399999976158142,
+          "p95": 2.899999976158142,
+          "max": 3.5
+        },
+        "shadowPrepare": {
+          "p50": 1.1999999284744263,
+          "p95": 1.6999999284744263,
+          "max": 1.7999999523162842
+        },
+        "validation": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        }
+      },
+      "isolatedStages": {
+        "paths": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "prepare": {
+          "p50": 0,
+          "p95": 0.10000002384185791,
+          "max": 0.10000002384185791
+        },
+        "ground": {
+          "p50": 3,
+          "p95": 4,
+          "max": 4
+        },
+        "geometry": {
+          "p50": 3,
+          "p95": 3.899999976158142,
+          "max": 3.899999976158142
+        },
+        "buildings": {
+          "p50": 0,
+          "p95": 0,
+          "max": 0
+        },
+        "water": {
+          "p50": 0.10000002384185791,
+          "p95": 0.5,
+          "max": 0.5
+        },
+        "shadows": {
+          "p50": 2.799999952316284,
+          "p95": 3.5,
+          "max": 3.5
+        },
+        "weather": {
+          "p50": 0.10000002384185791,
+          "p95": 0.20000004768371582,
+          "max": 0.20000004768371582
+        },
+        "post": {
+          "p50": 2.899999976158142,
+          "p95": 4,
+          "max": 4
+        },
+        "total": {
+          "p50": 12,
+          "p95": 15,
+          "max": 15
+        }
+      }
+    }
+  ],
+  "parity": {
+    "normal": {
+      "colour": "2afc72cae2396e893abe898d86b37aa2ab1cbe5f0670cd262656ca93c01d37b4",
+      "depth": "63b809b5230160fce23d2064e86250909c71c1f9c4c8541c5b5b87a74fb3172c",
+      "picks": "23a480c34fdfe730f4f3334b434406adaa130a9d108e6a8ec02d1d1b3536dd45",
+      "shadow": "0b50babcab75ab44f1af0919eb2cc0b9ba650be02a29a1fae43fd4c4ab254231"
+    },
+    "profiled": {
+      "colour": "2afc72cae2396e893abe898d86b37aa2ab1cbe5f0670cd262656ca93c01d37b4",
+      "depth": "63b809b5230160fce23d2064e86250909c71c1f9c4c8541c5b5b87a74fb3172c",
+      "picks": "23a480c34fdfe730f4f3334b434406adaa130a9d108e6a8ec02d1d1b3536dd45",
+      "shadow": "0b50babcab75ab44f1af0919eb2cc0b9ba650be02a29a1fae43fd4c4ab254231"
+    },
+    "equal": true
+  }
+}

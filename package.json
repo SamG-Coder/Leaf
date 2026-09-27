@@ -14,7 +14,10 @@
     "test:water-fft": "node scripts/test-water-fft.mjs",
     "test:paths": "node scripts/test-path-model.mjs && node scripts/test-path-editor.mjs",
     "test:buildings": "node scripts/test-building-model.mjs && node scripts/test-building-editor.mjs",
-    "test:building-shadows": "node scripts/test-building-shadows.mjs"
+    "test:building-shadows": "node scripts/test-building-shadows.mjs",
+    "profile:building-paths": "node scripts/profile-building-paths.mjs artifacts/building-path-performance-after.json",
+    "test:camera-projector": "node scripts/test-camera-projector.mjs",
+    "test:performance-parity": "node scripts/compare-building-path-performance.mjs"
   },
   "description": "Seeded procedural vegetation and a CUDA WebShader world editor",
   "devDependencies": {
