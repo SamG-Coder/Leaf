@@ -12,7 +12,7 @@ Ocean/coastal water blends sand into shores and seabeds. Ponds and lakes use ear
 
 Leaf adapts the CUDA FFT and optics from [SamG-Coder/clearwater](https://github.com/SamG-Coder/clearwater/blob/b0c3bdbc87edf20e7c2dace5ad75efcfae2bf475/src/clearwater.cu), verified against the GitHub main revision `b0c3bdb`. The original MIT copyright notice is preserved in `vendor/LICENSE.ClearWater`.
 
-- Two seeded **64 � 64 inverse FFT cascades**, spanning 37 and 149 metres, drive wave normals, reflection distortion and surface shading. This uses 8,192 spectral cells instead of ClearWater's 196,608 cells and 32 times fewer FFT butterfly outputs per update. The wave field updates at most 30 Hz, with no work when its time and wind inputs are unchanged. Wind rotates the field and controls its strength. Polygon river flow advects it independently.
+- Two seeded **64 × 64 inverse FFT cascades**, spanning 37 and 149 metres, drive wave normals, reflection distortion and surface shading. This uses 8,192 spectral cells instead of ClearWater's 196,608 cells and 32 times fewer FFT butterfly outputs per update. The wave field updates at most 30 Hz, with no work when its time and wind inputs are unchanged. Wind rotates the field and controls its strength. Polygon river flow advects it independently.
 - **Scene reflections** trace the existing opaque scene at half width and half height, using at most 16 march steps and three intersection refinements. No reflected scene geometry is rendered. Screen edges and misses fade to a procedural sky/cloud reflection that uses the existing weather cloud-density function.
 - **Shallow-water optics** retain depth-dependent transmission and add bounded refraction distortion, brighter moving caustics derived from wave-slope divergence, and a changing shoreline wash. Fresnel reflection, highlights and foam remain visible over transparent beds; transmission no longer attenuates reflection a second time.
 - Rendering remains in `.cu`, with JavaScript handling buffers, dispatch and editor input. ClearWater's demo assets, full ripple solver, photon caustics, bloom and native application are not imported.
@@ -21,7 +21,7 @@ Under Terrain's shared water controls, **Wave visibility** adjusts the normal st
 
 Water planes remain horizontal: FFT height contributes to appearance but does not displace polygon geometry or change picking. This is not fluid simulation. Caustics approximate light focusing rather than tracing photons. Scene reflections can only show geometry represented in the current camera's opaque depth buffer; hidden/off-screen objects use the sky fallback. Play mode now includes an underwater camera with absorption, haze and an approximate surface light window; see [Play mode](play-mode.md). The finite FFT fields repeat, and distant detail is filtered to reduce aliasing.
 
-The wave buffers reserve about 512 KiB. At 1920 � 1080, immutable scene colour/depth snapshots plus the half-resolution reflection buffer use about 23.7 MiB. The snapshots prevent refraction from reading partially written water pixels. Buffers are allocated lazily on the first enabled water surface and reused thereafter.
+The wave buffers reserve about 512 KiB. At 1920 × 1080, immutable scene colour/depth snapshots plus the half-resolution reflection buffer use about 23.7 MiB. The snapshots prevent refraction from reading partially written water pixels. Buffers are allocated lazily on the first enabled water surface and reused thereafter.
 
 ## Shared weather interface
 
@@ -48,7 +48,7 @@ Water uses broad irregular wave shading with distance-filtered ripples and a nar
 
 Water polygon inspectors include Directional river flow, direction (0 degrees along +X, 90 along +Z), and speed in metres per second. Current advects the procedural surface pattern independently of shared wind and persists with the map. Surfaces remain horizontal: this is a visual current, not downhill fluid simulation.
 
-The Example button now creates a 1000 by 1000 metre island map: ocean and sandy shores, two wooded uplands, four curved grass areas using seeded rotation, a lagoon and a carved river channel. The original forest generator remains available in source for stress testing.
+New Project → Templates → Island creates a 1000 by 1000 metre island map: ocean and sandy shores, two wooded uplands, four curved grass areas using seeded rotation, a lagoon and a carved river channel. The retired forest stress-test generator has been removed.
 
 ## FFT and reflection validation
 

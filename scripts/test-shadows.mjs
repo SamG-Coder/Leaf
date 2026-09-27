@@ -1,10 +1,11 @@
+import {readyEditor} from './editor-test-helpers.mjs';
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {writeFile} from 'node:fs/promises';
 const browser=await chromium.launch({channel:'msedge',headless:true,args:['--enable-unsafe-webgpu']});
 try{
  const page=await browser.newPage({viewport:{width:1024,height:768}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
- await page.goto('http://127.0.0.1:5197/editor.html');await page.waitForFunction(()=>window.mapDiagnostics?.ready);
+ await page.goto('http://127.0.0.1:5197/editor.html');await page.waitForFunction(()=>window.mapDiagnostics?.ready);await readyEditor(page);
  const result=await page.evaluate(async()=>{
   const {MapRenderer}=await import('./src/map-renderer.js');const {emptyMap}=await import('./src/map-model.js');
   const canvas=document.createElement('canvas');canvas.width=1024;canvas.height=768;canvas.id='shadowTest';canvas.style.cssText='position:fixed;inset:0;z-index:99999';document.body.append(canvas);

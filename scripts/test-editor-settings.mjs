@@ -1,8 +1,9 @@
+import {readyEditor} from './editor-test-helpers.mjs';
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {writeFile} from 'node:fs/promises';
 const browser=await chromium.launch({channel:'msedge',headless:true,args:['--enable-unsafe-webgpu']});
-try{const page=await browser.newPage({viewport:{width:1600,height:1000}});const errors=[];page.on('pageerror',e=>errors.push(String(e)));await page.goto('http://127.0.0.1:5197/editor.html');await page.waitForFunction(()=>window.editorTest);await page.evaluate(()=>editorTest.idle());
+try{const page=await browser.newPage({viewport:{width:1600,height:1000}});const errors=[];page.on('pageerror',e=>errors.push(String(e)));await page.goto('http://127.0.0.1:5197/editor.html');await page.waitForFunction(()=>window.editorTest);await readyEditor(page);await page.evaluate(()=>editorTest.idle());
 await page.click('#new');await page.fill('#newMapExtent','1024');await page.fill('#newMapName','Placement scale validation');await page.click('#createMap');await page.evaluate(()=>editorTest.idle());assert.equal(await page.evaluate(()=>editorTest.getMap().extent),1024);assert(await page.locator('#extent').getAttribute('readonly')!==null);
 await page.evaluate(()=>{editorTest.add(0,0,0);editorTest.add(81,3,0);editorTest.add(41,5,0);editorTest.add(31,7,0);editorTest.select([1,2,3,4]);});await page.click('#frameSelected');await page.evaluate(()=>editorTest.idle());
 assert.deepEqual(await page.evaluate(()=>editorTest.getMap().objects.map(o=>o.scale)),[2.5,.25,.3,.45]);

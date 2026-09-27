@@ -1,0 +1,3 @@
+// Shared browser-test navigation follows the same New Project workflow as the UI.
+export async function readyEditor(page){await page.waitForFunction(()=>window.mapDiagnostics?.ready||window.mapDiagnostics?.errors.length);const errors=await page.evaluate(()=>mapDiagnostics.errors);if(errors.length)throw Error(errors.join('\n'));if(await page.locator('#newMapDialog').isVisible())await page.click('#cancelNewMap');}
+export async function islandTemplate(page){await readyEditor(page);await page.click('#new');await page.locator('[name="projectTemplate"][value="island"]').check();await page.click('#createMap');await page.locator('#workspaceLoading').waitFor({state:'hidden'});}

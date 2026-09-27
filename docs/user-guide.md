@@ -8,13 +8,13 @@ Use a browser and GPU with WebGPU support. Open the HTTPS demo, or run `npm inst
 
 ## Start with an example or an empty map
 
-**Example** loads the supplied 1,000 × 1,000 metre island. It includes hills, coastline, an ocean, a lagoon, a flowing river, forest, undergrowth and four grass areas. This is the current example; the earlier forest stress test remains in the source and historical validation artifacts.
+**New Project → Templates → Island** loads the supplied 1,000 × 1,000 metre island. It includes hills, coastline, an ocean, a lagoon, a flowing river, forest, undergrowth and four grass areas. The old forest stress-test entry has been removed.
 
 To build your own world:
 
-1. Click **New**.
+1. Click **New Project** and select **Blank landscape**.
 2. Enter a map name and its width/length in metres. Maps are square.
-3. Click **Create map**.
+3. Click **Create Project**.
 4. Shape the ground in **Terrain**, then add vegetation and polygon areas in **Scene**.
 5. Save a JSON file before leaving or replacing work you want to keep.
 

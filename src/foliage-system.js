@@ -14,7 +14,7 @@ const finite=(v,name)=>{if(!Number.isFinite(v))throw new TypeError(`${name} must
 
 export class FoliageSystem {
 
- static async create({runtime,width=1280,height=896,capacity=200000,onError,artifactBase=new URL('../generated/',import.meta.url)}={}){
+ static async create({runtime,width=1280,height=896,capacity=200000,onError,onProgress,artifactBase=new URL('../generated/',import.meta.url)}={}){
 
   if(!Number.isInteger(capacity)||capacity<1||capacity>200000)throw new RangeError('capacity must be 1..200000');
 
@@ -26,7 +26,7 @@ export class FoliageSystem {
 
   try{
 
-   for(const entry of ENTRIES){const response=await fetch(new URL(`${entry}.json`,artifactBase));if(!response.ok)throw Error(`Missing kernel ${entry}`);self.kernels[entry]=await runtime.kernel(await response.json());}
+   for(const entry of ENTRIES){const response=await fetch(new URL(`${entry}.json`,artifactBase));if(!response.ok)throw Error(`Missing kernel ${entry}`);self.kernels[entry]=await runtime.kernel(await response.json());onProgress?.(entry,ENTRIES.indexOf(entry)+1,ENTRIES.length);}
 
    self.buffers={woodA:runtime.createBuffer(512*16),woodB:runtime.createBuffer(512*16),pos:runtime.createBuffer(capacity*16),normal:runtime.createBuffer(capacity*16),shape:runtime.createBuffer(capacity*16),centers:runtime.createBuffer(128*16),light:runtime.createBuffer(16384*4),depth:runtime.createBuffer(width*height*4),pixels:runtime.createBuffer(width*height*4)};
 

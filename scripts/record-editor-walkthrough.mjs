@@ -1,3 +1,4 @@
+import {readyEditor,islandTemplate} from './editor-test-helpers.mjs';
 import {chromium} from 'playwright';
 import {mkdir,writeFile} from 'node:fs/promises';
 const out='D:/LeafMedia/walkthrough';await mkdir(out,{recursive:true});
@@ -13,7 +14,7 @@ async function point(x,z){return p.evaluate(([x,z])=>{const q=editorTest.project
 async function stroke(x,z,dx=3){let a=await point(x,z),b=await point(x+dx,z);await p.mouse.move(a.x,a.y);await p.mouse.down();await p.mouse.move(b.x,b.y,{steps:30});await pause(450);await p.mouse.up();await idle();}
 async function drop(selector,x,z){await p.locator(selector).scrollIntoViewIfNeeded();const q=await point(x,z),r=await p.locator('#viewport').boundingBox();await p.locator(selector).dragTo(p.locator('#viewport'),{targetPosition:{x:q.x-r.x,y:q.y-r.y}});await idle();await pause();}
 try{
-await p.goto('http://127.0.0.1:5197/editor.html');await p.waitForFunction(()=>window.mapDiagnostics?.ready);await idle();
+await p.goto('http://127.0.0.1:5197/editor.html');await p.waitForFunction(()=>window.mapDiagnostics?.ready);await readyEditor(p);await idle();
 await chapter('LEAF / Build your own world','A walkthrough of terrain, procedural assets, polygon areas, water and weather.');
 await p.click('#new');await p.fill('#newMapName','Coastal garden');await p.fill('#newMapExtent','128');await pause(3000);await p.click('#createMap');await idle();await p.uncheck('#grid');await zoom(-2);
 await chapter('01 / Create a map','Choose the name and dimensions before editing. This walkthrough uses a compact 128 m map.');
@@ -30,7 +31,7 @@ await overview();await p.click('#terrainTab');await chapter('06 / Ocean and beac
 await chapter('07 / Time and weather','Choose clear, cloudy, rain or storm. Rain wets terrain and creates water ripples.');await p.check('#environmentEnabled');await p.uncheck('#environmentPlaying');await p.selectOption('#environmentMode','manual');for(const w of ['clear','cloudy','rain','storm']){await p.selectOption('#environmentWeather',w);await pause(3500);}await p.selectOption('#environmentWeather','clear');for(const hour of [17.5,22,9]){await fill('#environmentHour',hour);await pause(2500);}await fill('#environmentDayMinutes',1);await p.check('#environmentPlaying');await pause(3500);await p.uncheck('#environmentPlaying');await p.selectOption('#environmentMode','dynamic');await pause();await p.selectOption('#environmentMode','manual');await fill('#environmentHour',14);
 await chapter('08 / Painterly finish','Control softness, paint texture and outlines without changing the scene geometry.');await p.uncheck('#animeStyle');await pause();await p.check('#animeStyle');await fill('#paintTexture',.9);await fill('#colourSoftness',1.2);
 await chapter('09 / Save and load your map','Save a portable JSON file. Loading restores terrain, objects, polygons, water and weather.');const download=p.waitForEvent('download');await p.click('#save');await(await download).saveAs(out+'/coastal-garden.leaf.json');await p.click('#new');await p.fill('#newMapName','Empty map');await p.click('#createMap');await idle();await pause();await p.locator('#file').setInputFiles(out+'/coastal-garden.leaf.json');await idle();await pause(3500);
-await chapter('10 / The 1 km island example','Load the supplied island: forest, meadows, river, lagoon, coast and ocean.');await p.click('#example');await idle();await overview();await zoom(-1);await pause(6000);await p.click('#sceneTab');await p.fill('#objectSearch','Grass');await pause(3500);await p.fill('#objectSearch','');await p.click('#terrainTab');await p.locator('#environmentEnabled').scrollIntoViewIfNeeded();await pause(3500);
+await chapter('10 / The 1 km island example','Load the supplied island: forest, meadows, river, lagoon, coast and ocean.');await islandTemplate(p);await idle();await overview();await zoom(-1);await pause(6000);await p.click('#sceneTab');await p.fill('#objectSearch','Grass');await pause(3500);await p.fill('#objectSearch','');await p.click('#terrainTab');await p.locator('#environmentEnabled').scrollIntoViewIfNeeded();await pause(3500);
 await chapter('Create, sculpt, plant and explore','Project: github.com/SamG-Coder/Leaf  •  Demo: samg-coder.github.io/Leaf/editor.html');await overview();await zoom(-1);await pause(7000);await p.screenshot({path:out+'/final.png'});
 if(errors.length)throw Error(errors.join('\n'));
 }finally{await writeFile(out+'/chapters.json',JSON.stringify({chapters,errors},null,2));await context.close();await p.video().saveAs(out+'/leaf-editor-walkthrough.webm');await browser.close();}

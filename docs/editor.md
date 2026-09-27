@@ -1,6 +1,6 @@
 # World editor
 
-Open http://127.0.0.1:5197/editor.html. Use Example for the forest hills stress test, or drag assets from the searchable library onto the terrain. All 121 presets are available. The viewport is a freely navigable perspective scene.
+Open http://127.0.0.1:5197/editor.html. Use New Project to start a blank landscape or choose the Island template, then drag assets from the searchable library onto the terrain. All 121 presets are available. The viewport is a freely navigable perspective scene.
 
 ## Camera controls
 
@@ -127,7 +127,7 @@ High-detail variants are requested at a 72-pixel projected radius, before the ol
 ### Persistent canopy surfaces
 Trees and bushes retain a closed triangle surface per seed cluster at all viewing distances. Each octahedron face is split into four triangles (4,096 canopy triangles per object); shared edge midpoints round continuously toward an ellipsoid as the close leaf representation fades in. The close surface contracts to 88% of the proxy radius, letting the existing detailed leaves define the outer silhouette. It writes normal depth and object IDs and uses the shared foliage lighting; only branch proxies retain complementary LOD dithering. This fills sampling holes inside clusters while retaining real gaps between separate clusters. It is a hybrid surface/detail renderer, not a complete replacement of leaf samples. Near-plane crossing and species silhouette fidelity remain limitations of the proxy representation.
 
-Validated with the close/far lighting regression and a warmed forest benchmark; the latter measured approximately 13–16 ms per render on the test machine, not a universal frame-rate guarantee.
+Validated with the close/far lighting regression and a warmed forest benchmark; the latter measured approximately 13â€“16 ms per render on the test machine, not a universal frame-rate guarantee.
 
 
 ### Close-canopy raster performance
@@ -137,7 +137,7 @@ The cold-cache approach replay in `artifacts/approach-perf-before.json` and `art
 
 
 ### Continuous tree wood
-Tree and bush trunks/branches now use capped eight-sided triangle tubes at every distance. Their point-ring branch path is disabled, and wood coverage is not dithered during leaf LOD transitions. Bark is evaluated at the perspective-correct interpolated surface position in the colour pass, retaining texture across large faces. The triangle row-parallel raster path remains active. Build, close/far lighting tests and the oak preview passed; the warmed 3,074-object forest run measured 10.0–12.3 ms per render on the test machine. This supersedes the earlier branch-proxy dithering description.
+Tree and bush trunks/branches now use capped eight-sided triangle tubes at every distance. Their point-ring branch path is disabled, and wood coverage is not dithered during leaf LOD transitions. Bark is evaluated at the perspective-correct interpolated surface position in the colour pass, retaining texture across large faces. The triangle row-parallel raster path remains active. Build, close/far lighting tests and the oak preview passed; the warmed 3,074-object forest run measured 10.0â€“12.3 ms per render on the test machine. This supersedes the earlier branch-proxy dithering description.
 
 
 ### Under-canopy performance investigation
@@ -166,3 +166,11 @@ Recorded normal-path median/p95/max: 11.16/20.44/22.42 ms before, 10.12/15.78/18
 `scripts/bench-fast-crossing.mjs NAME` alternates between opposite sides of the example map for 80 frames; add `profile` for synchronized stages. Static placement heights and ground influence descriptions are now cached until object or terrain references change. Camera motion no longer recalculates terrain attachment for every placement or recreates each influence descriptor. Culling also avoids temporary per-object vector arrays. Ground region rasterization still updates when entering another region.
 
 Recorded before/after medians: CPU prepare 3.34/2.11 ms, total 16.37/14.98 ms; p95 22.31/19.64 ms. Maximum was 28.93/30.62 ms: this optimization did not establish an improvement to the worst spike. The user's 60 ms event remains unreproduced. Interactive timing records now include camera travel distance, geometry generations, ground-region rebuilds and visible object count, to correlate future spikes with rapid movement. Ground edit/removal/light tests validate cache invalidation.
+
+## Startup and projects
+
+The viewport shows Opening workspace, Compiling GPU shaders (completed pipelines out of 30), and Loading map. GPU compilation progress is measured from completed pipeline creation, not a timer. Map loading remains visible through the first completed frame; later distance-dependent LOD work remains incremental. Controls are unavailable during loading. A shader failure leaves a visible explanation and Reload editor action.
+
+A fresh workspace opens New Project after initialization. Existing autosaved projects restore automatically. Templates offers Blank landscape with editable dimensions or Island with its authored 1,000 m extent locked. Cancelling preserves the current project. The Example toolbar button, stress-test prompt and unused old forest generator have been removed. Invalid imported map files preserve the current map and restore editor controls.
+
+Run `node scripts/test-project-startup.mjs` for startup progress, templates, dimensions, cancellation, autosave restoration, invalid map recovery and shader-failure UI coverage.

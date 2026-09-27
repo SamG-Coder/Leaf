@@ -1,9 +1,10 @@
+import {readyEditor} from './editor-test-helpers.mjs';
 import {chromium} from 'playwright';
 import {writeFile} from 'node:fs/promises';
 import assert from 'node:assert/strict';
 const browser=await chromium.launch({channel:'msedge',headless:true,args:['--enable-unsafe-webgpu']});
 try{
- const p=await browser.newPage({viewport:{width:1440,height:900}}),errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto('http://127.0.0.1:5197/editor.html');await p.waitForFunction(()=>window.mapDiagnostics?.ready);
+ const p=await browser.newPage({viewport:{width:1440,height:900}}),errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto('http://127.0.0.1:5197/editor.html');await p.waitForFunction(()=>window.mapDiagnostics?.ready);await readyEditor(p);
  await p.evaluate(async()=>{const {islandExample}=await import('./src/island-example.js');const m=islandExample();m.spawn={x:-140,z:115,yaw:0};editorTest.load(m);});await p.evaluate(()=>editorTest.idle());await p.click('#play');await p.waitForFunction(()=>!!document.pointerLockElement);await p.waitForTimeout(1500);
  assert.equal((await p.evaluate(()=>editorTest.playState())).swimming,false);const result={};for(const mode of ['standing','walking','sprinting','rotating']){
   if(mode==='walking'||mode==='sprinting')await p.keyboard.down('KeyW');if(mode==='sprinting')await p.keyboard.down('ShiftLeft');

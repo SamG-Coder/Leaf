@@ -1,8 +1,9 @@
+import {readyEditor} from './editor-test-helpers.mjs';
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 const b=await chromium.launch({channel:'msedge',headless:true,args:['--enable-unsafe-webgpu']});
 try {
- const p=await b.newPage({viewport:{width:1600,height:1000}});await p.goto('http://127.0.0.1:5197/editor.html');await p.waitForFunction(()=>window.editorTest);await p.locator('#animateWater').evaluate(el=>{el.checked=false;el.dispatchEvent(new Event('change'));});
+ const p=await b.newPage({viewport:{width:1600,height:1000}});await p.goto('http://127.0.0.1:5197/editor.html');await p.waitForFunction(()=>window.editorTest);await readyEditor(p);await p.locator('#animateWater').evaluate(el=>{el.checked=false;el.dispatchEvent(new Event('change'));});
  await p.evaluate(async()=>{const {emptyMap}=await import('./src/map-model.js');const m=emptyMap();m.extent=64;for(let z=0;z<65;z++)for(let x=0;x<65;x++)m.terrain[z*65+x]=(x-32)*.45+(z-32)*.12;m.plans=[{id:1,name:'Slope grass',type:'grass',visible:true,seed:42,preset:61,spacing:2,scale:.4,level:0,kind:'lake',vertices:[{x:-8,z:-8},{x:8,z:-8},{x:8,z:8},{x:-8,z:8}]}];editorTest.load(m);});
  await p.locator('#hierarchy .object-row').filter({hasText:'Slope grass'}).click();await p.click('#framePlan');await p.evaluate(()=>editorTest.idle());
  const before=await p.evaluate(()=>editorTest.getMap());const h=await p.locator('[data-plan-vertex="2"]').boundingBox(),x=h.x+h.width/2+3,y=h.y+h.height/2;
