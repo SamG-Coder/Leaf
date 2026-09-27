@@ -51,10 +51,47 @@ __global__ void water_reflections(const float4* waves,const float4* waters,const
  if(hit>=0){unsigned int colour=pixels[hit];reflections[i]=make_float4((float)(colour&255u)/255.0f,(float)((colour>>8)&255u)/255.0f,(float)((colour>>16)&255u)/255.0f,weight);}
 }
 
-// Underwater view: depth absorption, a bright surface window and restrained distortion.
-__global__ void scene_underwater(const unsigned int* source,const unsigned int* depth,unsigned int* target,int w,int h,float cy,float level,float yaw,float pitch,float tangent,float aspect,float time,float day){
- unsigned int i=blockIdx.x*blockDim.x+threadIdx.x;if(i>=(unsigned int)(w*h))return;int x=(int)(i%(unsigned int)w);int y=(int)(i/(unsigned int)w);float sx=(((float)x+.5f)/(float)w*2.0f-1.0f)*tangent*aspect;float sy=(1.0f-((float)y+.5f)/(float)h*2.0f)*tangent;float rayY=sinf(pitch)+cosf(pitch)*sy;float rayLength=sqrtf(1.0f+sx*sx+sy*sy);float distance=depth[i]==4294967295u?120.0f:(float)depth[i]*.001f*rayLength;float toSurface=120.0f;if(rayY>.0001f)toSurface=fmaxf(0.0f,(level-cy)/rayY)*rayLength;distance=fminf(distance,toSurface);float immersion=fminf(1.0f,fmaxf(0.0f,(level-cy)*3.0f));float fog=1.0f-expf(-distance*.055f);float illumination=.18f+.82f*day;int ox=(int)(sinf((float)y*.035f+time*1.4f)*1.5f*immersion);int oy=(int)(sinf((float)x*.026f-time)*immersion);unsigned int c=source[min(h-1,max(0,y+oy))*w+min(w-1,max(0,x+ox))];float r=(float)(c&255u)/255.0f;float g=(float)((c>>8)&255u)/255.0f;float b=(float)((c>>16)&255u)/255.0f;
- r=r*expf(-distance*.07f)*(1.0f-fog)+.025f*illumination*fog;g=g*(1.0f-fog)+.29f*illumination*fog;b=b*(1.0f-fog)+.34f*illumination*fog;
- if(toSurface<120.0f&&toSurface<=distance+.01f){float window=fmaxf(0.0f,rayY/rayLength);float ripple=.5f+.5f*sinf((float)x*.028f+time*1.5f+sinf((float)y*.037f));float aperture=fminf(1.0f,fmaxf(0.0f,(window-.62f)/.14f));float surface=.85f+.15f*ripple;r=r*aperture+.035f*surface*illumination*(1.0f-aperture);g=g*aperture+.28f*surface*illumination*(1.0f-aperture);b=b*aperture+.33f*surface*illumination*(1.0f-aperture);float tint=.03f+.04f*ripple;r+=tint*window*illumination;g+=tint*window*illumination;b+=tint*window*illumination;}
- target[i]=(unsigned int)(fminf(1.0f,r)*255.0f)|((unsigned int)(fminf(1.0f,g)*255.0f)<<8)|((unsigned int)(fminf(1.0f,b)*255.0f)<<16)|4278190080u;
+// Underwater optics: retain near-field contrast; only fog the actual submerged path.
+// Surface normals share the ocean FFT. Reflection is a bounded screen lookup with a soft fallback.
+__global__ void scene_underwater(const float* base,const float* tiles,const int* table,const float4* waves,const unsigned int* source,const unsigned int* depth,unsigned int* target,int w,int h,float cx,float cy,float cz,float level,float yaw,float pitch,float tangent,float aspect,float time,float day,float windDirection,float waveStrength,float ly,float extent){
+ unsigned int i=blockIdx.x*blockDim.x+threadIdx.x;if(i>=(unsigned int)(w*h))return;
+ int x=(int)(i%(unsigned int)w);int y=(int)(i/(unsigned int)w);
+ float sx=(((float)x+.5f)/(float)w*2.0f-1.0f)*tangent*aspect;float sy=(1.0f-((float)y+.5f)/(float)h*2.0f)*tangent;
+ float cp=cosf(pitch);float sp=sinf(pitch);float ca=cosf(yaw);float sa=sinf(yaw);float len=sqrtf(1.0f+sx*sx+sy*sy);
+ float dx=(sa*cp+ca*sx-sa*sp*sy)/len;float dy=(sp+cp*sy)/len;float dz=(ca*cp-sa*sx-ca*sp*sy)/len;
+ float sceneDistance=depth[i]==4294967295u?400.0f:(float)depth[i]*.001f*len;
+ float immersion=fmaxf(0.0f,level-cy);float surfaceDistance=dy>.0001f?immersion/dy:100000.0f;
+ float path=fminf(sceneDistance,surfaceDistance);float light=(.12f+.88f*day)*expf(-immersion*.018f);
+ unsigned int c=source[i];float r=(float)(c&255u)/255.0f;float g=(float)((c>>8)&255u)/255.0f;float b=(float)((c>>16)&255u)/255.0f;
+ float angle=windDirection*.0174532925f;
+ if(surfaceDistance<sceneDistance){
+  float wx=cx+dx*surfaceDistance;float wz=cz+dz*surfaceDistance;float footprint=surfaceDistance*tangent*2.0f/(float)h/fmaxf(.08f,dy);
+  float4 wave=water_field(waves,wx,wz,angle,footprint);float nx=-wave.y*waveStrength*.45f;float nz=-wave.z*waveStrength*.45f;float nl=sqrtf(1.0f+nx*nx+nz*nz);nx/=nl;nz/=nl;float ny=1.0f/nl;
+  float incidence=fmaxf(.001f,dx*nx+dy*ny+dz*nz);float critical=1.0f-1.3335f*1.3335f*(1.0f-incidence*incidence);
+  float reflect=1.0f;
+  if(critical>0.0f){float transmitted=sqrtf(critical);float rs=(1.3335f*incidence-transmitted)/(1.3335f*incidence+transmitted);float rp=(incidence-1.3335f*transmitted)/(incidence+1.3335f*transmitted);reflect=.5f*(rs*rs+rp*rp);}
+  // Reflected rays look back into the underwater scene, with edge confidence to avoid seams.
+  float rx=dx-2.0f*incidence*nx;float ry=dy-2.0f*incidence*ny;float rz=dz-2.0f*incidence*nz;
+  float forward=rx*sa*cp+ry*sp+rz*ca*cp;float rr=.07f*light;float rg=.28f*light;float rb=.31f*light;
+  // Off-screen fallback traces only the height field, avoiding a second scene render.
+  if(ry<-.025f){float t=8.0f/(-ry);float bx=wx;float bz=wz;for(int step=0;step<3;step++){bx=wx+rx*t;bz=wz+rz*t;float bed=terrain_world(base,tiles,table,fminf(extent*.5f,fmaxf(-extent*.5f,bx)),fminf(extent*.5f,fmaxf(-extent*.5f,bz)),extent);t=fmaxf(.1f,(level-bed)/(-ry));}
+   float grain=noise3(bx*.24f,1.0f,bz*.24f);float wash=.85f+grain*.25f;float visibility=expf(-t*.028f);float focus=fminf(.15f,fmaxf(0.0f,-wave.w*2.0f));rr=rr*(1.0f-visibility)+.43f*wash*light*visibility;rg=rg*(1.0f-visibility)+(.47f*wash+focus)*light*visibility;rb=rb*(1.0f-visibility)+(.30f*wash+focus)*light*visibility;
+  }
+  if(forward>.05f){float u=.5f+(rx*ca-rz*sa)/(forward*tangent*aspect)*.5f;float v=.5f-(-rx*sa*sp+ry*cp-rz*ca*sp)/(forward*tangent)*.5f;
+   if(u>0.0f&&u<1.0f&&v>0.0f&&v<1.0f){int at=min(h-1,(int)(v*(float)h))*w+min(w-1,(int)(u*(float)w));float confidence=fminf(1.0f,fminf(fminf(u,1.0f-u),fminf(v,1.0f-v))*10.0f);if(depth[at]==4294967295u)confidence=0.0f;else confidence*=expf(-(float)depth[at]*.001f*.06f);unsigned int reflected=source[at];rr=rr*(1.0f-confidence)+(float)(reflected&255u)/255.0f*.65f*confidence;rg=rg*(1.0f-confidence)+(float)((reflected>>8)&255u)/255.0f*.85f*confidence;rb=rb*(1.0f-confidence)+(float)((reflected>>16)&255u)/255.0f*.9f*confidence;}
+  }
+  // Small refraction offsets only sample sky/geometry beyond this water intersection.
+  int qx=min(w-1,max(0,x+(int)(nx*12.0f)));int qy=min(h-1,max(0,y+(int)(nz*8.0f)));int q=qy*w+qx;
+  if(depth[q]==4294967295u||(float)depth[q]*.001f*len>surfaceDistance){unsigned int refracted=source[q];r=(float)(refracted&255u)/255.0f;g=(float)((refracted>>8)&255u)/255.0f;b=(float)((refracted>>16)&255u)/255.0f;}
+  r=r*(1.0f-reflect)+rr*reflect;g=g*(1.0f-reflect)+rg*reflect;b=b*(1.0f-reflect)+rb*reflect;
+ }else if(depth[i]!=4294967295u){
+  float wx=cx+dx*path;float wy=cy+dy*path;float wz=cz+dz*path;float bedDepth=fmaxf(0.0f,level-wy);
+  float4 wave=water_field(waves,wx,wz,angle,path*tangent*2.0f/(float)h);
+  float focusing=fminf(1.0f,fmaxf(0.0f,-wave.w*7.0f));float caustic=focusing*.32f*expf(-bedDepth*.085f)*fmaxf(0.0f,ly)*expf(-path*.015f);
+  r*=1.0f+caustic;g*=1.0f+caustic;b*=1.0f+caustic*.7f;
+ }
+ // Per-channel transmission avoids double attenuation and keeps shallow sand recognisable.
+ float tr=expf(-path*.038f);float tg=expf(-path*.016f);float tb=expf(-path*.011f);
+ r=r*tr+.025f*light*(1.0f-tr);g=g*tg+.30f*light*(1.0f-tg);b=b*tb+.38f*light*(1.0f-tb);
+ target[i]=(unsigned int)(fminf(1.0f,fmaxf(0.0f,r))*255.0f)|((unsigned int)(fminf(1.0f,fmaxf(0.0f,g))*255.0f)<<8)|((unsigned int)(fminf(1.0f,fmaxf(0.0f,b))*255.0f)<<16)|4278190080u;
 }
