@@ -1,0 +1,66 @@
+[
+  {
+    "hz": 60,
+    "mode": "walk",
+    "stationaryFrames": 0,
+    "frames": 119,
+    "meanSpeed": 4.200000000000031,
+    "speedStdDev": 1.4210854715202004e-14
+  },
+  {
+    "hz": 60,
+    "mode": "sprint",
+    "stationaryFrames": 0,
+    "frames": 119,
+    "meanSpeed": 7.000000000000004,
+    "speedStdDev": 2.442453335469253e-14
+  },
+  {
+    "hz": 120,
+    "mode": "walk",
+    "stationaryFrames": 0,
+    "frames": 239,
+    "meanSpeed": 4.200000000000038,
+    "speedStdDev": 2.1316282072803006e-14
+  },
+  {
+    "hz": 120,
+    "mode": "sprint",
+    "stationaryFrames": 0,
+    "frames": 239,
+    "meanSpeed": 7,
+    "speedStdDev": 3.208736213708456e-14
+  },
+  {
+    "hz": 144,
+    "mode": "walk",
+    "stationaryFrames": 0,
+    "frames": 287,
+    "meanSpeed": 4.200000000000039,
+    "speedStdDev": 2.220446049250313e-14
+  },
+  {
+    "hz": 144,
+    "mode": "sprint",
+    "stationaryFrames": 0,
+    "frames": 287,
+    "meanSpeed": 7.00000000000006,
+    "speedStdDev": 1.5127277696890585e-13
+  },
+  {
+    "hz": 165,
+    "mode": "walk",
+    "stationaryFrames": 0,
+    "frames": 329,
+    "meanSpeed": 4.200000000000048,
+    "speedStdDev": 7.907390072129389e-14
+  },
+  {
+    "hz": 165,
+    "mode": "sprint",
+    "stationaryFrames": 0,
+    "frames": 329,
+    "meanSpeed": 6.999999999999989,
+    "speedStdDev": 1.39199567056787e-13
+  }
+]
