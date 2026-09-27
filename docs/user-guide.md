@@ -114,7 +114,7 @@ When environment control is enabled, it controls sunlight and shared weather int
 
 ## Painterly appearance
 
-Anime finish enables the shared stylized finish. Painterly softness blends compatible colour detail while preserving object/depth/light boundaries. Paint texture adds irregular pigment dabs; Ink outline strength controls outlines. Turn a control down to compare its contribution.
+Anime finish enables the shared stylized finish. The Anime style dropdown selects Painted Background, Cel Animation, or Ink & Watercolour. Painted Background retains the original appearance; Cel Animation uses clear light bands and stronger outlines; Ink & Watercolour uses pale washes and broken ink. See [style research and implementation](anime-styles.md). Cel Animation disables softness and paint controls because it bypasses those effects. Painterly softness blends compatible colour detail while preserving object/depth/light boundaries. Paint texture adds irregular pigment dabs; Ink outline strength controls outlines. Turn a control down to compare its contribution.
 
 Trees combine persistent canopy surfaces with detailed procedural foliage so lighting and volume remain visible at different distances. Screen-space detail budgeting, culling and cached geometry reduce work. This is an approximation of painted foliage; tiny leaf silhouettes and close surface detail depend on distance and available budgets.
 

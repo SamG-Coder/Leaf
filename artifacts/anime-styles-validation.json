@@ -1,0 +1,62 @@
+{
+  "results": [
+    {
+      "mode": "painted",
+      "digest": "fcda903219bbdc8eb41fea0fb48d021f00cfa28b39960cc34b8ae45dd7096661"
+    },
+    {
+      "mode": "cel",
+      "digest": "dc8e3dc3b4d9aae0d569774663501a9d8118951fb3d30843144ad5f43b443dd4"
+    },
+    {
+      "mode": "watercolour",
+      "digest": "0007b54d5b83f7147bef58709b909089d21068d93ba1ede20d79c940ef905fa9"
+    },
+    {
+      "mode": "painted",
+      "digest": "c95868a689d97d49ccaa431a5f37aa3f49589e0517df46857cf8050b2b7da3ac"
+    }
+  ],
+  "lighting": [
+    {
+      "mode": "painted",
+      "hour": 14,
+      "mean": 0.36446730199075117,
+      "sky": 0.5800804350082422
+    },
+    {
+      "mode": "painted",
+      "hour": 22,
+      "mean": 0.09123825568501298,
+      "sky": 0.022673538480396018
+    },
+    {
+      "mode": "cel",
+      "hour": 14,
+      "mean": 0.36559633703680755,
+      "sky": 0.5780758200163785
+    },
+    {
+      "mode": "cel",
+      "hour": 22,
+      "mean": 0.11453323663867765,
+      "sky": 0.018500626552285387
+    },
+    {
+      "mode": "watercolour",
+      "hour": 14,
+      "mean": 0.473487107005371,
+      "sky": 0.6804878125408836
+    },
+    {
+      "mode": "watercolour",
+      "hour": 22,
+      "mean": 0.19283605483513958,
+      "sky": 0.0740479625816995
+    }
+  ],
+  "geometryReused": true,
+  "mapPreserved": true,
+  "restorationMode": true,
+  "errors": []
+}

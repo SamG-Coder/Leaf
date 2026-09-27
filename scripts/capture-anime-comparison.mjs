@@ -1,0 +1,1 @@
+import {chromium} from 'playwright';const b=await chromium.launch({channel:'msedge',headless:true});try{const p=await b.newPage({viewport:{width:1800,height:690}});await p.goto('http://127.0.0.1:5197/artifacts/anime-style-comparison.html');await p.screenshot({path:'artifacts/anime-style-comparison.png'});}finally{await b.close();}
