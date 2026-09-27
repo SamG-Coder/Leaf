@@ -7,12 +7,14 @@ Click **Play** to hide the editor and enter first person. Mouse look uses pointe
 - WASD: move; Shift: run on land.
 - Space: jump on land, swim upward in deep water.
 - Ctrl or C: dive. Looking up/down while moving also steers swimming.
-- Release swim controls to drift toward the surface.
+- Once submerged, release vertical controls to hold depth. Look down while moving or use C/Ctrl to dive; Space rises.
 
-Character physics runs at a fixed 60 Hz with bounded catch-up. It includes gravity, jumping, terrain grounding, map boundaries and approximate upright collision volumes for tree trunks, rocks and deadwood. Nearby colliders are queried through spatial cells. Plants remain static; there is no rigid-body simulation or branch/leaf collision. Collider silhouettes are approximate and rock stepping/climbing is not implemented.
+Character physics runs at a fixed 60 Hz with bounded catch-up. Jumping works while walking or sprinting, including immediately on spawn, with a short input buffer and coyote time. It includes gravity, jumping, terrain grounding, map boundaries and approximate upright collision volumes for tree trunks, rocks and deadwood. Nearby colliders are queried through spatial cells. Plants remain static; there is no rigid-body simulation or branch/leaf collision. Collider silhouettes are approximate and rock stepping/climbing is not implemented.
 
 Swimming uses the same ocean, rotated water rectangles and smoothed polygon outlines as scene water. Underwater rendering adds distance absorption, teal haze, mild distortion and an approximate surface light window in CUDA. It does not ray-trace underwater refraction or polygon-side exits. The viewport fills the available window while retaining the renderer's existing internal resolution.
 
 Play movement and temporary environment progression do not edit the map. Pause freezes movement and play animation time. The configured environment clock still honours its Play time checkbox.
 
 Validation: `node scripts/test-play-model.mjs` covers movement, jumping, grounding, collision, swimming, resurfacing, water bounds and spawn serialization. `node scripts/test-play-browser.mjs` covers real pointer lock, blocked-capture fallback, keyboard movement, drag look, underwater rendering, pause/resume and restoring the editor.
+
+Rain streaks and water splash rings share a quantized 60 Hz animation clock. Camera rendering and cloud animation are not capped. This caps animation phases, not the number of weather shader dispatches.
