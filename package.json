@@ -11,7 +11,8 @@
     "build:pages": "npm run build && node scripts/build-pages.mjs",
     "test:model": "node scripts/test-map-model.mjs",
     "test:shadows": "node scripts/test-shadows.mjs",
-    "test:water-fft": "node scripts/test-water-fft.mjs"
+    "test:water-fft": "node scripts/test-water-fft.mjs",
+    "test:paths": "node scripts/test-path-model.mjs && node scripts/test-path-editor.mjs"
   },
   "description": "Seeded procedural vegetation and a CUDA WebShader world editor",
   "devDependencies": {

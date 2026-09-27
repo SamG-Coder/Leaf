@@ -1,0 +1,16 @@
+// Spatially indexed terrain-attached path materials. Host packs quadratic splines into segments.
+__device__ float4 path_surface(const float4* pathSegments,const int* pathCells,const int* pathRefs,float x,float z,float extent,float footprint){
+ int ix=min(63,max(0,(int)floorf((x/extent+.5f)*64.0f)));int iz=min(63,max(0,(int)floorf((z/extent+.5f)*64.0f)));int cell=(iz*64+ix)*2;int start=pathCells[cell];int count=pathCells[cell+1];if(count==0)return make_float4(0.0f,0.0f,0.0f,0.0f);float best=0.0f;int material=0;float seed=0.0f;
+ for(int k=0;k<count;k++){int id=pathRefs[start+k];float4 s=pathSegments[id*2];float4 settings=pathSegments[id*2+1];float dx=s.z-s.x;float dz=s.w-s.y;float t=fminf(1.0f,fmaxf(0.0f,((x-s.x)*dx+(z-s.y)*dz)/fmaxf(.000001f,dx*dx+dz*dz)));float ex=x-s.x-dx*t;float ez=z-s.y-dz*t;float distance=sqrtf(ex*ex+ez*ez);float edge=noise3(x*2.0f,settings.w,z*2.0f);float feather=fmaxf(.04f+footprint,settings.y);float coverage=fminf(1.0f,fmaxf(0.0f,(settings.x*.5f+settings.y*(edge-.35f)-distance)/feather+.5f));coverage=coverage*coverage*(3.0f-2.0f*coverage);if(coverage>=best){best=coverage;material=(int)settings.z;seed=settings.w;}}
+ if(best<=0.0f)return make_float4(0.0f,0.0f,0.0f,0.0f);
+ float r=.76f;float g=.65f;float b=.40f;
+ if(material==1){r=.40f;g=.28f;b=.15f;}if(material==2){r=.49f;g=.49f;b=.44f;}if(material==3){r=.58f;g=.53f;b=.44f;}if(material==4){r=.48f;g=.43f;b=.34f;}if(material==5){r=.47f;g=.48f;b=.45f;}if(material==6){r=.57f;g=.28f;b=.19f;}if(material==7){r=.58f;g=.54f;b=.43f;}if(material==8){r=.29f;g=.34f;b=.39f;}if(material==9){r=.76f;g=.74f;b=.59f;}if(material==10){r=.60f;g=.36f;b=.22f;}if(material==11){r=.25f;g=.20f;b=.13f;}if(material==12){r=.40f;g=.26f;b=.12f;}if(material==13){r=.38f;g=.40f;b=.16f;}
+ float broad=noise3(x*.9f,seed,z*.9f);float pigment=.87f+.21f*floorf(broad*5.0f)/5.0f;float filter=1.0f/(1.0f+footprint*footprint*60.0f);float grain=noise3(x*12.0f,seed+3.0f,z*12.0f);pigment+=(grain-.5f)*.12f*filter;
+ if(material==2||material==5||material==6||material==7||material==8||material==9){float scale=material==6?3.0f:material==5?2.3f:1.3f;float row=floorf(z*scale);float ux=x*scale+(row-floorf(row*.5f)*2.0f)*.5f;float uz=z*scale;float seam=fminf(fminf(ux-floorf(ux),1.0f-(ux-floorf(ux))),fminf(uz-floorf(uz),1.0f-(uz-floorf(uz))));float mortar=1.0f-fminf(1.0f,seam/.045f);float block=noise3(floorf(ux),seed+7.0f,row);pigment+=(block-.5f)*.20f; pigment-=mortar*.28f*filter;}
+ if(material==3||material==4){float size=material==3?4.0f:9.0f;float gx=x*size;float gz=z*size;float nearest=2.0f;float tone=.5f;for(int zz=-1;zz<=1;zz++)for(int xx=-1;xx<=1;xx++){float cx=floorf(gx)+(float)xx;float cz=floorf(gz)+(float)zz;float n=noise3(cx*3.1f,seed,cz*3.1f);float px=cx+.2f+n*.6f;float pz=cz+.2f+noise3(cx,seed+9.0f,cz)*.6f;float dist=sqrtf((gx-px)*(gx-px)+(gz-pz)*(gz-pz));if(dist<nearest){nearest=dist;tone=n;}}pigment+=((tone-.5f)*.3f-fmaxf(0.0f,nearest-.35f)*.4f)*filter;}
+ if(material==0)pigment+=sinf(x*5.0f+broad*3.0f)*.035f*filter;
+ if(material==10||material==11)pigment-=fmaxf(0.0f,.12f-fabsf(grain-.5f))*.6f*filter;
+ if(material==12)pigment+=(noise3(x*3.0f,seed,z*18.0f)-.5f)*.35f*filter;
+ if(material==13)pigment+=sinf(x*35.0f+z*4.0f)*.07f*filter;
+ return make_float4(r*pigment,g*pigment,b*pigment,best);
+}

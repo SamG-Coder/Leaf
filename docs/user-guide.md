@@ -22,13 +22,19 @@ Map dimensions are chosen at creation and remain fixed during editing. Supported
 
 ## Understand the layout
 
-The header contains the map name, New, Example, Load map and Save map. The toolbar switches Scene/Terrain, chooses tools, sets radius and offers Undo, Redo, framing and the grid.
+The header contains the map name, Play, New Project, Load map and Save map. The toolbar switches Scene/Terrain, chooses tools, sets radius and offers Undo, Redo, framing and the grid.
 
-The left library contains procedural asset collections and the Water plane and Grass area cards. Search by name or choose a category. The centre is the perspective viewport. The right inspector shows the selected object's controls, terrain/environment settings, style controls and camera settings. Scroll the inspector to reach lower controls. The bottom status bar reports rendering work and cursor coordinates.
+The left library contains procedural asset collections and the Water plane, Grass area and Spline path cards. Search by name or choose a category. The centre is the perspective viewport. The right inspector shows the selected object's controls, terrain/environment settings, style controls and camera settings. Scroll the inspector to reach lower controls. The bottom status bar reports rendering work and cursor coordinates.
 
 ![The 1 km island example](../artifacts/showcase-preview.png)
 
 [Watch the live island showcase](https://samg-coder.github.io/Leaf/showcase.html) for daylight, sunset, night, sunrise and weather views.
+
+## Create paths
+
+Drag **Spline path** from the library onto the terrain. Round handles move nodes; square handles bend connections. Use **Extend / connect** to add nodes or join existing ones, and **Split selected connection** for more curve control. Choose from 14 surfaces, including Sand, Dirt, Stone and Pebbles. Paths follow terrain edits and clear grass from their footprint without deleting saved placements.
+
+See the [spline path guide](paths.md) for editing, materials and limits.
 
 ## Move the camera
 

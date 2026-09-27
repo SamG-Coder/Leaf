@@ -1,5 +1,5 @@
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
-const files=['leaf.cu','map.cu','water-fft.cu','scene.cu','water.cu','weather.cu','shadows.cu'];
+const files=['leaf.cu','map.cu','water-fft.cu','paths.cu','scene.cu','water.cu','weather.cu','shadows.cu'];
 const sources=await Promise.all(files.map(f=>readFile(`src/${f}`,'utf8')));
 const declarations=sources.flatMap(s=>[...s.matchAll(/(__device__\s+[\w]+\s+\w+\([^{}]*?\))\s*\{/g)].map(m=>m[1]+';'));
 await mkdir('Native/build',{recursive:true});

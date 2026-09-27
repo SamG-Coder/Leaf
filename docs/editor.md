@@ -32,6 +32,10 @@ New placements use per-asset scale defaults from src/asset-scale.js: larger tree
 
 V/W selects, B activates radius selection, P places, Delete removes, Escape clears selection. Ctrl/Cmd+Z undoes, Ctrl/Cmd+Shift+Z redoes, Ctrl/Cmd+S saves when viewport controls have focus.
 
+## Spline paths
+
+The **Spline path** library card creates a terrain-attached network of curved connections. Drag round nodes, bend with square handles, extend or connect nodes, and split or delete connections through the inspector. Fourteen procedural surfaces change the terrain appearance and suppress overlapping grass. Paths persist with the map and support undo/redo. See [the path guide](paths.md).
+
 ## Separate Terrain workspace
 
 Raise, Lower, Flatten and Smooth edit the ground. Radius, strength and flatten height control the brush. One stroke is one undo action. Object base height follows the terrain automatically after sculpting or movement. Objects remain upright and rigid: attachment currently changes height, not slope orientation or the geometry of broad foliage patches.
