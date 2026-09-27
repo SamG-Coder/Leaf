@@ -4,6 +4,8 @@
 
 Ten tree presets, ten bush presets, ten flower presets, ten fern presets, ten moss presets, ten vine/ivy presets, ten grass species presets, ten crop presets, ten mushroom colony presets, ten rock/crystal formations, ten ground-litter presets, ten deadwood/stump presets, and a reusable CUDA WebShader instance system for leaves and grass. Generation, wind, shared lighting, depth testing and pixel shading live in `src/leaf.cu`. JavaScript is host/API/UI glue.
 
+[Read the complete user guide](docs/user-guide.md) for creating maps, sculpting terrain, placing assets, editing polygons, water, weather and saving your work.
+
 ## Map editor
 
 Open `editor.html` for the Scene and Terrain workspaces: all 121 assets, drag/drop, radius selection, transforms, height brushes, automatic ground attachment, undo/redo, autosave and JSON map/terrain save-load. The editor now has a perspective camera with Unity-style right-mouse flight, Alt-orbit, pan and selection framing. Worlds support up to 65,536 m width and 100,000 stored placements, with sparse terrain and bounded visible rendering. Use **Example** to load the 1 km island: wooded uplands, sandy beaches, four curved grass areas with seeded rotations, a lagoon and a river with directional surface flow. See `docs/editor.md` for controls, limits and tests.
